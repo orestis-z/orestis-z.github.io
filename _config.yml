@@ -43,7 +43,7 @@ about: true
 skills: false
 
 # do you want to display a projects section? true or false
-projects: false
+projects: true
 
 # do you want to display the theme attribution? true or false
 footer: true
@@ -55,3 +55,36 @@ gems:
   - jekyll-seo-tag
 
 exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
+
+project-list:
+    Eve:
+        name: Trap the Cat
+        description: Cross-platform puzzle game built with vanilla JavaScript and CapacitorJS
+        url: https://orestis-z.itch.io/trap-the-cat
+        icon: https://play-lh.googleusercontent.com/Nvp14M_z_lItrBoEkTUKxL6UE3Kr92FkbM8KY_jB3OzoehsXhwO9URL-IIHtLar3Yw=w480-h960-rw
+        year: 2023 – present
+    Beachin':
+        name: Beachin' Rentals
+        description: Beach equipment rental shop in Barceloneta, Barcelona
+        url: https://beachinrentalsbcn.es/
+        icon: https://lh5.googleusercontent.com/p/AF1QipNThJ5yJZ17UbXYz4-j_uox4338cxDfbWoS1M9s=w286-h298-k-no
+        year: 2023 – present
+    Eixample Airbnb:
+        name: Eixample Airbnb
+        description: Airbnb listing for a flat in Barcelona, interior design and self-made furniture
+        url: https://orestisz.pixieset.com/eixample-airbnb/
+        icon: https://a0.muscache.com/im/pictures/miso/Hosting-618130808206581598/original/b69ee138-867e-4de0-83d7-9ac9a29916ea.jpeg?im_w=480
+        year: 2022
+    Anti CryptoPunks:
+        name: Anti CryptoPunks
+        description: NFT project built on the Polygon blockchain
+        url: https://www.anticryptopunks.com/
+        icon: https://www.anticryptopunks.com/9280.png
+        year: 2022
+    PyJet:
+        name: PyJet
+        description: Python library converting Python/NumPy operations to C++
+        url: https://github.com/orestis-z/pyjet
+        icon: https://raw.githubusercontent.com/wolfv/pyjet/master/docs/img/jet_logo.png
+        year: 2015
+        icon_contain: true

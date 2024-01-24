@@ -1,11 +1,16 @@
 <section class="list">
     {% for project_hash in site.project-list %}
     {% assign project = project_hash[1] %}
-        <div class="item">
-                <a class="url" href="{{ project.url }}">
-                    <h3 class="title">{{ project.name }}</h3>
-                </a>
-                <p class="description">{{ project.description }}</p>        
-        </div>
+    <div class="item">
+        <a class="url link" href="{{ project.url }}" target="_blank">
+            <img class="thumbnail" src="{{project.icon}}" referrerpolicy="no-referrer" {% if project.icon_contain
+                %}style="object-fit: contain;"{% endif %}>
+            <div>
+                <h3 class="title">{{ project.name }}</h3>
+                <p class="year">{{ project.year }}</p>
+            </div>
+        </a>
+        <p class="description">{{ project.description }}</p>
+    </div>
     {% endfor %}
 </section>

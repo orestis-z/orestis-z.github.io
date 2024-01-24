@@ -23,24 +23,54 @@
 .blog > .list,
 .projects > .list
     > .item
-        display: block
+        display: flex
         width: 95%
         margin: 0 auto
+        border-bottom: 1px dotted hsla(0,0%,62.7%,.65)
+        margin-top: 2rem
+
+    @media (max-width: 600px)
+        > .item
+            flex-direction: column
+            align-items: center
+
+    > .item:last-child
+        border-bottom: none
 
     > .item > .url
-        width: 100%
         display: block
         padding: 20px 0
         text-decoration: none
+        align-items: center
+        display: flex
+        flex: 1
 
-    > .item > .url > .title
+    > .item > .description
+        display: flex
+        flex: 1
+
+    > .item > .url > div > .title
         margin: 0
-        width: 75%
         font-weight: 500
         transition: all ease-in-out .2s
+        display: inline
+
+    > .item > .url > div > .year
+        margin: 0
+        text-align: left
+        font-size: 14px
 
     > .item:hover > .url > .title
         color: $delta
+
+
+    > .item > .url > .thumbnail
+        display: inline
+        height: 4.5rem
+        width: 4.5rem
+        margin-right: 2rem
+        object-fit: cover
+        box-shadow: 0 0vmin 0.6vmin rgba(0, 0, 0, 0.2)
 
     // maybe we can't nest html5 elements
     // can you help me?
