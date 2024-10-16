@@ -83,7 +83,7 @@ project-list:
         year: 2022
     PyJet:
         name: PyJet
-        description: Python library converting Python/NumPy operations to C++
+        description: Python library converting Python/NumPy operations to C++, 55x speedup
         url: https://github.com/orestis-z/pyjet
         icon: https://raw.githubusercontent.com/wolfv/pyjet/master/docs/img/jet_logo.png
         year: 2015
