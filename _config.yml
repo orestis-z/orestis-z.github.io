@@ -62,10 +62,10 @@ project-list:
         description: Cross-platform puzzle game built with vanilla JavaScript and CapacitorJS
         url: https://play.google.com/store/apps/details/Chat_Noir_Hexagon?id=com.kima.chatnoirhex
         icon: https://play-lh.googleusercontent.com/Nvp14M_z_lItrBoEkTUKxL6UE3Kr92FkbM8KY_jB3OzoehsXhwO9URL-IIHtLar3Yw=w480-h960-rw
-        year: 2023 – present
+        year: 2023 – 2024
     Beachin':
         name: Beachin' Rentals
-        description: Beach equipment rental shop in Barceloneta, Barcelona
+        description: Self-service beach equipment rental shop in Barceloneta, Barcelona
         url: https://beachinrentalsbcn.es/
         icon: https://lh5.googleusercontent.com/p/AF1QipNThJ5yJZ17UbXYz4-j_uox4338cxDfbWoS1M9s=w286-h298-k-no
         year: 2023 – present
