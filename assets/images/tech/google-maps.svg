@@ -1,0 +1,6 @@
+<!-- This is a placeholder SVG for the Android logo.
+     Replace this with the actual logo. -->
+<svg width="100" height="40" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="40" fill="#4285f4"/>
+  <text x="50" y="25" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Android</text>
+</svg>

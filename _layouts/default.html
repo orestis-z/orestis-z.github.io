@@ -27,7 +27,7 @@ layout: compress
 <body>
 
     <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
-        <div class="{{ page.title | downcase }}">
+        <div class="{{ page.title | downcase | replace: ' ', '-' }}">
         {% include header.html %}
             
         {{ content }}
