@@ -1,6 +1,9 @@
 // Shop Automation page styles
 .shop-automation
     padding: 60px 0
+    max-width: 960px
+    margin: 0 auto
+    width: 100%
     
     @media #{$mobile}
         padding: 30px 0
@@ -12,52 +15,54 @@
             margin-bottom: 30px
         
     .container
-        max-width: 100%
+        width: 90%
+        max-width: 900px
         margin: 0 auto
-        padding: 0 20px
+        padding: 0
         
         @media #{$mobile}
-            padding: 0 15px
+            width: 95%
+            padding: 0
         
     h1
-        font-size: 2.2rem
+        font-size: 3rem
         margin-bottom: 0.5em
         color: $title-color
         
         @media #{$mobile}
-            font-size: 1.8rem
+            font-size: 2.2rem
         
     h2
-        font-size: 1.6rem
+        font-size: 2rem
         margin-bottom: 1em
         color: $subtitle-color
         
         @media #{$mobile}
-            font-size: 1.4rem
+            font-size: 1.7rem
         
     h3
-        font-size: 1.2rem
+        font-size: 1.5rem
         margin-bottom: 0.8em
         color: $subtitle-color
         
         @media #{$mobile}
-            font-size: 1.1rem
+            font-size: 1.3rem
         
     p
         margin-bottom: 1.5em
-        font-size: 1.1rem
+        font-size: 1.3rem
         line-height: 1.6
     
     // Text alignment helpers
     .text-left
-        text-align: left
-        p, h1, h2, h3, h4
-            text-align: left
+        text-align: left !important
+        p, h1, h2, h3, h4, ul, ol, li
+            text-align: left !important
             
     .text-center
-        text-align: center
+        text-align: center !important
         p, h1, h2, h3, h4
-            text-align: center
+            text-align: center !important
             
     // Hero section
     .shop-automation-hero
@@ -101,7 +106,7 @@
         li
             padding: 10px 0
             border-bottom: 1px solid #eaeaea
-            font-size: 1.1rem
+            font-size: 1.3rem
             
             &:last-child
                 border-bottom: none
@@ -115,6 +120,7 @@
         li
             padding: 8px 0 8px 30px
             position: relative
+            font-size: 1.3rem
             
             &:before
                 content: '✓'
@@ -177,7 +183,7 @@
             text-decoration: none
             border-radius: 30px
             font-weight: bold
-            font-size: 1.1rem
+            font-size: 1.3rem
             transition: all 0.3s ease
             position: relative
             overflow: hidden
@@ -205,6 +211,8 @@
             max-width: 500px
             margin: 40px auto 0
             text-align: left
+            display: block
+            width: 100%
             
             .form-group
                 margin-bottom: 20px
@@ -213,12 +221,14 @@
                 display: block
                 margin-bottom: 5px
                 font-weight: bold
+                font-size: 1.2rem
                 
             input, textarea
                 width: 100%
                 padding: 10px
                 border: 1px solid #ddd
                 border-radius: 4px
+                font-size: 1.2rem
                 
             button
                 margin-top: 10px
