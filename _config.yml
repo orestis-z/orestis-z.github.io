@@ -78,8 +78,8 @@ project-list:
     Anti CryptoPunks:
         name: Anti CryptoPunks
         description: NFT project built on the Polygon blockchain, 6 ETH traded
-        url: /anticryptopunks.com/
-        icon: /anticryptopunks.com/9280.png
+        url: /anticryptopunks/
+        icon: /anticryptopunks/9280.png
         year: 2022
     PyJet:
         name: PyJet
