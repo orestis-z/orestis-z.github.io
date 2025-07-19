@@ -59,7 +59,7 @@ exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
 project-list:
     Beachin':
         name: Beachin' Rentals
-        description: Self-service beach equipment rental shop in Barcelona
+        description: Self-service beach & skates equipment rental shop in Barcelona
         url: https://beachinrentalsbcn.es/
         icon: https://lh5.googleusercontent.com/p/AF1QipNThJ5yJZ17UbXYz4-j_uox4338cxDfbWoS1M9s=w286-h298-k-no
         year: 2023 – present
