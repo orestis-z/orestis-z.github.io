@@ -17,7 +17,7 @@ permalink: /shop-automation/
 
         <div class="hero-cta">
             <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-primary">📞 Book a Free Consultation</a>
-            <p class="cta-subtitle">Free consultation • No hard sell • Just actionable insights</p>
+            <p class="cta-subtitle">Free, no-pressure call. Just actionable advice.</p>
         </div>
 
         <div class="hero-image">
@@ -41,18 +41,6 @@ permalink: /shop-automation/
             <li>✔️ IoT hardware setup (locks, cameras, etc.)</li>
             <li>✔️ Remote management dashboards</li>
         </ul>
-
-        <div style="padding:75% 0 0 0;position:relative; margin-top: 40px; margin-bottom: 40px;">
-            <iframe
-                src="https://player.vimeo.com/video/1102926128?title=0&amp;byline=0&amp;portrait=0&amp;background=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&muted=1&amp;playsinline=0"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                title="Shop Automation Demo">
-            </iframe>
-        </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
 </section>
 
@@ -72,17 +60,29 @@ permalink: /shop-automation/
             <!-- <h3>Trusted by</h3> -->
             <div class="logo-grid">
                 <a href="https://beachinrentalsbcn.es/" target="_blank" rel="noopener" class="client-logo-link" style="display: block; transition: all 0.3s ease; text-decoration: none; border: none;">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipNThJ5yJZ17UbXYz4-j_uox4338cxDfbWoS1M9s=w286-h298-k-no" alt="Beachin' Rentals" title="Beachin' Rentals - Beach Equipment Rental Shop" class="client-logo" style="height: 200px; width: auto; border-radius: 15px; box-shadow: 0 6px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;" />
+                    <img src="https://beachinrentalsbcn.es/cdn/shop/files/beachin-logo-v2.png?v=1742215640&width=220" alt="Beachin' Rentals" title="Beachin' Rentals - Beach Equipment Rental Shop" class="client-logo" style="width: 220px; height: auto; border-radius: 6px; transition: all 0.3s ease;" />
                 </a>
             </div>
         </div>
+
+        <div style="padding:75% 0 0 0;position:relative; margin-top: 40px;">
+            <iframe
+                src="https://player.vimeo.com/video/1102926128?title=0&amp;byline=0&amp;portrait=0&amp;background=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&muted=1&amp;playsinline=0"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                title="Shop Automation Demo">
+            </iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
 </section>
 
 <section class="shop-automation-why-now text-left">
     <div class="container">
         <h2>📈 Why Automate Your Shop Now?</h2>
-        <p class="section-intro">The shift to self-service isn't just a trend—it's a fundamental change in consumer behavior backed by data.</p>
+        <p class="section-intro">Automation can quickly boost profitability, convenience, and customer satisfaction. The shift to self-service isn't just a trend—it's a fundamental change in consumer behavior backed by data.</p>
         
         <div class="why-now-grid">
             <div class="why-now-item">
@@ -293,15 +293,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var clientLogo = clientLogoLink.querySelector('.client-logo');
         clientLogoLink.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
-            if (clientLogo) {
-                clientLogo.style.boxShadow = '0 12px 40px rgba(0,0,0,0.3)';
-            }
         });
         clientLogoLink.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
-            if (clientLogo) {
-                clientLogo.style.boxShadow = '0 6px 30px rgba(0,0,0,0.2)';
-            }
         });
     }
 });
