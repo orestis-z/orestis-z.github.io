@@ -78,7 +78,7 @@ project-list:
     Machine Dreams:
         name: Machine Dreams
         description: An experimental fusion of artificial intelligence and digital art
-        url: /meachinedreams/
+        url: /machinedreams/
         icon: https://machinedreamsart.s3.us-east-1.amazonaws.com/public/binary/small/0.gif
         year: 2022
     Anti CryptoPunks:
