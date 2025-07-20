@@ -75,6 +75,12 @@ project-list:
         url: https://orestisz.pixieset.com/eixample-airbnb/
         icon: https://a0.muscache.com/im/pictures/miso/Hosting-618130808206581598/original/b69ee138-867e-4de0-83d7-9ac9a29916ea.jpeg?im_w=480
         year: 2022
+    Machine Dreams:
+        name: Machine Dreams
+        description: An experimental fusion of artificial intelligence and digital art
+        url: /meachinedreams/
+        icon: https://machinedreamsart.s3.amazonaws.com/public/binary/medium/0.webm
+        year: 2022
     Anti CryptoPunks:
         name: Anti CryptoPunks
         description: NFT project built on the Polygon blockchain, 6 ETH traded
