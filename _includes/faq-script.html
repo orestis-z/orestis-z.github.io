@@ -1,0 +1,37 @@
+<!-- FAQ JavaScript -->
+<script>
+function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const answer = faqItem.querySelector('.faq-answer');
+    const toggle = element.querySelector('.faq-toggle');
+    
+    // Close all other FAQs
+    document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) {
+            item.classList.remove('active');
+            const otherAnswer = item.querySelector('.faq-answer');
+            const otherToggle = item.querySelector('.faq-toggle');
+            if (otherAnswer) otherAnswer.style.maxHeight = '0';
+            if (otherToggle) otherToggle.textContent = '+';
+        }
+    });
+    
+    // Toggle current FAQ
+    if (faqItem.classList.contains('active')) {
+        faqItem.classList.remove('active');
+        answer.style.maxHeight = '0';
+        toggle.textContent = '+';
+    } else {
+        faqItem.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        toggle.textContent = '−';
+    }
+}
+
+// Initialize FAQ answers as hidden when DOM loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.style.maxHeight = '0';
+    });
+});
+</script>

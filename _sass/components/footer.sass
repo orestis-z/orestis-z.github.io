@@ -1,12 +1,13 @@
 .footer-main
     border-top: 1px solid $epsilon
-    padding: 40px 0
+    padding: 40px 0 20px 0
     margin: 40px 0 0
     font-size: 1.3rem
     color: $gama
     font-weight: 300
     text-align: center
     position: relative
+    // background: #f8f9fa
 
     &:before
         display: block
@@ -21,6 +22,69 @@
         background: #FFF
         box-shadow: #FFF 0 0 0 5px
         border-radius: 3px
+
+    .footer-content
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        gap: 30px
+        max-width: 800px
+        margin: 0 auto 30px
+        text-align: left
+        
+        @media #{$mobile}
+            grid-template-columns: 1fr
+            text-align: center
+            
+        .footer-contact
+            text-align: left
+            
+            @media #{$mobile}
+                text-align: center
+                
+            h4, p
+                text-align: left
+                
+                @media #{$mobile}
+                    text-align: center
+        
+        h4
+            color: $beta
+            font-size: 1.1rem
+            margin-bottom: 15px
+            font-weight: bold
+        
+        p
+            margin: 8px 0
+            font-size: 1rem
+            
+        ul
+            list-style: none
+            padding: 0
+            margin: 0
+            
+            li
+                margin: 8px 0
+                
+                a
+                    color: $gama
+                    text-decoration: none
+                    transition: color 0.3s ease
+                    
+                    &:hover
+                        color: $beta
+        
+        a
+            color: $beta
+            text-decoration: none
+            
+            &:hover
+                text-decoration: underline
+
+    .footer-bottom
+        border-top: 1px solid #e0e0e0
+        padding-top: 20px
+        font-size: 0.9rem
+        color: #666
 
     > .link
         display: inline

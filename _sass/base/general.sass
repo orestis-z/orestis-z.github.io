@@ -48,6 +48,56 @@ strong
     font-weight: 400
     color: #000
 
+// Global button styles
+.btn
+    display: inline-block
+    padding: 15px 35px
+    background-color: $highlight-color
+    color: white
+    text-decoration: none
+    border-radius: 30px
+    font-weight: bold
+    font-size: 1.3rem
+    transition: all 0.3s ease
+    position: relative
+    overflow: hidden
+    z-index: 1
+    border: none
+    cursor: pointer
+    
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 0%
+        height: 100%
+        background-color: darken($highlight-color, 15%)
+        transition: width 0.4s ease-in-out
+        z-index: -1
+    
+    &:hover
+        transform: translateY(-2px)
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2)
+        color: white
+        text-decoration: none
+        
+        &:before
+            width: 100%
+
+.btn-primary
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important
+    color: white !important
+    
+    &:before
+        background: linear-gradient(135deg, darken(#667eea, 10%) 0%, darken(#764ba2, 10%) 100%) !important
+    
+    &:hover
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important
+        color: white !important
+        text-decoration: none !important
+
 ul,
 ol
     li

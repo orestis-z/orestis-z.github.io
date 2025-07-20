@@ -64,8 +64,26 @@
         p, h1, h2, h3, h4
             text-align: center !important
             
-    // Hero section
+    // Hero section with background
     .shop-automation-hero
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)
+        padding: 80px 0
+        position: relative
+        overflow: hidden
+        
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+            opacity: 0.5
+        
+        .container
+            position: relative
+            z-index: 1
         animation: fadeIn 1s ease-in-out
         
         @keyframes fadeIn
@@ -91,6 +109,12 @@
                 max-width: 100%
                 border-radius: 8px
                 box-shadow: 0 4px 12px rgba(0,0,0,0.1)
+                filter: brightness(1.1) contrast(1.05)
+                transition: all 0.3s ease
+                
+                &:hover
+                    filter: brightness(1.15) contrast(1.1)
+                    box-shadow: 0 6px 20px rgba(0,0,0,0.15)
                 
             .image-caption
                 font-size: 0.9rem
@@ -188,6 +212,8 @@
             position: relative
             overflow: hidden
             z-index: 1
+            border: none
+            cursor: pointer
             
             &:before
                 content: ''
@@ -203,9 +229,23 @@
             &:hover
                 transform: translateY(-2px)
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2)
+                color: white
+                text-decoration: none
                 
                 &:before
                     width: 100%
+                    
+        .btn-primary
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important
+            color: white !important
+            
+            &:before
+                background: linear-gradient(135deg, darken(#667eea, 10%) 0%, darken(#764ba2, 10%) 100%) !important
+            
+            &:hover
+                box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important
+                color: white !important
         
         .contact-form
             max-width: 500px
@@ -232,3 +272,335 @@
                 
             button
                 margin-top: 10px
+
+    // Hero CTA styling
+    .hero-cta
+        margin: 40px 0
+        
+        .cta-subtitle
+            font-size: 0.9rem
+            color: #666
+            margin: 10px 0 0 0
+
+    // Social proof section
+    .shop-automation-social-proof
+        background: #f8f9fa
+        padding: 60px 0
+        
+        .testimonial
+            max-width: 700px
+            margin: 0 auto 40px
+            
+            blockquote
+                font-size: 1.3rem
+                font-style: italic
+                line-height: 1.6
+                margin: 0 0 20px 0
+                padding: 0
+                color: #333
+                
+                &:before
+                    content: '"'
+                    font-size: 2rem
+                    color: #667eea
+                    
+                &:after
+                    content: '"'
+                    font-size: 2rem
+                    color: #667eea
+            
+            cite
+                font-size: 1.1rem
+                color: #666
+                font-weight: bold
+                
+    // Why Now section with data and trends
+    .shop-automation-why-now
+        background: #ffffff
+        padding: 70px 0
+        border-top: 1px solid #eaeaea
+        border-bottom: 1px solid #eaeaea
+        
+        .section-intro
+            font-size: 1.3rem
+            max-width: 800px
+            margin: 0 auto 50px
+            text-align: center
+            color: #444
+        
+        .why-now-grid
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+            gap: 40px
+            margin: 40px 0
+            
+            @media #{$mobile}
+                grid-template-columns: 1fr
+                gap: 30px
+        
+        .why-now-item
+            background: white
+            border-radius: 10px
+            padding: 30px
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05)
+            transition: transform 0.3s ease, box-shadow 0.3s ease
+            
+            &:hover
+                transform: translateY(-5px)
+                box-shadow: 0 15px 40px rgba(0,0,0,0.1)
+            
+            h3
+                color: $subtitle-color
+                margin-bottom: 20px
+                font-size: 1.4rem
+                border-bottom: 2px solid #f0f0f0
+                padding-bottom: 15px
+            
+            p
+                color: #555
+                line-height: 1.6
+                
+                &:last-child
+                    margin-bottom: 0
+        
+        .stat-card
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%)
+            border-radius: 8px
+            padding: 25px
+            margin-bottom: 20px
+            position: relative
+            
+            .stat-number
+                font-size: 2.5rem
+                font-weight: bold
+                color: #667eea
+                margin-bottom: 10px
+                line-height: 1
+                
+            p
+                font-size: 1.1rem
+                font-weight: 500
+                margin: 0 0 15px 0
+                color: #333
+                
+            .source
+                font-size: 0.9rem
+                color: #555
+                font-weight: 500
+                display: block
+                margin-top: 10px
+                padding: 8px 12px
+                background: rgba(102, 126, 234, 0.1)
+                border-left: 3px solid #667eea
+                border-radius: 0 4px 4px 0
+        
+        .why-now-cta
+            text-align: center
+            margin-top: 50px
+        
+        .client-logos
+            h3
+                margin-bottom: 30px
+                color: #666
+                font-size: 1.2rem
+            
+            .logo-grid
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 30px
+                flex-wrap: wrap
+                
+                .client-logo-link
+                    display: block
+                    cursor: pointer
+                    transition: all 0.3s ease
+                    overflow: visible
+                    text-decoration: none
+                    border: none
+                    
+                    &:hover
+                        transform: scale(1.05)
+                        text-decoration: none
+                        
+                        .client-logo
+                            box-shadow: 0 12px 40px rgba(0,0,0,0.3)
+                
+                .client-logo
+                    height: 200px
+                    width: auto
+                    border-radius: 15px
+                    box-shadow: 0 6px 30px rgba(0,0,0,0.2)
+                    vertical-align: middle
+                    object-fit: cover
+                    transition: all 0.3s ease
+                    filter: brightness(1.05) contrast(1.02)
+
+    // How it works section
+    .shop-automation-how-it-works
+        .steps-grid
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+            gap: 40px
+            margin-top: 40px
+            
+            @media #{$mobile}
+                grid-template-columns: 1fr
+                gap: 30px
+        
+        .step
+            text-align: center
+            
+            .step-number
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+                color: white
+                width: 60px
+                height: 60px
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: 1.5rem
+                font-weight: bold
+                margin: 0 auto 20px
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3)
+            
+            h3
+                margin-bottom: 15px
+                color: $subtitle-color
+            
+            p
+                color: #666
+                line-height: 1.6
+
+    // FAQ section
+    .shop-automation-faq
+        background: white
+        
+        .faq-grid
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+            gap: 30px
+            margin-top: 30px
+            
+            @media #{$mobile}
+                grid-template-columns: 1fr
+                gap: 25px
+        
+        .faq-item
+            padding: 0
+            border: 1px solid #e0e0e0
+            border-radius: 8px
+            transition: box-shadow 0.3s ease
+            overflow: hidden
+            
+            &:hover
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1)
+            
+            &.active
+                .faq-question
+                    background: #f8f9fa
+                    
+                .faq-toggle
+                    transform: none !important /* Force no rotation */
+            
+            .faq-question
+                color: $subtitle-color
+                margin: 0
+                font-size: 1.2rem
+                padding: 20px 25px
+                cursor: pointer
+                transition: background 0.3s ease
+                display: flex
+                justify-content: space-between
+                align-items: center
+                border-bottom: 1px solid #e0e0e0
+                
+                &:hover
+                    background: #f8f9fa
+                
+                .faq-toggle
+                    font-size: 1.5rem
+                    font-weight: bold
+                    color: #667eea
+                    transition: transform 0.3s ease
+                    min-width: 20px
+                    text-align: center
+            
+            .faq-answer
+                max-height: 0
+                overflow: hidden
+                transition: max-height 0.4s ease-out
+                background: white
+                
+                p
+                    color: #666
+                    line-height: 1.6
+                    margin: 0
+                    padding: 20px 25px
+
+    // About section styling
+    .shop-automation-about
+        padding: 70px 0
+        background: #f8f9fa
+        
+        .about-content
+            max-width: 700px
+            margin: 0 auto
+            
+        .about-photo
+            margin-bottom: 30px
+            
+            .founder-photo
+                width: 120px
+                height: 120px
+                border-radius: 50%
+                object-fit: cover
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15)
+                transition: all 0.3s ease
+                filter: brightness(1.05) contrast(1.02)
+                
+                &:hover
+                    transform: scale(1.05)
+                    box-shadow: 0 6px 25px rgba(0,0,0,0.2)
+                
+                @media #{$mobile}
+                    width: 100px
+                    height: 100px
+        
+        .founder-message
+            text-align: left
+            max-width: 600px
+            margin: 0 auto
+            
+            @media #{$mobile}
+                text-align: center
+                
+            p
+                margin-bottom: 1.5em
+                line-height: 1.7
+                font-size: 1.1rem
+                color: #333
+                
+                @media #{$mobile}
+                    font-size: 1rem
+            
+            .closing-message
+                font-style: italic
+                color: #555
+                margin-bottom: 2em !important
+        
+        .founder-signature
+            margin-top: 30px
+            padding-top: 25px
+            border-top: 1px solid #eee
+            text-align: center
+            
+            p
+                margin: 0 !important
+                font-size: 1rem !important
+                
+            .title
+                color: #666
+                font-size: 0.95rem
+                font-weight: normal
