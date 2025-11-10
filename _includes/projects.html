@@ -1,16 +1,41 @@
 <section class="list">
-    {% for project_hash in site.project-list %}
-    {% assign project = project_hash[1] %}
+    {% for project_key in site.mini-portfolio %}
+    {% assign project = site.project-list[project_key] %}
+    {% if project %}
     <div class="item">
+        {% if project.url %}
         <a class="url link" href="{{ project.url }}" target="_blank">
             <img class="thumbnail" src="{{project.icon}}" referrerpolicy="no-referrer" {% if project.icon_contain
                 %}style="object-fit: contain;"{% endif %}>
             <div>
                 <h3 class="title">{{ project.name }}</h3>
-                <p class="year">{{ project.year }}</p>
+                <p class="year">
+                    {% unless project.short_org == "<none>" %}
+                        {% if project.short_org or project.organization %}
+                            {% if project.short_org %}{{ project.short_org }}{% else %}{{ project.organization }}{% endif %} · 
+                        {% endif %}
+                    {% endunless %}{{ project.year }}
+                </p>
             </div>
         </a>
+        {% else %}
+        <div class="url">
+            <img class="thumbnail" src="{{project.icon}}" referrerpolicy="no-referrer" {% if project.icon_contain
+                %}style="object-fit: contain;"{% endif %}>
+            <div>
+                <h3 class="title">{{ project.name }}</h3>
+                <p class="year">
+                    {% unless project.short_org == "<none>" %}
+                        {% if project.short_org or project.organization %}
+                            {% if project.short_org %}{{ project.short_org }}{% else %}{{ project.organization }}{% endif %} · 
+                        {% endif %}
+                    {% endunless %}{{ project.year }}
+                </p>
+            </div>
+        </div>
+        {% endif %}
         <p class="description">{{ project.description }}</p>
     </div>
+    {% endif %}
     {% endfor %}
 </section>

@@ -11,18 +11,19 @@
         {% include social-links.html %}
     {% endif %}
 </header>
-
 {% include nav.html %}
 {% else %}
-<header class="header-page">
-    <div class="page-header-content">
-        <a href="/shop-automation/" class="brand-link">
-            <h1 class="brand-name">Zambounis Technology</h1>
-            <span class="brand-tagline">Shop Automation Solutions</span>
-        </a>
-        <div class="header-cta">
-            <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-header-cta">📞 Book a Free Call</a>
+    {% if page.url == "/shop-automation.html" %}
+    <header class="header-page">
+        <div class="page-header-content">
+            <a href="/shop-automation/" class="brand-link">
+                <h1 class="brand-name">Zambounis Technology</h1>
+                <span class="brand-tagline">Shop Automation Solutions</span>
+            </a>
+            <div class="header-cta">
+                <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-header-cta">📞 Book a Free Call</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
+    {% endif %}
 {% endif %}

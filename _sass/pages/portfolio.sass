@@ -1,0 +1,248 @@
+// Portfolio page styles
+.portfolio-container
+    padding: 2rem 0
+
+.portfolio-header
+    text-align: center
+    margin-bottom: 4rem
+    
+    h1
+        font-size: 3.5rem
+        margin-bottom: 1rem
+        color: $beta
+        
+    .portfolio-subtitle
+        font-size: 1.8rem
+        color: $gama
+        font-weight: 300
+
+.portfolio-category
+    margin-bottom: 5rem
+    
+    .category-title
+        font-size: 2.8rem
+        color: $beta
+        margin-bottom: 3rem
+        padding-bottom: 1rem
+        border-bottom: 1px solid #ddd
+        text-align: left
+
+.project-item
+    margin-bottom: 4rem
+    background: white
+    border: 1px solid #eee
+    border-radius: 4px
+    overflow: hidden
+
+.project-content
+    display: flex
+    align-items: stretch
+    min-height: 300px
+    
+    @media #{$mobile}
+        flex-direction: column
+
+.project-info
+    flex: 1
+    padding: 3rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    
+    @media #{$mobile}
+        padding: 2rem
+
+.project-title
+    font-size: 2.4rem
+    color: $beta
+    margin-bottom: 0.5rem
+    line-height: 1.3
+
+.project-subtitle
+    font-size: 1.6rem
+    color: $gama
+    margin-bottom: 1.5rem
+    font-weight: 400
+
+.project-description
+    font-size: 1.4rem
+    line-height: 1.6
+    color: $alpha
+    margin-bottom: 2rem
+    text-align: left !important
+
+.project-links
+    margin-bottom: 1.5rem
+    
+    .btn
+        margin-right: 1rem
+        margin-bottom: 0.5rem
+        display: inline-block
+        padding: 10px 20px
+        background: $beta
+        color: white
+        text-decoration: none
+        border-radius: 3px
+        font-weight: 500
+        font-size: 1.3rem
+        transition: none
+        
+        &:before
+            transition: none
+            background-color: $beta
+    
+    .btn-secondary
+        background: transparent
+        color: $beta
+        border: 1px solid $beta
+        
+        &:hover
+            background: $beta
+            color: white
+
+.project-meta
+    flex-direction: row
+    display: flex
+
+    .project-year
+        font-size: 1.3rem
+        color: $gama
+        font-weight: 500
+        background: #f8f9fa
+        padding: 0.5rem 1rem
+        border-radius: 20px
+        display: inline-block
+        margin-right: 0.7rem
+
+.project-image
+    flex: 0 0 400px
+    position: relative
+    
+    @media #{$mobile}
+        flex: none
+        height: 250px
+    
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        display: block
+        border-radius: 0
+
+// Small/Minimal variant
+.project-item--small
+    margin-bottom: 2.5rem
+    
+    .project-content
+        min-height: 200px
+        
+        @media #{$mobile}
+            flex-direction: column
+    
+    .project-info
+        padding: 2rem
+        
+        @media #{$mobile}
+            padding: 1.5rem
+    
+    .project-title
+        font-size: 1.8rem
+        margin-bottom: 0.3rem
+    
+    .project-subtitle
+        font-size: 1.3rem
+        margin-bottom: 1rem
+    
+    .project-description
+        font-size: 1.3rem
+        margin-bottom: 1.5rem
+    
+    .project-links
+        margin-bottom: 1rem
+        
+        .btn
+            padding: 8px 16px
+            font-size: 1.2rem
+    
+    .project-image
+        flex: 0 0 250px
+        
+        @media (max-width: 1024px)
+            flex: 0 0 200px
+            
+        @media #{$tablet}
+            flex: 0 0 180px
+            
+        @media #{$mobile}
+            height: 150px
+        border-radius: 0
+
+// Responsive adjustments
+@media (max-width: 1024px)
+    .project-content
+        .project-image
+            flex: 0 0 350px
+
+@media #{$tablet}
+    .project-content
+        .project-image
+            flex: 0 0 300px
+    
+    .portfolio-header
+        h1
+            font-size: 3rem
+        
+        .portfolio-subtitle
+            font-size: 1.6rem
+    
+    .portfolio-category
+        .category-title
+            font-size: 2.4rem
+    
+    .project-item--small
+        .project-title
+            font-size: 1.6rem
+        
+        .project-subtitle
+            font-size: 1.2rem
+
+@media #{$mobile}
+    .portfolio-header
+        margin-bottom: 3rem
+        
+        h1
+            font-size: 2.5rem
+        
+        .portfolio-subtitle
+            font-size: 1.4rem
+    
+    .portfolio-category
+        margin-bottom: 4rem
+        
+        .category-title
+            font-size: 2rem
+            margin-bottom: 2rem
+    
+    .project-item
+        margin-bottom: 3rem
+    
+    .project-item--small
+        margin-bottom: 2rem
+        
+        .project-title
+            font-size: 1.5rem
+        
+        .project-subtitle
+            font-size: 1.1rem
+        
+        .project-description
+            font-size: 1.2rem
+    
+    .project-title
+        font-size: 2rem
+    
+    .project-subtitle
+        font-size: 1.4rem
+    
+    .project-description
+        font-size: 1.3rem

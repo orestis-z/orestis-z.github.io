@@ -1,6 +1,7 @@
 # Your name and what you do
 name: Orestis Zambounis
 bio: AI & Full-Stack Engineer
+subbio: Specializing in ML optimization, computer vision, and scalable systems
 
 description: Orestis Zambounis' Personal Website
 
@@ -57,40 +58,258 @@ gems:
 exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
 
 project-list:
+    Shop automation:
+        name: Shop Automation
+        description: Self-service in-store system powered by smart lockers and Shopify
+        year: 2023 – present
+        icon: /assets/images/thumbnails/selfservice.jpg
+        variant: small
+        detailed_description: "Self-service in-store system powered by custom smart lockers for oversized products, payment kiosk and Shopify integration. Reduced staff costs to zero (unattended store)."
+        portfolio_image: "/assets/images/portfolio/selfservice.jpg"
+        organization: "Beachin' Rentals"
+        short_org: <none>
+        organization_link: "https://beachinrentalsbcn.es"
+    Inference Optimization:
+        name: ML Inference Optimization
+        description: Real-time ML pipeline optimization using TensorRT, batching & parallelization, 10x speedup
+        icon: /assets/images/thumbnails/tensorrt.jpg
+        year: 2022 – 2025
+        variant: small
+        detailed_description: "Real-time ML pipeline optimization using TensorRT, batching & parallelization, achieving 10x speedup for computer vision models in production environments. With the help of those optimizations we were able to sell multiple VisionSuite systems running on a single hardware unit while staying within the Python ecosystem."
+        portfolio_image: "/assets/images/portfolio/tensorrt.jpg"
+        secondary_button_label: "Q-SYS VisionSuite"
+        secondary_button_url: "https://www.qsys.com/products/q-sys/video/q-sys-visionsuite/"
+        organization: "QSC"
+        organization_link: "https://qsc.com"
+    Face Recognition:
+        name: Face Recognition
+        description: Face recognition system with a false-positive rate below 5%
+        icon: /assets/images/thumbnails/facereco.jpg
+        year: 2022
+        variant: small
+        detailed_description: |
+            Face recognition system developed at Seervision GmbH with a false-positive rate below 5%.
+            By uploading a photo, we can remember talents and always associate the same ID to a specific talent. This way you can track specific people or enable person-specific workflows.
+            This complex and highly requested feature set us apart from other competitors in the market.
+        portfolio_image: /assets/images/portfolio/facereco2.jpg
+        organization: "Seervision GmbH"
+        short_org: "Seervision"
+        organization_link: "https://seervision.ch"
+    Data pipeline:
+        name: Big Data Pipeline
+        description: Scalable ML infrastructure and data pipelines built on DataBricks
+        icon: /assets/images/thumbnails/databricks.jpg
+        year: 2022
+        variant: small
+        detailed_description: "Cloud infrastructure powered by Azure DataBricks, enabling large-scale ETL pipelines, data analytics and machine learning applications."
+        portfolio_image: "/assets/images/portfolio/databricks.jpg"
+        organization: "benshi.ai"
+        organization_link: "https://benshi.ai"
+    AWS:
+        name: AWS Cloud Infrastructure
+        description: Scalable cloud infrastructure for web applications and services
+        icon: /assets/images/thumbnails/aws.jpg
+        year: 2021
+        variant: small
+        detailed_description: |
+            Scalable microservice infrastructure powered by Route 53, S3, EC2, RDS, SNS, CloudFront, Elastic Beanstalk, OpsWorks and ELB.
+            The cloud infrastructure served a web and mobile app enabling a seamless experience at scale.
+        portfolio_image: "/assets/images/portfolio/aws.jpg"
+    MT:
+        name: Multitask CNN
+        description: Multitask CNN architecture for online 3D human pose estimation and multi-person tracking
+        url: https://drive.google.com/file/d/1JowSPwsx_-GFVdufEHyK6bJdPH2bveiT/view?usp=sharing
+        icon: /assets/images/thumbnails/trackrcnn.jpg
+        year: 2019
+        subtitle: "Architecture for Online 3D Human Pose Estimation and Multi-person Tracking"
+        detailed_description: |
+            Robotic systems require precise information about the position and shape of objects along with future motion of surrounding persons in order to efficiently plan
+            trajectories and safely collaborate with humans in a dynamic environment.
+            We present an end-to-end multi-task CNN architecture which predicts object instances, human poses and tracks multiple people. Our method extends Mask R-CNN with a simple tracking head based on the MatchNet metric which relies exclusively on appearance cues. With a straightforward back-tracking algorithm we
+            manage to re-identify lost tracks caused by detector failures or occlusions.
+            Our method runs at ∼2.5Hz and is able to associate objects independent of spatio-temporal relations.
+            Exploiting sensory information from RGB-D cameras and SLAM systems we aim
+            to lay a solid step stone for generating arbitrary 3D human motion datasets and use
+            those to train temporal models to predict human motion for future timestamps.
+        button_label: "Report"
+        portfolio_image: "/assets/images/portfolio/000066_pred-multi.jpg"
+        portfolio_image_contain: true
+        secondary_button_url: https://docs.google.com/presentation/d/1sPEMw900Rz1AuMB-vPiYq_DEyCpvwpXp/edit?usp=drive_link&ouid=103928730132306857985&rtpof=true&sd=true
+        secondary_button_label: "Slides"
+        organization: "Imperial College London"
+        organization_link: "https://www.imperial.ac.uk/"
+    Does depth matter:
+        name: Does Depth Matter?
+        description: RGB-D Instance Segmentation with Mask R-CNN, 31% accuracy improvement 
+        url: https://drive.google.com/file/d/1jngkyHaAs9gxZNe6l0xQHnCDeZzjOQ1T/view?usp=sharing
+        icon: /assets/images/thumbnails/convnet.jpg
+        year: 2018
+        subtitle: "RGB-D Instance Segmentation with Mask R-CNN"
+        detailed_description: |
+            Robotic systems require precise information about the geometry and the location
+            of object instances for successful interactions with their surrounding environment.
+            This involves the ability to extract information about previously unseen object instances from raw sensor data. Most methods approach this by segmenting RGB,
+            depth, or point cloud data based on either geometrical cues or learned features.
+            Whereas color-based segmentation approaches benefit from distinctive changes
+            in appearance, they fail at identifying objects with similar texture or drastic illumination changes. On the other hand, geometrical approaches suffer from the
+            inability to detect object instances that have invisible boundaries in depth images,
+            such as flat objects. Furthermore, most of the learning-based approaches are restricted to RGB inputs as they require a large amount of training data to show good
+            performance and only limited labeled RGB-D data is available. We extend
+            an established convolutional neural network for instance-aware segmentation to
+            work with RGB-D data, which substantially improves the object instance prediction accuracy, compared to sole RGB inputs. In our approach, we use the synthetic
+            SceneNet RGB-D dataset with data augmentation to generate a large training set
+            and we fine-tune our models using a limited set of labeled real-world data from
+            the NYU Depth V2 dataset. Our method yields real-time performance running at
+            over 11 fps. We evaluate our approach on both synthetic and real data.
+        button_label: "Paper"
+        portfolio_image: "/assets/images/portfolio/maskrcnn.jpg"
+        portfolio_image_contain: true
+        secondary_button_label: "Slides"
+        secondary_button_url: https://drive.google.com/file/d/1otA-GDfS-7KHopIVa8kvhq6R2vQh8dGX/view?usp=drive_link
+        organization: "ETH Zurich"
+        organization_link: "https://ethz.ch"
+    Explora:
+        name: Explora.ch
+        description: Cross-platform mobile app built using React Native, 5.0-star rating
+        url: https://www.explora.ch/news?id=6418V3XK-Neue_Explora_App
+        icon: /assets/images/thumbnails/explora.jpg
+        year: 2018
+        variant: small
+        detailed_description: "Cross-platform mobile app built using React Native, providing users with event information and a ticket booking system. Maintained a 5.0-star rating on app stores."
+        button_label: "App Info"
+        portfolio_image: /assets/images/portfolio/explora.jpg
+        organization: "nextron GmbH"
+        short_org: "nextron"
+        organization_link: "https://nextron.ch"
+    PyJet:
+        name: PyJet
+        description: Python library converting Python/NumPy code to C++, 55x speedup
+        url: https://github.com/wolfv/pyjet
+        icon: https://raw.githubusercontent.com/wolfv/pyjet/master/docs/img/jet_logo.png
+        icon_contain: true
+        year: 2016
+        subtitle: "NumPy/Python to C++ compiler"
+        detailed_description: |
+            The JET library offers a simple way to make Python, and especially NumPy code run faster. This is achieved by transparently converting Python/NumPy operations to performant C++.
+            The computation graph is represented as a Directed Acyclic Graph (DAG). Nodes of the graph represent a specific operation and edges are the data that flows between the nodes.
+            Instead of calling a huge, math-heavy Python/NumPy simulation model on every iteration JET packs the whole model in a single performant C++ function which results in a significant speed-up (up to 60-fold speed up was observed in a simulation of a math-heavy quadcopter-model).
+        button_label: "GitHub"
+        organization: "Rapyuta Robotics"
+        organization_link: "https://rapyuta-robotics.com"
+    Omnicopter:
+        name: Balancing the Omnicopter
+        description: Control systems from simulation to product using quaternions, C++, and MATLAB/Simulink
+        url: https://drive.google.com/file/d/1kAv44eUh_8UD5H3U0iBAwY4kKAhkx1JA/view?usp=sharing
+        icon: /assets/images/thumbnails/OmnicopterRendering_Edge.jpg
+        year: 2015
+        subtitle: "Nonlinear attitude control system"
+        detailed_description: |
+            The Omnicopter is a 44 cm×44 cm×44 cm cube-framed UAV with 8 rotors attached on its space diagonals.
+            This work presents the synthesis of control algorithms in order to balance the Omnicopter on both its edges and corners on the floor. 
+            Some attitude representations are introduced, with emphasis on
+            the quaternion-parametrisation. The rigid-body dynamics of the inverted 3D
+            pendulum model are derived and a steering system which allows guidance of
+            the balancing maneuvers by the end user is described. The nonlinear attitude
+            control system utilized is presented and an onboard implementation is introduced using the Kalman filter as a sensor fusion algorithm.
+            Performance tests in simulations and experiments are included.
+        portfolio_image: /assets/images/portfolio/cube_inital_body_frame.svg
+        portfolio_image_contain: true
+        button_label: "Report"
+        secondary_button_url: "https://docs.google.com/presentation/d/1FkHmZTHal_46OnI0chXMOFyWvDplDz-x/edit?usp=drive_link&ouid=103928730132306857985&rtpof=true&sd=true"
+        secondary_button_label: "Slides"
+        organization: "ETH Zurich"
+        organization_link: "https://ethz.ch"
     Beachin':
         name: Beachin' Rentals
         description: Self-service beach & skates equipment rental shop in Barcelona
         url: https://beachinrentalsbcn.es/
         icon: https://lh5.googleusercontent.com/p/AF1QipNThJ5yJZ17UbXYz4-j_uox4338cxDfbWoS1M9s=w286-h298-k-no
         year: 2023 – present
-    Eve:
+        variant: small
+        detailed_description: "Self-service beach & skates equipment rental shop in Barcelona. Clear value proposition with proximity to the beach and 50% cheaper than on the sand."
+        button_label: "Website"
+        portfolio_image: /assets/images/portfolio/beachin.jpg
+    Trap the Cat:
         name: Trap the Cat
         description: Cross-platform puzzle game built with vanilla JavaScript and CapacitorJS, 100K+ downloads
         url: https://play.google.com/store/apps/details/Chat_Noir_Hexagon?id=com.kima.chatnoirhex
         icon: https://play-lh.googleusercontent.com/Nvp14M_z_lItrBoEkTUKxL6UE3Kr92FkbM8KY_jB3OzoehsXhwO9URL-IIHtLar3Yw=w480-h960-rw
         year: 2023 – 2024
+        variant: small
+        detailed_description: "Cross-platform puzzle game built with vanilla JavaScript and CapacitorJS, surpassing 100K downloads across mobile platforms with 100+ levels and user-generated content."
+        button_label: "Play Store"
+        secondary_button_url: "/trap-the-cat"
+        secondary_button_label: "Browser Game"
     Eixample Airbnb:
         name: Eixample Airbnb
         description: Airbnb listing for a flat in Barcelona, interior design and self-made furniture
         url: https://orestisz.pixieset.com/eixample-airbnb/
         icon: https://a0.muscache.com/im/pictures/miso/Hosting-618130808206581598/original/b69ee138-867e-4de0-83d7-9ac9a29916ea.jpeg?im_w=480
         year: 2022
+        variant: small
+        detailed_description: "Airbnb listing for a flat in Barcelona featuring custom interior design and self-made furniture. Creative expression in physical space creating a unique accommodation experience."
+        button_label: "Gallery"
     Machine Dreams:
         name: Machine Dreams
         description: An experimental fusion of artificial intelligence and digital art
         url: /machinedreams/
         icon: https://machinedreamsart.s3.us-east-1.amazonaws.com/public/binary/small/0.gif
         year: 2022
+        variant: small
+        detailed_description: "An experimental fusion of artificial intelligence and digital art. Surreal animated artwork generated by interpolating selected feature embeddings from a Generative Adversarial Network (GAN)."
+        button_label: "Website"
     Anti CryptoPunks:
         name: Anti CryptoPunks
         description: NFT project built on the Polygon blockchain, 6 ETH traded
         url: /anticryptopunks/
         icon: /anticryptopunks/9280.png
         year: 2022
-    PyJet:
-        name: PyJet
-        description: Python library converting Python/NumPy operations to C++, 55x speedup
-        url: https://github.com/orestis-z/pyjet
-        icon: https://raw.githubusercontent.com/wolfv/pyjet/master/docs/img/jet_logo.png
-        year: 2015
-        icon_contain: true
+        variant: small
+        detailed_description: "NFT project built on the Polygon blockchain with 6 ETH traded. Grew community to 4k+ users on Discord and Twitter."
+        button_label: "Website"
+
+mini-portfolio:
+    - "Inference Optimization"
+    - "Shop automation"
+    - "Face Recognition"
+    - "Trap the Cat"
+    - "Data pipeline"
+    - "Does depth matter"
+    - "PyJet"
+
+# Portfolio configuration for detailed project pages
+portfolio:
+    categories:
+        computer_vision_ai:
+            name: "Computer Vision / AI"
+            projects:
+                - "Inference Optimization"
+                - "Face Recognition"
+                - "MT"
+                - "Does depth matter"
+        iot:
+            name: "IoT"
+            projects:
+                - "Shop automation"
+        big_data:
+            name: "Cloud"
+            projects:
+                - "Data pipeline"
+                - "AWS"
+        robotics:
+            name: "Robotics"
+            projects:
+                - "PyJet"
+                - "Omnicopter"
+        app_development:
+            name: "App Development"
+            projects:
+                - "Trap the Cat"
+                - "Explora"
+        creative:
+            name: "Creative & Entrepreneurial"
+            projects:
+                - "Beachin'"
+                - "Eixample Airbnb"
+                - "Machine Dreams"
+                - "Anti CryptoPunks"

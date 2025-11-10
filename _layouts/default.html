@@ -12,7 +12,18 @@ layout: compress
     <meta name=description content="{{ site.bio }}">
     <meta name=author content="{{ site.name }}">
 
-    {% seo %}
+    {% if page.url == "/" or page.url == "/index.html" %}
+        <title>{{ page.title }}</title>
+    {% else %}
+        <title>{{ page.title }} | {{ site.name }}</title>
+    {% endif %}
+    
+    <!-- Essential SEO meta tags -->
+    <meta property="og:title" content="{% if page.url == "/" or page.url == "/index.html" %}{{ page.title }}{% else %}{{ page.title }} | {{ site.name }}{% endif %}">
+    <meta property="og:description" content="{{ site.bio }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta name="twitter:card" content="summary">
     
     {% include favicon.html %}
 
@@ -26,8 +37,8 @@ layout: compress
 </head>
 <body>
 
-    <div class="wrapper-{% if page.width %}{{ page.width }}{% elsif site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
-        <div class="content-wrapper {{ page.title | downcase | replace: ' ', '-' }}">
+        <div class="wrapper-{% if page.width %}{{ page.width }}{% elsif site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
+        <div class="content-wrapper {% if page.url == "/" or page.url == "/index.html" %}home{% else %}{{ page.title | downcase | replace: ' ', '-' }}{% endif %}">
         {% include header.html %}
             
         {{ content }}
