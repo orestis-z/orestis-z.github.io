@@ -1,17 +1,17 @@
-{% if page.url == "/" or page.url == "/index.html" %}
+{% if page.url == "/" or page.url == "/index.html" or page.url == "/contact.html" %}
 <header class="header-home {% if site.animation %}animated{% endif %}">
-    <span class="link">
+    <a href="/" class="link">
         <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-    </span>
+    </a>
 
     <h1 class="title">{{ site.name }}</h1>
     <h2 class="description">{{ site.bio }}</h2>
+    <h2 class="description">{{ site.subbio }}</h2>
 
     {% if site.social-media %}
         {% include social-links.html %}
     {% endif %}
 </header>
-{% include nav.html %}
 {% else %}
     {% if page.url == "/shop-automation.html" %}
     <header class="header-page">

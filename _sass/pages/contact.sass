@@ -1,0 +1,124 @@
+// Contact page styling
+.contact-page
+    padding: 60px 0
+    max-width: 600px
+    margin: 0 auto
+    
+    @media #{$mobile}
+        padding: 30px 0
+    
+    .container
+        width: 90%
+        max-width: 600px
+        margin: 0 auto
+        padding: 0 20px
+        
+        @media #{$mobile}
+            width: 95%
+            padding: 0 15px
+    
+    h1
+        font-size: 2.5rem
+        margin-bottom: 1em
+        color: $title-color
+        border-bottom: 2px solid $epsilon
+        padding-bottom: 15px
+        text-align: center
+        
+        @media #{$mobile}
+            font-size: 2rem
+    
+    h2
+        font-size: 1.8rem
+        margin: 2em 0 1em 0
+        color: $subtitle-color
+        
+        @media #{$mobile}
+            font-size: 1.5rem
+            margin: 1.5em 0 0.8em 0
+    
+    h3
+        font-size: 1.4rem
+        margin: 1.5em 0 0.5em 0
+        color: $subtitle-color
+        
+        @media #{$mobile}
+            font-size: 1.2rem
+            margin: 1.2em 0 0.4em 0
+    
+    .contact-info
+        text-align: left
+    
+    .contact-section
+        margin-bottom: 2em
+        
+        @media #{$mobile}
+            margin-bottom: 1.5em
+        
+        p
+            margin-bottom: 0.8em
+            line-height: 1.6
+            color: #333
+            font-size: 1.1rem
+            
+            @media #{$mobile}
+                font-size: 1rem
+    
+    .contact-item
+        a
+            color: $beta
+            text-decoration: none
+            border-bottom: 1px solid transparent
+            transition: all 0.3s ease
+            font-weight: 500
+            
+            &:hover
+                border-bottom-color: $beta
+                text-decoration: none
+    
+    .address
+        .company-name
+            font-weight: 600
+            color: $title-color
+            margin-bottom: 0.3em
+        
+        p
+            margin-bottom: 0.3em
+    
+    .contact-actions
+        margin-top: 3em
+        text-align: center
+        
+        @media #{$mobile}
+            margin-top: 2em
+        
+        .btn
+            margin-right: 1rem
+            margin-bottom: 0.5rem
+            display: inline-block
+            padding: 10px 20px
+            background: $beta
+            color: white
+            text-decoration: none
+            border-radius: 3px
+            font-weight: 500
+            font-size: 1.3rem
+            transition: none
+            
+            &:before
+                transition: none
+                background-color: $beta
+            
+            @media #{$mobile}
+                display: block
+                margin: 0.5rem 0
+                margin-right: 0
+        
+        .btn-secondary
+            background: transparent
+            color: $beta
+            border: 1px solid $beta
+            
+            &:hover
+                background: $beta
+                color: white

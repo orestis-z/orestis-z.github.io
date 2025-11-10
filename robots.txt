@@ -1,7 +1,97 @@
 # www.robotstxt.org/
 
-# Allow crawling of all content
+# Allow all search engines to crawl all content
 User-agent: *
-Disallow:
+Allow: /
 
+# Specific optimizations for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# AI/LLM crawlers - allow with proper rate limiting
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: OpenAI-SearchBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 3
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: YouBot
+Allow: /
+Crawl-delay: 3
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 2
+
+# Block access to admin/system files and development artifacts
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /.sass-cache/
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /Rakefile
+Disallow: /travis.sh
+Disallow: /_config-dev.yml
+Disallow: /.editorconfig
+Disallow: /.gitignore
+Disallow: /.github/
+Disallow: /vendor/
+Disallow: /node_modules/
+
+# Allow access to important assets and content
+Allow: /assets/
+Allow: /portfolio/
+Allow: /shop-automation/
+Allow: /contact/
+Allow: /trap-the-cat/
+Allow: /machinedreams/
+Allow: /anticryptopunks/
+
+# XML Sitemap location
 Sitemap: https://orestis-z.github.io/sitemap.xml
+
+# Host information for better crawling
+Host: https://orestis-z.github.io

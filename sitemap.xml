@@ -1,12 +1,107 @@
 ---
 layout: null
+sitemap:
+  exclude: 'yes'
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
   <url>
-    <loc>https://orestis-z.github.io/</loc>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>{{ site.url }}/{{ site.picture }}</image:loc>
+      <image:title>{{ site.name | xml_escape }} - {{ site.bio | xml_escape }}</image:title>
+      <image:caption>Personal profile photo of {{ site.name | xml_escape }}</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Main navigation pages -->
   <url>
-    <loc>https://orestis-z.github.io/shop-automation/</loc>
+    <loc>{{ site.url }}/portfolio/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+  
+  <url>
+    <loc>{{ site.url }}/contact/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Shop automation main page -->
+  <url>
+    <loc>{{ site.url }}/shop-automation/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project-specific pages (internal URLs) -->
+  {% for project_hash in site.project-list %}
+    {% assign project_key = project_hash[0] %}
+    {% assign project = project_hash[1] %}
+    {% if project.url and project.url contains "/" %}
+      {% unless project.url contains "http" %}
+  <url>
+    <loc>{{ site.url }}{{ project.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    {% if project.portfolio_image %}
+    <image:image>
+      <image:loc>{{ site.url }}{{ project.portfolio_image }}</image:loc>
+      <image:title>{{ project.name | xml_escape }} - {{ project.description | xml_escape }}</image:title>
+      <image:caption>{{ project.detailed_description | strip_html | truncate: 150 | xml_escape }}</image:caption>
+    </image:image>
+    {% elsif project.icon %}
+      {% unless project.icon contains site.url or project.icon contains "http" %}
+    <image:image>
+      <image:loc>{{ site.url }}{{ project.icon }}</image:loc>
+      <image:title>{{ project.name | xml_escape }}</image:title>
+      <image:caption>{{ project.description | xml_escape }}</image:caption>
+    </image:image>
+      {% endunless %}
+    {% endif %}
+  </url>
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  <!-- Legal and policy pages -->
+  <url>
+    <loc>{{ site.url }}/privacy-policy/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>{{ site.url }}/terms/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>{{ site.url }}/impressum/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Asset directories for crawler discovery -->
+  <url>
+    <loc>{{ site.url }}/assets/images/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
 </urlset>

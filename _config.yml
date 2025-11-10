@@ -1,7 +1,7 @@
 # Your name and what you do
 name: Orestis Zambounis
 bio: AI & Full-Stack Engineer
-subbio: Specializing in ML optimization, computer vision, and scalable systems
+subbio: ML optimization, computer vision, scalable systems
 
 description: Orestis Zambounis' Personal Website
 
@@ -34,7 +34,7 @@ email: me@orestisz.com
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
-# normal = 560px / large = 810px
+# normal = 600px / large = 1000px
 width: normal
 
 # do you want to display an about section? true or false
@@ -69,6 +69,8 @@ project-list:
         organization: "Beachin' Rentals"
         short_org: <none>
         organization_link: "https://beachinrentalsbcn.es"
+        url: https://player.vimeo.com/video/1102926128
+        button_label: "Demo"
     Inference Optimization:
         name: ML Inference Optimization
         description: Real-time ML pipeline optimization using TensorRT, batching & parallelization, 10x speedup
@@ -275,7 +277,6 @@ mini-portfolio:
     - "Trap the Cat"
     - "Data pipeline"
     - "Does depth matter"
-    - "PyJet"
 
 # Portfolio configuration for detailed project pages
 portfolio:

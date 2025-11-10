@@ -1,0 +1,60 @@
+---
+layout: default
+title: Contact
+width: normal
+---
+
+<div class="contact-page">
+    <div class="container">
+        <div class="contact-info">
+            <div class="contact-section">
+                <p class="contact-item">
+                    <a href="mailto:info@orestis.ch">info@orestis.ch</a>
+                </p>
+                 <p class="contact-item">
+                    <a href="tel:+41786373591">+41 78 637 35 91</a>
+                </p>
+                <div class="address">
+                    <p class="company-name">Zambounis Technology</p>
+                    <p>Haselrain 1</p>
+                    <p>4103 Bottmingen</p>
+                    <p>Switzerland</p>
+                </div>
+            </div>
+            
+            <div class="contact-actions">
+                <a href="#" id="download-vcard" class="btn">vCard</a>
+                <a href="/portfolio" class="btn btn-secondary">Portfolio</a>
+                <a href="https://github.com/orestis-z/resume-compiler/raw/master/docs/Resume_Orestis_Zambounis.pdf" target="_blank" class="btn btn-secondary">Resume</a>
+                <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-secondary" target="_blank">Meeting</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('download-vcard').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Orestis Zambounis
+ORG:Zambounis Technology
+EMAIL:info@orestis.ch
+ADR:;;Haselrain 1;Bottmingen;;4103;Switzerland
+TITLE:AI & Full-Stack Engineer
+URL:https://orestis-z.github.io/
+END:VCARD`;
+    
+    const blob = new Blob([vcard], { type: 'text/vcard' });
+    const url = window.URL.createObjectURL(blob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'orestis-zambounis.vcf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+});
+</script>

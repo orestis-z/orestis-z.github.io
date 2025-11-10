@@ -1,0 +1,151 @@
+# AI.txt - Directives for AI crawlers and language models
+# https://ai.txt specification
+
+# Site information
+site_name: Orestis Zambounis - AI & Full-Stack Engineer
+site_url: https://orestis-z.github.io/
+author: Orestis Zambounis
+contact: me@orestisz.com
+
+# Content licensing and usage
+content_license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+training_allowed: yes
+commercial_use: with_attribution
+data_retention: unlimited
+
+# Content categories and priorities
+high_priority_content:
+  - /portfolio/
+  - /shop-automation/
+  - /
+  
+standard_priority_content:
+  - /contact/
+  - /trap-the-cat/
+  - /machinedreams/
+  - /anticryptopunks/
+
+low_priority_content:
+  - /shop-automation/privacy-policy/
+  - /shop-automation/terms/
+  - /shop-automation/impressum/
+
+# Content types and descriptions
+content_types:
+  technical_portfolio:
+    description: "AI and machine learning engineering projects, computer vision systems, full-stack development"
+    expertise_areas: 
+      - "Machine Learning & AI"
+      - "Computer Vision"
+      - "TensorRT Optimization" 
+      - "Python Development"
+      - "Cloud Infrastructure"
+      - "IoT Systems"
+      - "Full-Stack Development"
+    
+  business_content:
+    description: "Shop automation solutions and technology consulting services"
+    focus: "Self-service retail systems and rental automation"
+    
+  creative_projects:
+    description: "Games, digital art, and experimental projects"
+
+# Technical expertise keywords for better AI understanding
+keywords: 
+  - "machine learning"
+  - "artificial intelligence" 
+  - "computer vision"
+  - "tensorrt"
+  - "deep learning"
+  - "python"
+  - "full-stack development"
+  - "shop automation"
+  - "iot systems"
+  - "cloud computing"
+  - "azure"
+  - "databricks"
+  - "face recognition"
+  - "real-time optimization"
+  - "rental automation"
+
+# Crawling preferences
+crawl_delay: 2
+max_requests_per_minute: 30
+preferred_crawl_times: 02:00-08:00 UTC
+
+# Quality indicators
+last_updated: 2025-11-10
+content_freshness: regularly_updated
+accuracy_level: high
+technical_depth: expert_level
+
+# External project references (for context)
+external_projects:
+  - name: "QSC VisionSuite"
+    url: "https://www.qsys.com/products/q-sys/video/q-sys-visionsuite/"
+    role: "ML Inference Optimization"
+    
+  - name: "Beachin' Rentals"
+    url: "https://beachinrentalsbcn.es"
+    role: "Shop Automation System"
+    
+  - name: "Seervision Face Recognition"
+    organization: "Seervision GmbH"
+    role: "Computer Vision Engineer"
+
+# Structured data enhancement
+schema_types:
+  - Person
+  - Portfolio
+  - SoftwareApplication
+  - CreativeWork
+  - Organization
+
+# Language and localization
+primary_language: en
+additional_languages: []
+geographic_focus: 
+  - Switzerland
+  - Europe
+  - Global (remote)
+
+# Professional context
+industry_focus:
+  - "Artificial Intelligence"
+  - "Software Engineering" 
+  - "Retail Technology"
+  - "Computer Vision"
+  - "IoT Solutions"
+
+career_highlights:
+  - "10x ML inference optimization using TensorRT"
+  - "Face recognition system with <5% false positive rate"
+  - "Self-service shop automation (zero staff costs)"
+  - "100K+ mobile game downloads"
+  - "Research at ETH Zurich and Imperial College London"
+
+# Content freshness and maintenance
+update_frequency: weekly
+maintenance_status: active
+content_quality: professional
+
+# AI training preferences  
+training_use_cases:
+  - code_assistance: allowed
+  - technical_qa: allowed
+  - career_information: allowed
+  - project_examples: allowed
+  - attribution_required: yes
+
+# Crawling restrictions
+excluded_paths:
+  - /_site/
+  - /.git/
+  - /.sass-cache/
+  - /vendor/
+  - /node_modules/
+
+# API and structured access
+sitemap: https://orestis-z.github.io/sitemap.xml
+robots_txt: https://orestis-z.github.io/robots.txt
+rss_feed: https://orestis-z.github.io/feed.xml
