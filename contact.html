@@ -36,25 +36,29 @@ width: normal
 document.getElementById('download-vcard').addEventListener('click', function(e) {
     e.preventDefault();
     
-    const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Orestis Zambounis
-ORG:Zambounis Technology
-EMAIL:info@orestis.ch
-ADR:;;Haselrain 1;Bottmingen;;4103;Switzerland
-TITLE:AI & Full-Stack Engineer
-URL:https://orestis-z.github.io/
-END:VCARD`;
-    
-    const blob = new Blob([vcard], { type: 'text/vcard' });
-    const url = window.URL.createObjectURL(blob);
+    const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:Zambounis;Orestis;;;',
+        'FN:Orestis Zambounis',
+        'ORG:Zambounis Technology',
+        'TITLE:AI & Full-Stack Engineer',
+        'EMAIL;TYPE=INTERNET;TYPE=WORK:info@orestis.ch',
+        'TEL;TYPE=CELL:+41786373591',
+        'ADR;TYPE=WORK:;;Haselrain 1;Bottmingen;;4103;Switzerland',
+        'URL:https://orestis.ch/',
+        'END:VCARD'
+    ].join('\r\n'); // Proper CRLF line endings required
+
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
     
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'orestis-zambounis.vcf';
+    link.download = 'Orestis_Zambounis.vcf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
+    URL.revokeObjectURL(url);
 });
 </script>
