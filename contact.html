@@ -48,7 +48,7 @@ document.getElementById('download-vcard').addEventListener('click', async functi
     e.preventDefault();
 
     try {
-        const base64Photo = await urlToBase64('/assets/images/profile.jpg'); // adjust if needed
+        const base64Photo = await urlToBase64('/assets/images/profile.jpg');
 
         const vcard = [
             'BEGIN:VCARD',
