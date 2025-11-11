@@ -241,7 +241,7 @@ project-list:
         variant: small
         detailed_description: "Cross-platform puzzle game built with vanilla JavaScript and CapacitorJS, surpassing 100K downloads across mobile platforms with 100+ levels and user-generated content."
         button_label: "Play Store"
-        secondary_button_url: "/trap-the-cat"
+        secondary_button_url: "https://chat-noir-hexagon.web.app"
         secondary_button_label: "Browser Game"
     Eixample Airbnb:
         name: Eixample Airbnb

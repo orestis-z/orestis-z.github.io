@@ -21,7 +21,6 @@ high_priority_content:
   
 standard_priority_content:
   - /contact/
-  - /trap-the-cat/
   - /machinedreams/
   - /anticryptopunks/
 

@@ -86,7 +86,6 @@ Allow: /assets/
 Allow: /portfolio/
 Allow: /shop-automation/
 Allow: /contact/
-Allow: /trap-the-cat/
 Allow: /machinedreams/
 Allow: /anticryptopunks/
 

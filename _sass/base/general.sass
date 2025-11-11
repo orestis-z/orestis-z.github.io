@@ -48,42 +48,39 @@ strong
     font-weight: 400
     color: #000
 
-// Global button styles
+
 .btn
     display: inline-block
     padding: 15px 35px
-    background-color: $highlight-color
-    color: white
-    text-decoration: none
-    border-radius: 30px
-    font-weight: bold
-    font-size: 1.3rem
-    transition: all 0.3s ease
     position: relative
     overflow: hidden
-    z-index: 1
     border: none
     cursor: pointer
-    
-    &:before
-        content: ''
-        position: absolute
-        top: 0
-        left: 0
-        width: 0%
-        height: 100%
-        background-color: darken($highlight-color, 15%)
-        transition: width 0.4s ease-in-out
-        z-index: -1
+    margin-right: 1rem
+    margin-bottom: 0.5rem
+    display: inline-block
+    padding: 10px 20px
+    background: $beta
+    color: white
+    text-decoration: none
+    border-radius: 3px
+    font-weight: 500
+    font-size: 1.3rem
+    transition: none
+    border: 1px solid $beta
     
     &:hover
-        transform: translateY(-2px)
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2)
+        background: white
+        color: $beta
+
+.btn-secondary
+    background: transparent
+    color: $beta
+    border: 1px solid $beta
+    
+    &:hover
+        background: $beta
         color: white
-        text-decoration: none
-        
-        &:before
-            width: 100%
 
 .btn-primary
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important
@@ -167,7 +164,7 @@ pre
     border: 1px solid $epsilon
     border-radius: 2px
 
-a:not(.link)
+a:not(.link, .btn)
     color: inherit
     border-bottom: 1px dotted hsla(0,0%,62.7%,.65)
     text-decoration: none
