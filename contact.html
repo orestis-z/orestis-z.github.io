@@ -48,7 +48,7 @@ document.getElementById('download-vcard').addEventListener('click', function(e) 
         'ADR;TYPE=WORK:;;Haselrain 1;Bottmingen;;4103;Switzerland',
         'URL:https://orestis.ch/',
         'END:VCARD'
-    ].join('\r\n'); // Proper CRLF line endings required
+    ].join('\r\n');
 
     const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
     const url = URL.createObjectURL(blob);
