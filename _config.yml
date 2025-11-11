@@ -61,7 +61,7 @@ project-list:
     Shop automation:
         name: Shop Automation
         description: Self-service in-store system powered by smart lockers and Shopify
-        year: 2023 – present
+        year: 2024 – present
         icon: /assets/images/thumbnails/selfservice.jpg
         variant: small
         detailed_description: "Self-service in-store system powered by custom smart lockers for oversized products, payment kiosk and Shopify integration. Reduced staff costs to zero (unattended store)."
