@@ -33,32 +33,51 @@ width: normal
 </div>
 
 <script>
-document.getElementById('download-vcard').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const vcard = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        'N:Zambounis;Orestis;;;',
-        'FN:Orestis Zambounis',
-        'ORG:Zambounis Technology',
-        'TITLE:AI & Full-Stack Engineer',
-        'EMAIL;TYPE=INTERNET;TYPE=WORK:info@orestis.ch',
-        'TEL;TYPE=CELL:+41786373591',
-        'ADR;TYPE=WORK:;;Haselrain 1;Bottmingen;;4103;Switzerland',
-        'URL:https://orestis.ch/',
-        'END:VCARD'
-    ].join('\r\n');
+async function urlToBase64(url) {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+    });
+}
 
-    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Orestis_Zambounis.vcf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+document.getElementById('download-vcard').addEventListener('click', async function(e) {
+    e.preventDefault();
+
+    try {
+        const base64Photo = await urlToBase64('/assets/images/profile.jpg'); // adjust if needed
+
+        const vcard = [
+            'BEGIN:VCARD',
+            'VERSION:3.0',
+            'N:Zambounis;Orestis;;;',
+            'FN:Orestis Zambounis',
+            'ORG:Zambounis Technology',
+            'TITLE:AI & Full-Stack Engineer',
+            'EMAIL;TYPE=INTERNET;TYPE=WORK:info@orestis.ch',
+            'TEL;TYPE=CELL:+41786373591',
+            'ADR;TYPE=WORK:;;Haselrain 1;Bottmingen;;4103;Switzerland',
+            'URL:https://orestis-z.github.io/',
+            'PHOTO;ENCODING=b;TYPE=JPEG:' + base64Photo,
+            'END:VCARD'
+        ].join('\r\n');
+
+        const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Orestis_Zambounis.vcf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    } catch (err) {
+        console.error('Failed to create vCard with photo:', err);
+        alert('Could not load the profile image for the vCard.');
+    }
 });
 </script>
