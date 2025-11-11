@@ -105,6 +105,7 @@ project-list:
         variant: small
         detailed_description: "Cloud infrastructure powered by Azure DataBricks, enabling large-scale ETL pipelines, data analytics and machine learning applications."
         portfolio_image: "/assets/images/portfolio/databricks.jpg"
+        portfolio_image_contain: true
         organization: "benshi.ai"
         organization_link: "https://benshi.ai"
     AWS:
