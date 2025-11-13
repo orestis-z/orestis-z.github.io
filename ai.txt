@@ -15,8 +15,8 @@ data_retention: unlimited
 
 # Content categories and priorities
 high_priority_content:
-  - /portfolio/
-  - /shop-automation/
+  - /portfolio
+  - /shop-automation
   - /
   
 standard_priority_content:

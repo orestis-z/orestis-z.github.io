@@ -111,6 +111,15 @@ img,
 pre
     border-radius: 4px
 
+.contain-mobile
+    @media #{$mobile}
+        object-fit: contain !important
+
+.contain-desktop-only
+    object-fit: contain
+    @media #{$mobile}
+        object-fit: cover !important
+
 figcaption
     position: relative
     top: -20px

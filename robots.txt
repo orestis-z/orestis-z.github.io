@@ -83,11 +83,11 @@ Disallow: /node_modules/
 
 # Allow access to important assets and content
 Allow: /assets/
-Allow: /portfolio/
-Allow: /shop-automation/
-Allow: /contact/
-Allow: /machinedreams/
-Allow: /anticryptopunks/
+Allow: /portfolio
+Allow: /shop-automation
+Allow: /contact
+Allow: /machinedreams
+Allow: /anticryptopunks
 
 # XML Sitemap location
 Sitemap: https://orestis-z.github.io/sitemap.xml

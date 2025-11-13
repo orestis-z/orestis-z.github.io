@@ -20,7 +20,7 @@ permalink: /shop-automation/
         <a href="#why-automate" class="btn btn-secondary">Learn More ↓</a>
     </div>
 
-    <div  style="margin-top: 50px; margin-bottom: 50px;">
+    <div  style="margin-top: 60px; margin-bottom: 70px;">
      <h2 class="category-title" id="why-automate">Why Automate Your Shop?</h2>
     <ul>
         <li>Operate 24/7 without staff</li>
@@ -102,7 +102,16 @@ permalink: /shop-automation/
                     <div class="project-image">
                         {% if project.portfolio_image %}
                             {% assign use_contain = project.portfolio_image_contain %}
-                            <img src="{{ project.portfolio_image }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %}>
+                            {% assign use_contain_mobile = project.portfolio_image_contain_mobile %}
+                            {% if use_contain and use_contain_mobile == false %}
+                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}" class="contain-desktop-only">
+                            {% elsif use_contain_mobile %}
+                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %} class="contain-mobile">
+                            {% elsif use_contain %}
+                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}" style="object-fit: contain;">
+                            {% else %}
+                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}">
+                            {% endif %}
                         {% else %}
                             {% assign use_contain = project.icon_contain %}
                             <img src="{{ project.icon }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %}>

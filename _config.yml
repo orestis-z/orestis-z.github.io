@@ -341,6 +341,7 @@ shop-automation-list:
             Integrates with Shopify for online bookings, order and inventory management.
             Physical payment terminals supporting cards and contactless payments.
         portfolio_image: /assets/images/shop-automation/kiosk.jpg
+        portfolio_image_contain_mobile: true
         variant: small
 
     Beachin':
@@ -353,11 +354,10 @@ shop-automation-list:
             content: The automation system transformed our rental shop. We now operate 24/7 without staff, and customer satisfaction has never been higher.
             author: Theo, Beachin' Rentals Barcelona
         secondary_button_url: https://beachinrentalsbcn.es/
-        icon: /assets/images/Beachin-01.svg
-        icon_contain: true
+        portfolio_image: /assets/images/Beachin-01.svg
+        portfolio_image_contain: true
         variant: small
         secondary_button_label: "Website"
-
 shop-automation-portfolio:
     categories:
         Case Studies:
