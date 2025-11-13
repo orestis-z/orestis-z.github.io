@@ -188,9 +188,11 @@ project-list:
         name: PyJet
         description: Python library converting Python/NumPy code to C++, 55x speedup
         url: https://github.com/wolfv/pyjet
-        icon: https://raw.githubusercontent.com/wolfv/pyjet/master/docs/img/jet_logo.png
+        icon: /assets/images/thumbnails/pyjet.jpg
+        portfolio_image: /assets/images/portfolio/pyjet.jpg
+        portfolio_image_contain: true
         icon_contain: true
-        year: 2016
+        year: 2016f
         subtitle: "NumPy/Python to C++ compiler"
         detailed_description: |
             The JET library offers a simple way to make Python, and especially NumPy code run faster. This is achieved by transparently converting Python/NumPy operations to performant C++.
@@ -247,7 +249,7 @@ project-list:
         name: Eixample Airbnb
         description: Airbnb listing for a flat in Barcelona, interior design and self-made furniture
         url: https://orestisz.pixieset.com/eixample-airbnb/
-        icon: https://a0.muscache.com/im/pictures/miso/Hosting-618130808206581598/original/b69ee138-867e-4de0-83d7-9ac9a29916ea.jpeg?im_w=480
+        icon: /assets/images/thumbnails/rbnb.jpg
         year: 2022
         variant: small
         detailed_description: "Airbnb listing for a flat in Barcelona featuring custom interior design and self-made furniture. Creative expression in physical space creating a unique accommodation experience."
