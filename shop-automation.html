@@ -1,320 +1,120 @@
 ---
 layout: default
-title: Shop Automation
-description: Custom automation solutions for rental shops, studios, and local stores. Turn your shop into a 24/7 self-service business.
-permalink: /shop-automation/
+title: Portfolio
+width: large
 ---
 
-<!-- Vimeo video preloading -->
-<!-- DNS prefetch for faster domain resolution -->
-<link rel="dns-prefetch" href="https://player.vimeo.com">
-<link rel="dns-prefetch" href="https://i.vimeocdn.com">
-<link rel="dns-prefetch" href="https://f.vimeocdn.com">
+<div class="portfolio-container">
+    <header class="portfolio-header">
+        <h1>Smart Shop Automation</h1>
+        <p class="portfolio-subtitle" style="text-align: left;">
+            Transform Your Shop into a 24/7 Unattended Operation.<br/>
+            Custom smart locker and kiosk solutions that eliminate staff costs while increasing revenue.
+        </p>
+        <img src="/assets/images/shop-automation/hero.jpg" alt="Shop Automation Banner" style="width:100%; max-height:500px; object-fit:cover;">
+    </header>
 
-<!-- Preconnect to establish early connections -->
-<link rel="preconnect" href="https://player.vimeo.com" crossorigin>
-<link rel="preconnect" href="https://i.vimeocdn.com" crossorigin>
-<link rel="preconnect" href="https://f.vimeocdn.com" crossorigin>
-
-<!-- Preload critical assets -->
-<link rel="preload" href="https://player.vimeo.com/video/1102926128" as="document">
-<link rel="preload" href="https://player.vimeo.com/api/player.js" as="script">
-
-<section class="shop-automation-hero text-center">
-    <div class="container">
-        <h1>🧠 Turn Your Shop Into a 24/7 Self&#8288;-&#8288;Service Business</h1>
-        <h2>Custom automation solutions for rental shops, studios, and local stores.</h2>
-
-        <div class="hero-subtitle">
-            <h3>🚀 Cut staffing costs. Offer flexible hours. Impress your customers.</h3>
-            <p>We help shop owners automate access, bookings, and payments — with tech that just works.</p>
-        </div>
-
-        <div class="hero-cta">
-            <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-primary">📞 Book a Free Consultation</a>
-            <p class="cta-subtitle">Free, no-pressure call. Just actionable advice.</p>
-        </div>
-
-        <div class="hero-image">
-            <!-- Replace with your actual image path -->
-            <!-- <img src="/assets/images/self-service.jpg" alt="Shop Automation Demo" /> -->
-
-            <div style="padding:75% 0 0 0;position:relative; margin-top: 40px;" class="video-container">
-                <div class="video-placeholder"></div>
-                <iframe
-                    src="https://player.vimeo.com/video/1102926128?title=0&amp;byline=0&amp;portrait=0&amp;background=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&muted=1&amp;playsinline=0"
-                    frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                    title="Shop Automation Demo">
-                </iframe>
-                <script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-            </script>
-
-            <p class="image-caption">Unattended shop automation system in action</p>
-        </div>
+    <div class="contact-actions">
+        <a href="mailto:info@orestis.ch" class="btn">Email</a>
+        <a href="#why-automate" class="btn btn-secondary">Learn More ↓</a>
     </div>
-</section>
 
-<section class="shop-automation-offerings text-left">
-    <div class="container">
-        <h2>✅ What We Offer</h2>
-        <p>Custom shop automation systems including:</p>
-
-        <ul class="offerings-list">
-            <li>✔️ Smart locks and remote access control</li>
-            <li>✔️ Self-service check-in/out flows</li>
-            <li>✔️ Booking system integration</li>
-            <li>✔️ Payment automation</li>
-            <li>✔️ IoT hardware setup (locks, cameras, etc.)</li>
-            <li>✔️ Remote management dashboards</li>
-        </ul>
+    <div  style="margin-top: 50px; margin-bottom: 50px;">
+     <h2 class="category-title" id="why-automate">Why Automate Your Shop?</h2>
+    <ul>
+        <li>Operate 24/7 without staff</li>
+        <li>Eliminate labor costs</li>
+        <li>Scale without hiring</li>
+        <li>Streamline user experience</li>
+    </ul>
     </div>
-</section>
 
-<section class="shop-automation-social-proof text-center">
-    <div class="container">
-        <h2>✨ What Our Clients Say</h2>
-        <div class="testimonials">
-            <div class="testimonial">
-                <blockquote>
-                    The automation system transformed our rental shop. We now operate 24/7 without staff, and customer satisfaction has never been higher. ROI in just 3 months!
-                </blockquote>
-                <cite>— Theo, Beachin' Rentals Barcelona</cite>
-            </div>
-        </div>
+    {% for category_hash in site.shop-automation-portfolio.categories %}
+    {% assign category_key = category_hash[0] %}
+    {% assign category = category_hash[1] %}
+    <section class="portfolio-category" id="{{ category_key }}">
+        <h2 class="category-title"
+        {% if category.description %}
+        style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;"
+        {% endif %}
+        >{{ category.name }}</h2>
+
+        {% if category.description %}
+        <p class="portfolio-subtitle" style="text-align: left; border-bottom: 1px solid #ddd; margin-bottom: 3rem; padding-bottom: 1rem; color: #A7A4A4;">{{ category.description }}</p>
+        {% endif %}
         
-        <div class="client-logos">
-            <!-- <h3>Trusted by</h3> -->
-            <div class="logo-grid">
-                <a href="https://beachinrentalsbcn.es/" target="_blank" rel="noopener" class="client-logo-link" style="display: block; transition: all 0.3s ease; text-decoration: none; border: none;">
-                    <img src="/assets/images/Beachin-01.svg" alt="Beachin' Rentals" title="Beachin' Rentals - Beach Equipment Rental Shop" class="client-logo" style="width: 220px; height: auto; border-radius: 6px; transition: all 0.3s ease;" />
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="shop-automation-why-now text-left">
-    <div class="container">
-        <h2>📈 Why Automate Your Shop Now?</h2>
-        <p class="section-intro">Automation can quickly boost profitability, convenience, and customer satisfaction. The shift to self-service isn't just a trend—it's a fundamental change in consumer behavior backed by data.</p>
-        
-        <div class="why-now-grid">
-            <div class="why-now-item">
-                <h3>Customer Preferences Have Shifted</h3>
-                <div class="stat-card">
-                    <div class="stat-number">61%</div>
-                    <p>of customers prefer self-service for simple tasks over talking to a human</p>
-                    <span class="source">Source: Salesforce State of the Connected Customer (2023)</span>
-                </div>
-                <p>McKinsey's 2022 research confirms that "consumers increasingly prefer digital self-service, especially for routine tasks."</p>
-            </div>
+        {% for project_key in category.projects %}
+            {% if site.shop-automation-list[project_key] %}
+                {% assign project = site.shop-automation-list[project_key] %}
+            {% endif %}
             
-            <div class="why-now-item">
-                <h3>Market Growth is Accelerating</h3>
-                <div class="stat-card">
-                    <div class="stat-number">$10.5B+</div>
-                    <p>Projected size of the global self-checkout market by 2030, up from $4.5B in 2022</p>
-                    <span class="source">Source: Statista (2023)</span>
+            {% if project %}
+            {% assign variant = project.variant | default: "default" %}
+            <div class="project-item project-item--{{ variant }}">
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">{{ project.name }}</h3>
+                        {% if project.subtitle %}
+                        <h4 class="project-subtitle">{{ project.subtitle }}</h4>
+                        {% endif %}
+                        <p class="project-description">{{ project.detailed_description | default: project.description }}</p>
+                        {% if project.quote %}
+                        <blockquote class="project-quote">
+                            <p style="text-align: left;"><em>"{{ project.quote.content }}"</em></p>
+                            <cite>– {{ project.quote.author }}</cite>
+                        </blockquote>
+                        {% endif %}
+                        {% if project.url or project.secondary_button_url %}
+                        <div class="project-links">
+                            {% if project.url %}
+                            <a href="{{ project.url }}" target="_blank" class="btn">
+                                {% if project.button_label %}
+                                    {{ project.button_label }}
+                                {% else %}
+                                    View Project
+                                {% endif %}
+                            </a>
+                            {% endif %}
+                            {% if project.secondary_button_url %}
+                            <a href="{{ project.secondary_button_url }}" target="_blank" class="btn btn-secondary">
+                                {{ project.secondary_button_label | default: "View More" }}
+                            </a>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        <div class="project-meta">
+                             {% if project.year %}
+                                <span class="project-year">{{ project.year }}</span>
+                            {% endif %}
+                            {% if project.organization %}
+                                <span class="project-year">
+                                {% if project.organization_link %}
+                                <a href="{{ project.organization_link }}" target="_blank">{{ project.organization }}</a>
+                                {% else %}
+                                {{ project.organization }}
+                                </a>
+                                {% endif %}
+                                </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        {% if project.portfolio_image %}
+                            {% assign use_contain = project.portfolio_image_contain %}
+                            <img src="{{ project.portfolio_image }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %}>
+                        {% else %}
+                            {% assign use_contain = project.icon_contain %}
+                            <img src="{{ project.icon }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %}>
+                        {% endif %}
+                    </div>
                 </div>
-                <p>This growth directly correlates with rising adoption of autonomous retail models across industries.</p>
             </div>
-            
-            <div class="why-now-item">
-                <h3>Next Generation Customers Demand It</h3>
-                <div class="stat-card">
-                    <div class="stat-number">73%</div>
-                    <p>of Gen Z and millennials prefer businesses that offer "anytime access" and "no-contact" options</p>
-                    <span class="source">Source: Retail Dive (2023)</span>
-                </div>
-                <p>Businesses that don't adapt risk losing relevance with younger, tech-savvy customers who will soon represent the majority of consumer spending.</p>
-            </div>
-        </div>
-        
-        <div class="why-now-cta">
-            <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-primary">Don't Get Left Behind — Book a Free Assessment</a>
-        </div>
+            {% endif %}
+        {% endfor %}
+    </section>
+    {% endfor %}
+     <div class="contact-actions">
+        <a href="mailto:info@orestis.ch" class="btn">Email</a>
+        <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-secondary" target="_blank">Consultation</a>
     </div>
-</section>
-
-<section class="shop-automation-about text-center">
-    <div class="container">
-        <h2>👋 Meet the Founder</h2>
-        <div class="about-content">
-            <div class="about-photo">
-                <img src="/assets/images/profile.jpg" alt="Orestis Zambounis - Founder" class="founder-photo" />
-            </div>
-            <div class="founder-message">
-                <p>I'm Orestis, founder of Zambounis Technology — a Swiss company focused on shop automation.</p>
-                <p>With a background in engineering and years of experience building digital + physical systems, I started this company to help local businesses modernize without relying on complex or unreliable tech.</p>
-                <p>From smart lockers to 24/7 rental shops, I've built automation solutions that just work — and I personally guide each project from idea to installation.</p>
-                <p class="closing-message">If you're thinking about automating your shop, I'm happy to walk you through the possibilities and help you decide if it's the right fit.</p>
-                <div class="founder-signature">
-                    <p><strong>— Orestis Zambounis</strong><br>
-                    <span class="title">Founder & Engineer, Zambounis Technology</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="shop-automation-how-it-works text-center">
-    <div class="container">
-        <h2>🔧 How It Works</h2>
-        <p>Simple 3-step process to get your shop automated</p>
-        
-        <div class="steps-grid">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>📞 Book a Call</h3>
-                <p>Free 20-minute consultation to understand your needs and evaluate feasibility</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>🔧 Install Hardware</h3>
-                <p>We handle the complete setup of smart locks, cameras, and automation systems</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>🚀 Go Live</h3>
-                <p>Your shop runs 24/7 with remote monitoring and customer self-service</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="shop-automation-faq text-left">
-    <div class="container">
-        <h2>❓ Frequently Asked Questions</h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h3 class="faq-question" onclick="toggleFAQ(this)">
-                    What does installation involve? 
-                    <span class="faq-toggle">&#43;</span>
-                </h3>
-                <div class="faq-answer">
-                    <p>We handle everything: hardware installation, software setup, system testing, and staff training. Minimal disruption to your business operations.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <h3 class="faq-question" onclick="toggleFAQ(this)">
-                    Can I use my existing shop system? 
-                    <span class="faq-toggle">&#43;</span>
-                </h3>
-                <div class="faq-answer">
-                    <p>Yes! We integrate with most existing POS systems, booking platforms, and payment processors like Shopify, Square, and more.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <h3 class="faq-question" onclick="toggleFAQ(this)">
-                    How much does it cost? 
-                    <span class="faq-toggle">&#43;</span>
-                </h3>
-                <div class="faq-answer">
-                    <p>Pricing depends on your specific needs. Most shops see ROI within 3-6 months through reduced staffing costs and extended operating hours.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <h3 class="faq-question" onclick="toggleFAQ(this)">
-                    What if something breaks? 
-                    <span class="faq-toggle">&#43;</span>
-                </h3>
-                <div class="faq-answer">
-                    <p>We provide ongoing support and maintenance. Remote monitoring alerts us to issues, and we offer 24/7 emergency support.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="shop-automation-contact text-center">
-    <div class="container">
-        <h2>📞 Let's Talk</h2>
-        <p>Thinking of automating your shop?<br>
-            Book a free 20-minute consultation. We'll evaluate your use case and give you clear next steps.</p>
-
-        <div class="contact-button">
-            <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-primary">📞 Book a Free Call</a>
-        </div>
-
-        <div class="contact-form">
-            <h3>Or send us a message</h3>
-            <form action="https://formspree.io/f/xyzjezde" method="POST">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="4" required></textarea>
-                </div>
-                <input type="hidden" name="_subject" value="Shop Automation Inquiry">
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Direct script inclusion -->
-<script type="text/javascript">
-/* FAQ Toggle Function */
-function toggleFAQ(element) {
-    var faqItem = element.parentElement;
-    var answer = faqItem.querySelector('.faq-answer');
-    var toggle = element.querySelector('.faq-toggle');
-    
-    /* Close all other FAQs */
-    var allItems = document.querySelectorAll('.faq-item');
-    for (var i = 0; i < allItems.length; i++) {
-        var item = allItems[i];
-        if (item !== faqItem) {
-            item.classList.remove('active');
-            var otherAnswer = item.querySelector('.faq-answer');
-            var otherToggle = item.querySelector('.faq-toggle');
-            if (otherAnswer) otherAnswer.style.maxHeight = '0';
-            if (otherToggle) otherToggle.textContent = '+';
-        }
-    }
-    
-    /* Toggle current FAQ */
-    if (faqItem.classList.contains('active')) {
-        faqItem.classList.remove('active');
-        answer.style.maxHeight = '0';
-        toggle.innerHTML = '&#43;'; /* HTML entity for plus sign */
-    } else {
-        faqItem.classList.add('active');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        toggle.innerHTML = '&#8722;'; /* HTML entity for minus sign */
-    }
-}
-
-/* Initialize FAQ answers as hidden when DOM loads */
-document.addEventListener('DOMContentLoaded', function() {
-    /* Initialize all FAQ answers as hidden */
-    var answers = document.querySelectorAll('.faq-answer');
-    for (var i = 0; i < answers.length; i++) {
-        answers[i].style.maxHeight = '0';
-    }
-    
-    /* Ensure all toggle indicators show plus sign */
-    var toggles = document.querySelectorAll('.faq-toggle');
-    for (var j = 0; j < toggles.length; j++) {
-        toggles[j].innerHTML = '&#43;';
-    }
-    
-    /* Setup client logo hover effect */
-    var clientLogoLink = document.querySelector('.client-logo-link');
-    if (clientLogoLink) {
-        var clientLogo = clientLogoLink.querySelector('.client-logo');
-        clientLogoLink.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-        });
-        clientLogoLink.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    }
-});
-</script>
+</div>

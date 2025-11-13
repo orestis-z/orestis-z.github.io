@@ -50,7 +50,9 @@ width: large
                         </div>
                         {% endif %}
                         <div class="project-meta">
-                            <span class="project-year">{{ project.year }}</span>
+                            {% if project.year %}
+                                <span class="project-year">{{ project.year }}</span>
+                            {% endif %}
                             {% if project.organization %}
                                 <span class="project-year">
                                 {% if project.organization_link %}

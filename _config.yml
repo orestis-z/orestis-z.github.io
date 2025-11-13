@@ -69,8 +69,8 @@ project-list:
         organization: "Beachin' Rentals"
         short_org: <none>
         organization_link: "https://beachinrentalsbcn.es"
-        url: https://player.vimeo.com/video/1102926128
-        button_label: "Demo"
+        url: /shop-automation
+        button_label: "Learn More"
     Inference Optimization:
         name: ML Inference Optimization
         description: Real-time ML pipeline optimization using TensorRT, batching & parallelization, 10x speedup
@@ -315,3 +315,60 @@ portfolio:
                 - "Eixample Airbnb"
                 - "Machine Dreams"
                 - "Anti CryptoPunks"
+
+shop-automation-list:
+    Smart Lockers:
+        name: Smart Lockers
+        description: |
+            Enable customers to pick up and return products anytime, automatically.
+            Automated locker systems for unattended retail, rentals, and storage.
+            Available in various sizes with custom branding, sensors, and weatherproofing for indoor/outdoor use.
+            Ideal for offices, supermarkets, universities, train stations, gyms, and more.
+        portfolio_image: /assets/images/shop-automation/smartlockers.jpg
+        variant: small
+    Oversized Product Lockers:
+        name: Oversized Product Lockers
+        description: |
+            Specialized lockers designed for surfboards, loungers, umbrellas, skates, and other large items.
+            Built for durability with modular design for easy expansion.
+            Made in Switzerland.
+        portfolio_image: /assets/images/shop-automation/customlockers.jpg
+        variant: small
+    Kiosk:
+        name: Self-service Kiosk
+        description: |
+            Intuitive payment and product selection terminals with seamless locker integration.
+            Integrates with Shopify for online bookings, order and inventory management.
+            Physical payment terminals supporting cards and contactless payments.
+        portfolio_image: /assets/images/shop-automation/kiosk.jpg
+        variant: small
+
+    Beachin':
+        name: Beachin' Rentals
+        description: |
+            Self-service beach equipment & skates rental shop in Barcelona.
+            Integration of custom smart lockers, lockers for oversized products, payment kiosk, and Shopify.
+            Reduced staff costs to zero while operating around the clock (unattended store).
+        quote: 
+            content: The automation system transformed our rental shop. We now operate 24/7 without staff, and customer satisfaction has never been higher.
+            author: Theo, Beachin' Rentals Barcelona
+        secondary_button_url: https://beachinrentalsbcn.es/
+        icon: /assets/images/Beachin-01.svg
+        icon_contain: true
+        variant: small
+        secondary_button_label: "Website"
+
+shop-automation-portfolio:
+    categories:
+        Case Studies:
+            name: "Case Study"
+            projects:
+                - "Beachin'"
+        solutions:
+            name: "Solutions"
+            description: "Complete automation systems tailored to your business needs."
+            projects:
+                - "Smart Lockers"
+                - "Oversized Product Lockers"
+                - "Kiosk"
+        
