@@ -43,6 +43,7 @@
     
     @media #{$mobile}
         flex-direction: column
+        min-height: 0
 
 .project-info
     flex: 1
@@ -96,7 +97,7 @@
     
     @media #{$mobile}
         flex: none
-        height: 250px
+        height: auto
     
     img
         width: 100%
@@ -104,6 +105,9 @@
         object-fit: cover
         display: block
         border-radius: 0
+        
+        @media #{$mobile}
+            height: auto
 
 // Small/Minimal variant
 .project-item--small
@@ -114,6 +118,7 @@
         
         @media #{$mobile}
             flex-direction: column
+            min-height: 0
     
     .project-info
         padding: 2rem
@@ -150,7 +155,7 @@
             flex: 0 0 180px
             
         @media #{$mobile}
-            height: 150px
+            height: auto
         border-radius: 0
 
 // Responsive adjustments
@@ -163,6 +168,11 @@
     .project-content
         .project-image
             flex: 0 0 300px
+
+@media #{$mobile}
+    .project-content
+        .project-image
+            flex: none
     
     .portfolio-header
         h1
