@@ -250,6 +250,7 @@ project-list:
         description: Airbnb listing for a flat in Barcelona, interior design and self-made furniture
         url: https://orestisz.pixieset.com/eixample-airbnb/
         icon: /assets/images/thumbnails/rbnb.jpg
+        portfolio_image: /assets/images/portfolio/rbnb.jpg
         year: 2022
         variant: small
         detailed_description: "Airbnb listing for a flat in Barcelona featuring custom interior design and self-made furniture. Creative expression in physical space creating a unique accommodation experience."
