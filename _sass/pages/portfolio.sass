@@ -41,7 +41,7 @@
     align-items: stretch
     min-height: 300px
     
-    @media #{$mobile}
+    @media #{$below}
         flex-direction: column
         min-height: 0
 
@@ -52,7 +52,7 @@
     flex-direction: column
     justify-content: space-between
     
-    @media #{$mobile}
+    @media #{$below}
         padding: 2rem
 
 .project-title
@@ -95,7 +95,7 @@
     flex: 0 0 400px
     position: relative
     
-    @media #{$mobile}
+    @media #{$below}
         flex: none
         height: auto
     
@@ -106,7 +106,7 @@
         display: block
         border-radius: 0
         
-        @media #{$mobile}
+        @media #{$below}
             height: auto
 
 // Small/Minimal variant
@@ -116,14 +116,14 @@
     .project-content
         min-height: 200px
         
-        @media #{$mobile}
+        @media #{$below}
             flex-direction: column
             min-height: 0
     
     .project-info
         padding: 2rem
         
-        @media #{$mobile}
+        @media #{$below}
             padding: 1.5rem
     
     .project-title
@@ -154,7 +154,7 @@
         @media #{$tablet}
             flex: 0 0 180px
             
-        @media #{$mobile}
+        @media #{$below}
             height: auto
         border-radius: 0
 
@@ -169,7 +169,7 @@
         .project-image
             flex: 0 0 300px
 
-@media #{$mobile}
+@media #{$below}
     .project-content
         .project-image
             flex: none
@@ -192,7 +192,7 @@
         .project-subtitle
             font-size: 1.2rem
 
-@media #{$mobile}
+@media #{$below}
     .portfolio-header
         margin-bottom: 3rem
         
