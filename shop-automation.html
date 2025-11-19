@@ -41,14 +41,14 @@ permalink: /shop-automation/
         >{{ category.name }}</h2>
 
         {% if category.description %}
-        <p class="portfolio-subtitle" style="text-align: left; border-bottom: 1px solid #ddd; margin-bottom: 3rem; padding-bottom: 1rem; color: #A7A4A4;">{{ category.description }}</p>
+        <p class="portfolio-subtitle" style="text-align: left; border-bottom: 1px solid #ddd; margin-bottom: 3rem; padding-bottom: 1rem; color: #8c8989;">{{ category.description }}</p>
         {% endif %}
-        
+
         {% for project_key in category.projects %}
             {% if site.shop-automation-list[project_key] %}
                 {% assign project = site.shop-automation-list[project_key] %}
             {% endif %}
-            
+
             {% if project %}
             {% assign variant = project.variant | default: "default" %}
             <div class="project-item project-item--{{ variant }}">
