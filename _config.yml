@@ -143,7 +143,7 @@ project-list:
         organization_link: "https://www.imperial.ac.uk/"
     Does depth matter:
         name: Does Depth Matter?
-        description: RGB-D Instance Segmentation with Mask R-CNN, 31% accuracy improvement 
+        description: RGB-D Instance Segmentation with Mask R-CNN, 31% accuracy improvement
         url: https://drive.google.com/file/d/1jngkyHaAs9gxZNe6l0xQHnCDeZzjOQ1T/view?usp=sharing
         icon: /assets/images/thumbnails/convnet.jpg
         year: 2018
@@ -210,7 +210,7 @@ project-list:
         subtitle: "Nonlinear attitude control system"
         detailed_description: |
             The Omnicopter is a 44 cm×44 cm×44 cm cube-framed UAV with 8 rotors attached on its space diagonals.
-            This work presents the synthesis of control algorithms in order to balance the Omnicopter on both its edges and corners on the floor. 
+            This work presents the synthesis of control algorithms in order to balance the Omnicopter on both its edges and corners on the floor.
             Some attitude representations are introduced, with emphasis on
             the quaternion-parametrisation. The rigid-body dynamics of the inverted 3D
             pendulum model are derived and a steering system which allows guidance of
@@ -343,7 +343,7 @@ shop-automation-list:
             Intuitive payment and product selection terminals with seamless locker integration.
             Integrates with Shopify for online bookings, order and inventory management.
             Physical payment terminals supporting cards and contactless payments.
-        portfolio_image: /assets/images/shop-automation/kiosk.jpg
+        portfolio_image: /assets/images/shop-automation/kiosk2.jpg
         portfolio_image_contain_mobile: true
         variant: small
 
@@ -353,7 +353,7 @@ shop-automation-list:
             Self-service beach equipment & skates rental shop in Barcelona.
             Integration of custom smart lockers, lockers for oversized products, payment kiosk, and Shopify.
             Reduced staff costs to zero while operating around the clock (unattended store).
-        quote: 
+        quote:
             content: The automation system transformed our rental shop. We now operate 24/7 without staff, and customer satisfaction has never been higher.
             author: Theo, Beachin' Rentals Barcelona
         secondary_button_url: https://beachinrentalsbcn.es/
@@ -374,4 +374,4 @@ shop-automation-portfolio:
                 - "Smart Lockers"
                 - "Oversized Product Lockers"
                 - "Kiosk"
-        
+
