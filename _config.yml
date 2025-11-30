@@ -93,7 +93,7 @@ project-list:
             Face recognition system developed at Seervision GmbH with a false-positive rate below 5%.
             By uploading a photo, we can remember talents and always associate the same ID to a specific talent. This way you can track specific people or enable person-specific workflows.
             This complex and highly requested feature set us apart from other competitors in the market.
-        portfolio_image: /assets/images/portfolio/facereco2.jpg
+        portfolio_image: /assets/images/portfolio/facereco.jpg
         organization: "Seervision GmbH"
         short_org: "Seervision"
         organization_link: "https://seervision.ch"
@@ -343,7 +343,7 @@ shop-automation-list:
             Intuitive payment and product selection terminals with seamless locker integration.
             Integrates with Shopify for online bookings, order and inventory management.
             Physical payment terminals supporting cards and contactless payments.
-        portfolio_image: /assets/images/shop-automation/kiosk2.jpg
+        portfolio_image: /assets/images/shop-automation/kiosk.jpg
         portfolio_image_contain_mobile: true
         variant: small
 
