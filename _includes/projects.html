@@ -5,8 +5,10 @@
     <div class="item">
         {% if project.url %}
         <a class="url link" href="{{ project.url }}" target="_blank">
-            <img class="thumbnail" src="{{project.icon}}" referrerpolicy="no-referrer" {% if project.icon_contain
-                %}style="object-fit: contain;"{% endif %}>
+            <img class="thumbnail" src="{{project.icon}}" referrerpolicy="no-referrer" alt="{{ project.name }}"
+                {% if project.icon_contain %}
+                style="object-fit: contain;"
+                {% endif %}>
             <div>
                 <h3 class="title">{{ project.name }}</h3>
                 <p class="year">
@@ -20,8 +22,10 @@
         </a>
         {% else %}
         <div class="url">
-            <img class="thumbnail" src="{{project.icon}}" referrerpolicy="no-referrer" {% if project.icon_contain
-                %}style="object-fit: contain;"{% endif %}>
+            <img class="thumbnail" src="{{project.icon}}" referrerpolicy="no-referrer" alt="{{ project.name }}"
+                {% if project.icon_contain %}
+                style="object-fit: contain;"
+                {% endif %}>
             <div>
                 <h3 class="title">{{ project.name }}</h3>
                 <p class="year">
