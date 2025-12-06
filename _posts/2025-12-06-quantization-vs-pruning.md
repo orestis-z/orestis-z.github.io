@@ -132,6 +132,6 @@ The findings suggest that for the majority of deep learning applications, quanti
 
 ---
 
-**References:**
+## References
 
 Kuzmin, Andrey, et al. ["Pruning vs quantization: Which is better?."](https://proceedings.neurips.cc/paper_files/paper/2023/file/c48bc80aa5d3cbbdd712d1cc107b8319-Paper-Conference.pdf) *Advances in neural information processing systems* 36 (2023): 62414-62427.
