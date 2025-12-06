@@ -29,6 +29,31 @@ layout: compress
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
 
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      output: {
+        displayOverflow: 'linebreak',  
+        linebreaks: {                  
+          inline: true,                   
+          width: '100%',                
+          lineleading: 0.2,             
+          LinebreakVisitor: null,     
+        }
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
     <style>
     {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
     {{ scss_sheet | scssify }}
@@ -37,7 +62,11 @@ layout: compress
 </head>
 <body>
 
-        <div class="wrapper-{% if page.width %}{{ page.width }}{% elsif site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
+
+        <div class="wrapper-{% if page.width %}{{ page.width }}{% else %}{{ site.width }}{% endif %}">
+        {% if page.url != "/" and page.url != "/index.html" %}
+          {% include navigation-header.html %}
+        {% endif %}
         <div class="content-wrapper {% if page.url == "/" or page.url == "/index.html" %}home{% else %}{{ page.title | downcase | replace: ' ', '-' }}{% endif %}">
         {% include header.html %}
             

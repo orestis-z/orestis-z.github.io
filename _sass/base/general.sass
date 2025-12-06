@@ -37,21 +37,16 @@ p
     font-weight: 300
     margin-bottom: 20px
     letter-spacing: 0.4px
-    
-    &:not([class*=text-])
-        text-align: center
 
     @media #{$mobile}
         letter-spacing: 0.2px
 
 strong
-    font-weight: 400
-    color: #000
+    font-weight: bold
 
 
 .btn
     display: inline-block
-    padding: 15px 35px
     position: relative
     overflow: hidden
     border: none
@@ -72,6 +67,10 @@ strong
     &:hover
         background: white
         color: $beta
+
+    &.small
+        padding: 8px 16px
+        font-size: 1.2rem
 
 .btn-secondary
     background: transparent
@@ -200,6 +199,7 @@ a:not(.link, .btn)
     text-decoration: none
     transition: color .2s ease,border-bottom-color .2s ease
 
+.wrapper-small,
 .wrapper-normal,
 .wrapper-large
     height: 100%
@@ -212,8 +212,11 @@ a:not(.link, .btn)
     @media #{$tablet}
         width: 88%
 
-.wrapper-normal
+.wrapper-small
     max-width: 600px
+
+.wrapper-normal
+    max-width: 680px
 
 .wrapper-large
     max-width: 1000px

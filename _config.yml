@@ -11,6 +11,8 @@ picture: assets/images/profile.jpg
 # your url: http://USERNAME.github.io
 url: https://orestis-z.github.io/
 
+permalink: /blog/:title
+
 # do you want to display social media links? true or false
 social-media: true
 # Add your username for the social media websites listed below
