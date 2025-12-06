@@ -21,18 +21,10 @@ social-media: true
 linkedin: orestis-z
 github: orestis-z
 email: me@orestisz.com
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
 # youtube: myyoutube
-# spotify: myspotify
-# lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
-# quora: userquora
 # reddit: username
 # medium: medium
-# vimeo: myvimeo
-# lanyrd: mylanyrd
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -54,9 +46,13 @@ footer: true
 # Enable animations? true or false
 animation: true
 
+# Markdown settings
+kramdown:
+  auto_ids: true
+  syntax_highlighter: rouge
+
 gems:
   - jekyll-seo-tag
-
 exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
 
 project-list:
