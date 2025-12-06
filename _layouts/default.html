@@ -82,6 +82,7 @@ layout: compress
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const headers = document.querySelectorAll('.post-content h2[id], .post-content h3[id]');
+        const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         
         headers.forEach(function(header) {
             header.style.cursor = 'pointer';
@@ -95,12 +96,14 @@ layout: compress
             header.style.position = 'relative';
             header.insertBefore(anchor, header.firstChild);
             
-            header.addEventListener('mouseenter', function() {
-                anchor.style.opacity = '1';
-            });
-            header.addEventListener('mouseleave', function() {
-                anchor.style.opacity = '0';
-            });
+            if (!isMobile) {
+                header.addEventListener('mouseenter', function() {
+                    anchor.style.opacity = '1';
+                });
+                header.addEventListener('mouseleave', function() {
+                    anchor.style.opacity = '0';
+                });
+            }
             
             header.addEventListener('click', function(e) {
                 e.preventDefault();

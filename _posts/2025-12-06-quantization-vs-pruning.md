@@ -30,7 +30,7 @@ where $s$ is the scale factor and $b$ is the bit-width.
 For pruning, the study considers magnitude pruning, which sets values closest to zero to actual zero. The pruning function $\mathcal P(\mathbf W)$ is defined as:
 
 $$
-\mathcal{P}(\mathbf{W})_{i, j} = \begin{cases} W_{i, j} & \text{if } |W_{i, j}| \ge \tau \\ 0 & \text{if } |W_{i, j}| < \tau \end{cases}\ ,\quad \tau \in \mathbb R^+.
+\mathcal{P}(\mathbf{W})_{i, j} = \begin{cases} W_{i, j} & \text{if } |W_{i, j}| \ge \tau \\ 0 & \text{if } |W_{i, j}| < \tau \end{cases},\quad \tau \in \mathbb R^+.
 $$
 
 where $\tau$ is the threshold value. Crucially, to ensure exact compression ratios for comparison, the threshold is derived from the Cumulative Distribution Function (CDF). For a target compression ratio $c \in (0,1)$ and a symmetric zero-mean distribution, the threshold satisfies:
