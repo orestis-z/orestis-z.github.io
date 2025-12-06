@@ -147,4 +147,3 @@ excluded_paths:
 # API and structured access
 sitemap: https://orestis-z.github.io/sitemap.xml
 robots_txt: https://orestis-z.github.io/robots.txt
-rss_feed: https://orestis-z.github.io/feed.xml
