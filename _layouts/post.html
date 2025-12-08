@@ -2,41 +2,48 @@
 layout: default
 ---
 
-<div class="wrapper-xlarge">
+<div
+    {% if page.image %}
+        class="wrapper-xlarge"
+    {% else %}
+        class="wrapper-blog"
+    {% endif %}
+>
     {% include navigation-header.html %}
     {% if page.image %}
-    <div class="post-hero">
-        <img src="{{ page.image }}" alt="{{ page.title }}" />
-    </div>
-    {% endif %}
-<article class="post-container">
-    
-    
-    <header class="post-header">
-        <h1 class="post-title">{{ page.title }}</h1>
-        <div class="post-meta">
-            <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%B %d, %Y" }}
-            </time>
-            {% if page.author %}
-            <span class="post-author">by {{ page.author }}</span>
-            {% endif %}
-            {% if page.categories %}
-            <span class="post-categories">
-                {% for category in page.categories %}
-                <span class="category">{{ category }}</span>
-                {% endfor %}
-            </span>
-            {% endif %}
+        <div class="post-hero">
+            <img src="{{ page.image }}" alt="{{ page.title }}" />
         </div>
-    </header>
+    {% endif %}
 
-    <div class="post-content">
-        {{ content }}
+    <div class="wrapper-blog" style="width: 100%;">
+        <article class="post-container">
+            <header class="post-header">
+                <h1 class="post-title">{{ page.title }}</h1>
+                <div class="post-meta">
+                    <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+                        {{ page.date | date: "%B %d, %Y" }}
+                    </time>
+                    {% if page.author %}
+                    <span class="post-author">by {{ page.author }}</span>
+                    {% endif %}
+                    {% if page.categories %}
+                    <span class="post-categories">
+                        {% for category in page.categories %}
+                        <span class="category">{{ category }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </div>
+            </header>
+
+            <div class="post-content">
+                {{ content }}
+            </div>
+
+            <nav class="post-navigation">
+                <a href="/blog" class="back-to-blog">← Back to blog</a>
+            </nav>
+        </article>
     </div>
-
-    <nav class="post-navigation">
-        <a href="/blog" class="back-to-blog">← Back to blog</a>
-    </nav>
-</article>
 </div>

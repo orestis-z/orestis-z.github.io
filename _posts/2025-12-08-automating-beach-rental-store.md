@@ -6,6 +6,7 @@ categories: [IoT, Entrepreneurship]
 tags: [quantization, pruning, model-compression, deep-learning, inference-optimization]
 author: Orestis Zambounis
 image: /assets/images/blogs/2025-12-08-automating-beach-rental-store/beachin.jpg
+description: "A deep dive into automating a physical retail space: How I built custom smart racks using Raspberry Pi, I/O expanders, and 3D printed parts to run a 24/7 unstaffed rental store."
 ---
 
 This is the story of **Beachin' Rentals**, our first venture into the world of physical retail. Located just three minutes from the sand in Barceloneta, we set out to provide high-quality beach equipment to locals and tourists alike. However, we quickly ran into a fundamental problem: the cost of staffing. In our first year, the expense of having an employee on-site was eating through our margins, and we were losing money.
