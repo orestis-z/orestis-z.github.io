@@ -1,38 +1,45 @@
 ---
 layout: default
 title: orestis.ch
-width: small
 ---
-{% if site.about %}
-    <nav class="nav-home">
-        <ul class="list">
-            <li class="item">
-                <h2>About</h2>
-            </li>
-        </ul>
-    </nav>
-    {% include about.html %}
-{% endif %}
 
-{% if site.skills %}
-    <nav class="nav-home">
-        <ul class="list">
-            <li class="item">
-                <h2>Skills</h2>
-            </li>
-        </ul>
-    </nav>
-    {% include skills.html %}
-{% endif %}
+<div class="wrapper-small">
+    {% include navigation-header.html %}
+    <div class="home">
+    {% include profile-header.html %}
 
-{% if site.projects %}
-    <nav class="nav-home">
-        <ul class="list">
-            <li class="item">
-                <h2>Projects</h2>
-                <p><a href="/portfolio">View all projects with detailed case studies →</a></p>
-            </li>
-        </ul>
-    </nav>
-    {% include projects.html %}
-{% endif %}
+    {% if site.about %}
+        <nav class="nav-home">
+            <ul class="list">
+                <li class="item">
+                    <h2>About</h2>
+                </li>
+            </ul>
+        </nav>
+        {% include about.html %}
+    {% endif %}
+
+    {% if site.skills %}
+        <nav class="nav-home">
+            <ul class="list">
+                <li class="item">
+                    <h2>Skills</h2>
+                </li>
+            </ul>
+        </nav>
+        {% include skills.html %}
+    {% endif %}
+
+    {% if site.projects %}
+        <nav class="nav-home">
+            <ul class="list">
+                <li class="item">
+                    <h2>Projects</h2>
+                    <p><a href="/portfolio">View all projects with detailed case studies →</a></p>
+                </li>
+            </ul>
+        </nav>
+        {% include projects.html %}
+    {% endif %}
+    </div>
+</div>

@@ -54,9 +54,10 @@ where $\mathcal F(\mathbf W)$ is the quantization or pruning function.
 When analyzing a standard normal distribution—a common proxy for neural network weights—quantization significantly outperforms pruning. For example, INT4 quantization achieves an SNR of 19.1 dB, whereas 75% pruning (equivalent compression) achieves only 5.6 dB. The error in quantization is bounded and oscillates between grid nodes, while pruning introduces large errors by rounding weights to zero.
 
 <img
-    src="/assets/images/blog/pruning-and-quantization-normal-distribution.jpg"
+    src="/assets/images/blogs/2025-12-06-quantization-vs-pruning/normal-distribution.jpg"
     alt="INT4 quantization vs. 75% pruning distribution (left), squared error weighted by p(x) (right)"
 />
+<p class="image-caption">Standard Normal Comparison. (Left) Distributions after INT4 quantization vs. 75% pruning. (Right) Probability-weighted squared error.</p>
 
 ### The Exception: Heavy Tails
 
@@ -71,9 +72,10 @@ $$
 where $\mu$ is the mean.
 
 <img
-    src="/assets/images/blog/pruning-and-quantization-for-student-t-distribution.jpg"
-    alt="Pruning vs. Quantization SNR: Kurtosis vs. \#bits (theoretical, Student's t)"
+    src="/assets/images/blogs/2025-12-06-quantization-vs-pruning/student-t-distribution.jpg"
+    alt="Pruning vs. Quantization SNR: Kurtosis vs. #bits (theoretical, Student's t)"
 />
+<p class="image-caption">Pruning vs. Quantization error (Student's $t$). Pruning error is invariant to outlier magnitude (left), while quantization SNR degrades significantly as kurtosis increases (middle), defining the trade-off regions between the two (right).</p>
 
 ## Post-Training: Optimization and Lower Bounds
 
@@ -105,10 +107,11 @@ where $k$ is the number of non-zero elements and $\odot$ is the element-wise pro
 The results across 10 distinct layers (from MobileNet-V2, ResNet-18, and ViT) confirmed that in a post-training setting, quantization provably outperforms pruning for moderate compression ratios.
 
 <img
-    src="/assets/images/blog/pruning-and-quantization-per-layer.jpg"
+    src="/assets/images/blogs/2025-12-06-quantization-vs-pruning/per-layer.jpg"
     alt="Pruning vs. Quantization SNR: Per layer comparison"
     style="max-width: min(100%, 380px)"
 />
+<p class="image-caption">Post-Training Pruning vs. Quantization. Boxes show performance bounds across 4 models and 7 bit-widths per layer.</p>
 
 ## Fine-Tuning: QAT vs. Magnitude Pruning
 

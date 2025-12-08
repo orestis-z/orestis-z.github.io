@@ -61,14 +61,6 @@ layout: compress
 
 </head>
 <body>
-
-
-        <div class="wrapper-{% if page.width %}{{ page.width }}{% else %}{{ site.width }}{% endif %}">
-        {% if page.url != "/" and page.url != "/index.html" %}
-          {% include navigation-header.html %}
-        {% endif %}
-        <div class="content-wrapper {% if page.url == "/" or page.url == "/index.html" %}home{% else %}{{ page.title | downcase | replace: ' ', '-' }}{% endif %}">
-        {% include header.html %}
             
         {{ content }}
         </div>

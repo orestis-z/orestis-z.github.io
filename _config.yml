@@ -25,11 +25,6 @@ email: me@orestisz.com
 # reddit: username
 # medium: medium
 
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 600px / large = 1000px
-width: normal
-
 # do you want to display an about section? true or false
 about: true
 
@@ -66,8 +61,8 @@ project-list:
         organization: "Beachin' Rentals"
         short_org: <none>
         organization_link: "https://beachinrentalsbcn.es"
-        url: /shop-automation
-        button_label: "Learn More"
+        url: /blog/automating-beach-rental-store
+        button_label: "Full Case Study"
     Inference Optimization:
         name: ML Inference Optimization
         description: Real-time ML pipeline optimization using TensorRT, batching & parallelization, 10x speedup
@@ -353,10 +348,12 @@ shop-automation-list:
         quote:
             content: The automation system transformed our rental shop. We now operate 24/7 without staff, and customer satisfaction has never been higher.
             author: Theo, Beachin' Rentals Barcelona
-        secondary_button_url: https://beachinrentalsbcn.es/
+        url: /blog/automating-beach-rental-store
         portfolio_image: /assets/images/Beachin-01.svg
         portfolio_image_contain: true
         variant: small
+        button_label: "Full Case Study"
+        secondary_button_url: https://beachinrentalsbcn.es/
         secondary_button_label: "Website"
 shop-automation-portfolio:
     categories:

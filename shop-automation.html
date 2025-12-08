@@ -1,130 +1,133 @@
 ---
 layout: default
 title: Smart Shop Automation
-width: large
 permalink: /shop-automation/
 ---
 
-<div class="portfolio-container">
-    <header class="portfolio-header">
-        <h1>Smart Shop Automation</h1>
-        <p class="portfolio-subtitle" style="text-align: left;">
-            Transform Your Shop into a 24/7 Unattended Operation.<br/>
-            Custom smart locker and kiosk solutions that eliminate staff costs while increasing revenue.
-        </p>
-        <img src="/assets/images/shop-automation/hero.jpg" alt="Shop Automation Banner" style="width:100%; max-height:500px; object-fit:cover;">
-    </header>
+<div class="wrapper-large">
+{% include navigation-header.html %}
 
-    <div class="contact-actions">
-        <a href="mailto:info@orestis.ch" class="btn">Email</a>
-        <a href="#why-automate" class="btn btn-secondary">Learn More ↓</a>
-    </div>
+    <div class="portfolio-container">
+        <header class="portfolio-header">
+            <h1>Smart Shop Automation</h1>
+            <p class="portfolio-subtitle" style="text-align: left;">
+                Transform Your Shop into a 24/7 Unattended Operation.<br/>
+                Custom smart locker and kiosk solutions that eliminate staff costs while increasing revenue.
+            </p>
+            <img src="/assets/images/shop-automation/hero.jpg" alt="Shop Automation Banner" style="width:100%; max-height:500px; object-fit:cover;">
+        </header>
 
-    <div class="portfolio-category" style="margin-top: 60px;">
-     <h2 class="category-title" id="why-automate">Why Automate Your Shop?</h2>
-    <ul>
-        <li>Operate 24/7 without staff</li>
-        <li>Eliminate labor costs</li>
-        <li>Scale without hiring</li>
-        <li>Streamline user experience</li>
-    </ul>
-    </div>
+        <div class="contact-actions">
+            <a href="mailto:info@orestis.ch" class="btn">Email</a>
+            <a href="#why-automate" class="btn btn-secondary">Learn More ↓</a>
+        </div>
 
-    {% for category_hash in site.shop-automation-portfolio.categories %}
-    {% assign category_key = category_hash[0] %}
-    {% assign category = category_hash[1] %}
-    <section class="portfolio-category" id="{{ category_key }}">
-        <h2 class="category-title"
-        {% if category.description %}
-        style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;"
-        {% endif %}
-        >{{ category.name }}</h2>
+        <div class="portfolio-category" style="margin-top: 60px;">
+        <h2 class="category-title" id="why-automate">Why Automate Your Shop?</h2>
+        <ul>
+            <li>Operate 24/7 without staff</li>
+            <li>Eliminate labor costs</li>
+            <li>Scale without hiring</li>
+            <li>Streamline user experience</li>
+        </ul>
+        </div>
 
-        {% if category.description %}
-        <p class="portfolio-subtitle" style="text-align: left; border-bottom: 1px solid #ddd; margin-bottom: 3rem; padding-bottom: 1rem; color: #797676;">{{ category.description }}</p>
-        {% endif %}
+        {% for category_hash in site.shop-automation-portfolio.categories %}
+        {% assign category_key = category_hash[0] %}
+        {% assign category = category_hash[1] %}
+        <section class="portfolio-category" id="{{ category_key }}">
+            <h2 class="category-title"
+            {% if category.description %}
+            style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;"
+            {% endif %}
+            >{{ category.name }}</h2>
 
-        {% for project_key in category.projects %}
-            {% if site.shop-automation-list[project_key] %}
-                {% assign project = site.shop-automation-list[project_key] %}
+            {% if category.description %}
+            <p class="portfolio-subtitle" style="text-align: left; border-bottom: 1px solid #ddd; margin-bottom: 3rem; padding-bottom: 1rem; color: #797676;">{{ category.description }}</p>
             {% endif %}
 
-            {% if project %}
-            {% assign variant = project.variant | default: "default" %}
-            <div class="project-item project-item--{{ variant }}">
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3 class="project-title">{{ project.name }}</h3>
-                        {% if project.subtitle %}
-                        <h4 class="project-subtitle">{{ project.subtitle }}</h4>
-                        {% endif %}
-                        <p class="project-description">{{ project.detailed_description | default: project.description }}</p>
-                        {% if project.quote %}
-                        <blockquote class="project-quote">
-                            <p style="text-align: left;"><em>"{{ project.quote.content }}"</em></p>
-                            <cite>– {{ project.quote.author }}</cite>
-                        </blockquote>
-                        {% endif %}
-                        {% if project.url or project.secondary_button_url %}
-                        <div class="project-links">
-                            {% if project.url %}
-                            <a href="{{ project.url }}" target="_blank" class="btn">
-                                {% if project.button_label %}
-                                    {{ project.button_label }}
-                                {% else %}
-                                    View Project
-                                {% endif %}
-                            </a>
+            {% for project_key in category.projects %}
+                {% if site.shop-automation-list[project_key] %}
+                    {% assign project = site.shop-automation-list[project_key] %}
+                {% endif %}
+
+                {% if project %}
+                {% assign variant = project.variant | default: "default" %}
+                <div class="project-item project-item--{{ variant }}">
+                    <div class="project-content">
+                        <div class="project-info">
+                            <h3 class="project-title">{{ project.name }}</h3>
+                            {% if project.subtitle %}
+                            <h4 class="project-subtitle">{{ project.subtitle }}</h4>
                             {% endif %}
-                            {% if project.secondary_button_url %}
-                            <a href="{{ project.secondary_button_url }}" target="_blank" class="btn btn-secondary">
-                                {{ project.secondary_button_label | default: "View More" }}
-                            </a>
+                            <p class="project-description">{{ project.detailed_description | default: project.description }}</p>
+                            {% if project.quote %}
+                            <blockquote class="project-quote">
+                                <p style="text-align: left;"><em>"{{ project.quote.content }}"</em></p>
+                                <cite>– {{ project.quote.author }}</cite>
+                            </blockquote>
                             {% endif %}
-                        </div>
-                        {% endif %}
-                        <div class="project-meta">
-                             {% if project.year %}
-                                <span class="project-year">{{ project.year }}</span>
-                            {% endif %}
-                            {% if project.organization %}
-                                <span class="project-year">
-                                {% if project.organization_link %}
-                                <a href="{{ project.organization_link }}" target="_blank">{{ project.organization }}</a>
-                                {% else %}
-                                {{ project.organization }}
+                            {% if project.url or project.secondary_button_url %}
+                            <div class="project-links">
+                                {% if project.url %}
+                                <a href="{{ project.url }}" target="_blank" class="btn">
+                                    {% if project.button_label %}
+                                        {{ project.button_label }}
+                                    {% else %}
+                                        View Project
+                                    {% endif %}
                                 </a>
                                 {% endif %}
-                                </span>
+                                {% if project.secondary_button_url %}
+                                <a href="{{ project.secondary_button_url }}" target="_blank" class="btn btn-secondary">
+                                    {{ project.secondary_button_label | default: "View More" }}
+                                </a>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                            <div class="project-meta">
+                                {% if project.year %}
+                                    <span class="project-year">{{ project.year }}</span>
+                                {% endif %}
+                                {% if project.organization %}
+                                    <span class="project-year">
+                                    {% if project.organization_link %}
+                                    <a href="{{ project.organization_link }}" target="_blank">{{ project.organization }}</a>
+                                    {% else %}
+                                    {{ project.organization }}
+                                    </a>
+                                    {% endif %}
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            {% if project.portfolio_image %}
+                                {% assign use_contain = project.portfolio_image_contain %}
+                                {% assign use_contain_mobile = project.portfolio_image_contain_mobile %}
+                                {% if use_contain and use_contain_mobile == false %}
+                                    <img src="{{ project.portfolio_image }}" alt="{{ project.name }}" class="contain-desktop-only">
+                                {% elsif use_contain_mobile %}
+                                    <img src="{{ project.portfolio_image }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %} class="contain-mobile">
+                                {% elsif use_contain %}
+                                    <img src="{{ project.portfolio_image }}" alt="{{ project.name }}" style="object-fit: contain;">
+                                {% else %}
+                                    <img src="{{ project.portfolio_image }}" alt="{{ project.name }}">
+                                {% endif %}
+                            {% else %}
+                                {% assign use_contain = project.icon_contain %}
+                                <img src="{{ project.icon }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %}>
                             {% endif %}
                         </div>
                     </div>
-                    <div class="project-image">
-                        {% if project.portfolio_image %}
-                            {% assign use_contain = project.portfolio_image_contain %}
-                            {% assign use_contain_mobile = project.portfolio_image_contain_mobile %}
-                            {% if use_contain and use_contain_mobile == false %}
-                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}" class="contain-desktop-only">
-                            {% elsif use_contain_mobile %}
-                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %} class="contain-mobile">
-                            {% elsif use_contain %}
-                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}" style="object-fit: contain;">
-                            {% else %}
-                                <img src="{{ project.portfolio_image }}" alt="{{ project.name }}">
-                            {% endif %}
-                        {% else %}
-                            {% assign use_contain = project.icon_contain %}
-                            <img src="{{ project.icon }}" alt="{{ project.name }}"{% if use_contain %} style="object-fit: contain;"{% endif %}>
-                        {% endif %}
-                    </div>
                 </div>
-            </div>
-            {% endif %}
+                {% endif %}
+            {% endfor %}
+        </section>
         {% endfor %}
-    </section>
-    {% endfor %}
-     <div class="contact-actions">
-        <a href="mailto:info@orestis.ch" class="btn">Email</a>
-        <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-secondary" target="_blank">Consultation</a>
+        <div class="contact-actions">
+            <a href="mailto:info@orestis.ch" class="btn">Email</a>
+            <a href="https://calendly.com/me-orestisz/20-minute-meeting" class="btn btn-secondary" target="_blank">Consultation</a>
+        </div>
     </div>
 </div>

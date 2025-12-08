@@ -193,15 +193,20 @@ pre
     border: 1px solid $epsilon
     border-radius: 2px
 
-a:not(.link, .btn)
+a:not(.link, .btn, .header-anchor)
     color: inherit
     border-bottom: 1px dotted hsla(0,0%,62.7%,.65)
     text-decoration: none
-    transition: color .2s ease,border-bottom-color .2s ease
+    transition: color .3s ease,border-bottom-color .2s ease
+
+    &:hover
+        color: #0066cc
+
 
 .wrapper-small,
 .wrapper-normal,
-.wrapper-large
+.wrapper-large,
+.wrapper-xlarge
     height: 100%
     width: 96%
     margin: 0 auto
@@ -220,3 +225,6 @@ a:not(.link, .btn)
 
 .wrapper-large
     max-width: 1000px
+
+.wrapper-xlarge
+    max-width: 1200px
