@@ -142,7 +142,7 @@ Automating **Beachin' Rentals** turned a struggling business into a profitable, 
 The next steps? Scaling. We are looking to open more automated stores and explore taking this "smart rack" technology to other verticals that struggle with renting out irregularly shaped equipment.
 
 
-[Thinking to automate your store?](http://localhost:4000/shop-automation/)
+[Thinking to automate your store?](/shop-automation/)
 
 ---
 
