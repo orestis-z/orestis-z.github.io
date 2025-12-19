@@ -30,7 +30,7 @@ Mounting the locks onto the rack was easier said than done. I spent roughly two 
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/wip-3.jpg"
-    alt=""
+    alt="Metal rack frame with mounted electric locks and 3D printed components"
 />
 <p class="image-caption">Electric locks mounted on rack frame with 3D printed handheld parts.</p>
 
@@ -38,7 +38,7 @@ Once the electric lockers were installed, I wired up all the trigger and feedbac
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/wip-4.jpg"
-    alt=""
+    alt="Raspberry Pi connected to MCP23017 I/O expanders with wiring for 32 locks"
 />
 <p class="image-caption">I/O expanders (MCP23017) to control 32 locks through the I2C interface of the Raspberry Pi.</p>
 
@@ -46,7 +46,7 @@ For the customer experience, we designed an intuitive self-service UI. We tested
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/kiosk2b.jpg"
-    alt=""
+    alt="Self-service kiosk touchscreen interface showing product selection and payment options"
 />
 <p class="image-caption">User interface to select and pay for rental equipment, and unlock online orders.</p>
 
@@ -55,18 +55,18 @@ After more than three months of grueling work—much harder than anticipated—t
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/rack.jpg"
     style="max-width:min(100%, 400px)"
-    alt=""
+    alt="Completed smart rack system with beach loungers and umbrellas secured by electric locks"
 />
 <p class="image-caption">Final "Smart Rack" with rental products snugly fitted.</p>
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/customers.jpg"
-    alt=""
+    alt="Customer using the self-service kiosk to rent beach equipment"
     style="margin-bottom: -15px"
 />
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/customers2.jpg"
-    alt=""
+    alt="Customers interacting with the automated rental system at Beachin' Rentals"
 />
 <p class="image-caption">Customers using the self-service system to rent beach equipment.</p>
 
@@ -78,13 +78,13 @@ We launched a "smoke test" with just two pairs of inline skates to validate the 
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/smartlockers.jpg"
-    alt=""
+    alt="Custom smart lockers with RS485 protocol integration for inline skate rentals"
 />
 <p class="image-caption">Customized smart lockers from a factory in China.</p>
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/smartlockerslight.jpg"
-    alt=""
+    alt="Illuminated smart lockers displaying inline skates in individual compartments"
 />
 <p class="image-caption">Smart lockers with inline skates integrated into our store. Illuminated compartments ensure optimal product presentation.</p>
 
@@ -103,7 +103,7 @@ We realized that since our inventory was relatively low-cost and damage was rare
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/door-fix.gif"
-    alt=""
+    alt="Technicians installing automated door blind system for hands-free store security"
 />
 <p class="image-caption">Technicians working on fully automating our door blinds.</p>
 
@@ -115,7 +115,8 @@ This time, I didn't want to spend weeks DIY-ing the fabrication. We utilized an 
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/module.jpg"
-    alt=""
+    alt="Laser-cut modular metal components for smart rack assembly"
+    style="max-width:min(100%, 400px)"
 />
 <p class="image-caption">Modular design for the upgraded smart rack.</p>
 
@@ -123,17 +124,16 @@ The new rack features 62 locks and looks professional. The cylindrical tubes you
 
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/customlockers2.jpg"
-    alt=""
+    alt="Smart Rack V2 showing 62 locks with cylindrical compartments for umbrellas"
+    style="margin-bottom: -15px"
 />
-<p class="image-caption">Assembled upgraded smart rack with the modular locks and snug pipe compartments for the umbrellas.</p>
-
 <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/rackv2-cam.jpeg"
-    alt=""
+    alt="Smart Rack V2 with modular lock system and organized product storage"
 />
 
 <script src="https://player.vimeo.com/api/player.js"></script>
-<p class="image-caption">Store view with products stored in the new system.</p>
+<p class="image-caption">Smart Rack V2 with modular locks and snug pipe compartments for umbrellas.</p>
 
 ## Conclusion
 
