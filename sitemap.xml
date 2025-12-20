@@ -57,8 +57,14 @@ sitemap:
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-    <url>
+  <url>
     <loc>{{ site.url }}/blog/automating-beach-rental-store</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/blog/backpropagation</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
