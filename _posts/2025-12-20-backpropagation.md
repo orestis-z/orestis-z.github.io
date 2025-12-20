@@ -41,7 +41,7 @@ $$
 
 
 
-### Row-Vector Notation (The Implementation Reality)
+### Row-Vector Notation
 
 In contrast to textbooks, libraries like PyTorch or TensorFlow use right-multiplication:
 
