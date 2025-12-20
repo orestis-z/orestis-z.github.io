@@ -52,12 +52,12 @@ $$
 In contrast to scientific publications and textbooks, libraries like PyTorch or TensorFlow use right-multiplication notation:
 
 $$
-f: \mathbb{R}^{B \times n} \to \mathbb{R}^{B \times m}, \quad f(\mathbf{X}) = \sigma(\mathbf{X}\mathbf{W}^\top + \mathbf{b}) \tag{5}
+f: \mathbb{R}^{M \times n} \to \mathbb{R}^{M \times m}, \quad f(\mathbf{X}) = \sigma(\mathbf{X}\mathbf{W}^\top + \mathbf{b}) \tag{5}
 $$
 
-where $\mathbf{W} \in \mathbb{R}^{m \times n}$, $\mathbf{b} \in \mathbb{R}^m$, and $B$ is the batch size. 
+where $\mathbf{W} \in \mathbb{R}^{m \times n}$, $\mathbf{b} \in \mathbb{R}^m$, and $M$ is the mini-batch size. 
 
-In this notation, the addition of the bias vector $\mathbf{b}$ to the matrix product $\mathbf{X}\mathbf{W}^\top$ is understood to be applied row-wise via _broadcasting_. Effectively, the bias is "stretched" across the batch dimension so it can be added to each observation. Note that for a batch size of $B=1$, this implementation is essentially the transpose of the textbook notation in Eq. \eqref{eq:multi-neurons}.
+In this notation, the addition of the bias vector $\mathbf{b}$ to the matrix product $\mathbf{X}\mathbf{W}^\top$ is understood to be applied row-wise via _broadcasting_. Effectively, the bias is "stretched" across the mini-batch dimension so it can be added to each observation. Note that for a mini-batch size of $M=1$, this implementation is essentially the transpose of the textbook notation in Eq. \eqref{eq:multi-neurons}.
 
 **Why the difference?**
 
@@ -78,7 +78,9 @@ $$
 \mathbf{W}_t = \mathbf{W}_{t-1} - \eta \nabla_{\mathbf{W}} C, \quad \mathbf{b}_t = \mathbf{b}_{t-1} - \eta \nabla_{\mathbf{b}} C \tag{7}
 $$
 
-where the hyperparameter $\eta \in \mathbb{R}^+$ is the _learning rate_. 
+where the hyperparameter $\eta \in \mathbb{R}^+$ is the _learning rate_.
+
+_Note:_ While SGD remains a gold standard for training certain neural networks, adaptive optimizers like [AdamW](/blog/adam-w) have emerged as the preferred choice for specific architectures.
 
 ### The Role of Mini-Batches
 
@@ -156,7 +158,7 @@ $$
 \nabla_{\mathbf{W}^l} C = \boldsymbol{\delta}^l (\mathbf{a}^{l-1})^\top \tag{BP4}
 $$
 
-*Note on Batching:* For a batch size $B$, the total cost is $C_{\text{tot}} = \frac{1}{B}\sum C_i$. Consequently, the final parameter updates use the _averaged gradients_ across the batch.
+*Note on Batching:* For a mini-batch size $M$, the total cost is $C_{\text{tot}} = \frac{1}{M}\sum C_i$. Consequently, the final parameter updates use the _averaged gradients_ across the mini-batch.
 
 ## Generalization
 

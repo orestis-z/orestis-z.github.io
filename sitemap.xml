@@ -69,6 +69,12 @@ sitemap:
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>{{ site.url }}/blog/adam-w</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Project-specific pages (internal URLs) -->
   {% for project_hash in site.project-list %}
