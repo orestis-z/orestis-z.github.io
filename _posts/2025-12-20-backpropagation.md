@@ -27,7 +27,9 @@ $$
 f: \mathbb{R}^n \to \mathbb{R}^m, \quad f(\mathbf{x}) = \sigma(\mathbf{W}\mathbf{x} + \mathbf{b}) \tag{2} \label{eq:multi-neurons}
 $$
 
-where $\mathbf{W} \in \mathbb{R}^{m \times n}$ is the weight matrix and $\mathbf{b} \in \mathbb{R}^m$ is the bias vector. We define this operation as a layer $l$:
+where $\mathbf{W} \in \mathbb{R}^{m \times n}$ is the weight matrix and $\mathbf{b} \in \mathbb{R}^m$ is the bias vector. We can think of the rows of the weight matrix $\mathbf{w}_i$ and the $i$-th element of the bias $b_i$ as belonging to the $i$-th neuron.
+
+We define this operation as a layer $l$:
 
 $$
 \mathbf{a}^l = \sigma(\mathbf{W}^l \mathbf{a}^{l-1} + \mathbf{b}^l), \quad l \in \{1, \dots, L\} \tag{3}
@@ -39,43 +41,75 @@ $$
 \mathbf{o} = f_L(f_{L-1}(\dots f_1(\mathbf{x}) \dots)) \tag{4}
 $$
 
-
+<img
+    src="/assets/images/blogs/2025-12-20-backpropagation/mlp.jpg"
+    alt=""
+/>
+<p class="image-caption">Three-layer neural network. $\mathbf w_i^l$ is the $i$th weight vector of the $l$th layer, and $\dim\left(\mathbf w_i^l\right) = \dim\left({\mathbf a_{l-1}}\right)$.</p>
 
 ### Row-Vector Notation
 
-In contrast to textbooks, libraries like PyTorch or TensorFlow use right-multiplication:
+In contrast to scientific publications and textbooks, libraries like PyTorch or TensorFlow use right-multiplication notation:
 
 $$
 f: \mathbb{R}^{B \times n} \to \mathbb{R}^{B \times m}, \quad f(\mathbf{X}) = \sigma(\mathbf{X}\mathbf{W}^\top + \mathbf{b}) \tag{5}
 $$
 
-Here, $B$ represents the batch size. Why the difference?
+where $\mathbf{W} \in \mathbb{R}^{m \times n}$, $\mathbf{b} \in \mathbb{R}^m$, and $B$ is the batch size. 
+
+In this notation, the addition of the bias vector $\mathbf{b}$ to the matrix product $\mathbf{X}\mathbf{W}^\top$ is understood to be applied row-wise via _broadcasting_. Effectively, the bias is "stretched" across the batch dimension so it can be added to each observation. Note that for a batch size of $B=1$, this implementation is essentially the transpose of the textbook notation in Eq. \eqref{eq:multi-neurons}.
+
+**Why the difference?**
 
 1.  **Batching Convention:** In data science, rows represent observations and columns represent features. This matches standard dataset structures (CSVs, SQL).
 2.  **Hardware Efficiency:** Modern GPUs use row-major storage. If data were stored as columns, the GPU would have to "jump" across memory addresses to fetch a single sample. Row-wise processing allows for *memory coalescing*, maximizing throughput.
 
 ## Training and Optimization
 
-The objective is to find parameters $\mathbf{W}$ and $\mathbf{b}$ that minimize the distance between the network output $\mathbf{o}$ and labels $\mathbf{y}$ across a dataset of size $N$:
+The objective of training is to find the set of weights $\mathbf{W}$ and biases $\mathbf{b}$ that minimize the distance between the network output $\mathbf{o}$ and labels $\mathbf{y}$:
 
 $$
 \hat{\mathbf{W}}, \hat{\mathbf{b}} = \arg\min_{\mathbf{W}, \mathbf{b}} \frac{1}{N} \sum_{i=1}^N C(\mathbf{W}, \mathbf{b}; \mathbf{x}_i, \mathbf{y}_i) \tag{6}
 $$
 
-We use *Stochastic Gradient Descent* (SGD) to update parameters. Since calculating the gradient over $N$ samples is expensive, we use mini-batches of size $M < N$. This provides a "noisy" gradient that helps the network escape local minima:
+Since calculating the inverse of the chained layers in Eq. \eqref{eq:multi-neurons} is virtually impossible, we must rely on numerical optimization. We use _Stochastic Gradient Descent_ (SGD) to update parameters. The gradient $\nabla C$ indicates the direction of steepest increase; thus, we move in the opposite direction:
 
 $$
 \mathbf{W}_t = \mathbf{W}_{t-1} - \eta \nabla_{\mathbf{W}} C, \quad \mathbf{b}_t = \mathbf{b}_{t-1} - \eta \nabla_{\mathbf{b}} C \tag{7}
 $$
 
+where the hyperparameter $\eta \in \mathbb{R}^+$ is the _learning rate_. 
 
+### The Role of Mini-Batches
+
+In practice, calculating the cost over the entire dataset ($N$) is computationally prohibitive. Instead, we approximate the gradient using mini-batches of size $M < N$. Selecting the optimal $M$ is a balancing act between two competing forces:
+
+* **Stochasticity for Generalization:** Because each mini-batch is a random sample, the resulting loss surface fluctuates slightly at every step. This "noise" is actually beneficial; it helps the optimizer escape sharp local minima and guides the network toward _flat minima_, which significantly improves the model's ability to generalize to unseen data.
+* **Gradient Stability vs. Overfitting:** Larger mini-batches provide a higher "gradient quality" by averaging out noise, leading to smoother and more stable updates. However, there is a point of diminishing returns: if $M$ is too large, the lack of stochastic pressure may cause the network to settle into poor minima or overfit on the training distribution.
+
+<img
+    src="/assets/images/blogs/2025-12-20-backpropagation/loss-surface.jpg"
+    alt=""
+    style="max-width: min(100%, 400px)"
+/>
+<p class="image-caption">Loss surface at a given input $\mathbf x$.</p>
 
 ## Gradient Derivation
 
-To calculate these gradients, we use the *Multivariate Chain Rule*. If $f$ depends on $x$ through intermediate variables $g_i$:
+To calculate these gradients efficiently, we combine the chain rule with efficient matrix operators.
+
+### Prerequisites
+
+In the following, we often use the gradient operator notation with respect to a matrix $\mathbf{M}$ or a vector $\mathbf{v}$ to denote the partial derivatives of the cost $C$:
 
 $$
-\frac{\partial f}{\partial x} = \sum_{i} \frac{\partial f}{\partial g_i} \frac{\partial g_i}{\partial x} \tag{8}
+(\nabla_{\mathbf{v}})_i = \frac{\partial C}{\partial v_i}, \quad (\nabla_{\mathbf{M}})_{ij} = \frac{\partial C}{\partial M_{ij}} \tag{8}
+$$
+
+Furthermore, we rely on the _Multivariate Chain Rule_. If a function $f$ depends on $x$ through several intermediate variables $g_i$, the total derivative is the sum of the partial derivatives along all paths:
+
+$$
+\frac{\partial f}{\partial x} = \sum_{i} \frac{\partial f}{\partial g_i} \frac{\partial g_i}{\partial x} \tag{9}
 $$
 
 ### 1. The Output Layer Error
@@ -83,11 +117,11 @@ $$
 Let $\mathbf{z}^l = \mathbf{W}^l \mathbf{a}^{l-1} + \mathbf{b}^l$. For the last layer $L$, the partial derivatives for a single weight and bias are:
 
 $$
-\frac{\partial C}{\partial b_i^L} = \frac{\partial C}{\partial z_i^L} \frac{\partial z_i^L}{\partial b_i^L} = \frac{\partial C}{\partial z_i^L} \tag{9}
+\frac{\partial C}{\partial b_i^L} = \frac{\partial C}{\partial z_i^L} \frac{\partial z_i^L}{\partial b_i^L} = \frac{\partial C}{\partial z_i^L} \tag{10}
 $$
 
 $$
-\frac{\partial C}{\partial W_{ij}^L} = \frac{\partial C}{\partial z_i^L} \frac{\partial z_i^L}{\partial W_{ij}^L} = \frac{\partial C}{\partial z_i^L} a_j^{L-1} \tag{10}
+\frac{\partial C}{\partial W_{ij}^L} = \frac{\partial C}{\partial z_i^L} \frac{\partial z_i^L}{\partial W_{ij}^L} = \frac{\partial C}{\partial z_i^L} a_j^{L-1} \tag{11}
 $$
 
 We define the error term $\delta_i^L := \frac{\partial C}{\partial z_i^L}$. In matrix form:
@@ -101,7 +135,7 @@ $$
 For a hidden layer $l$, a change in $z_i^l$ affects the cost through all neurons $k$ in the next layer $l+1$. Summing these paths:
 
 $$
-\delta_i^l = \sum_k \left( \frac{\partial C}{\partial z_k^{l+1}} \frac{\partial z_k^{l+1}}{\partial a_i^l} \right) \frac{\partial a_i^l}{\partial z_i^l} = \left( \sum_k \delta_k^{l+1} W_{ki}^{l+1} \right) \sigma'(z_i^l) \tag{11}
+\delta_i^l := \frac{\partial C}{\partial z_i^l} = \left( \sum_k \frac{\partial C}{\partial z_k^{l+1}} \frac{\partial z_k^{l+1}}{\partial a_i^l} \right) \frac{\partial a_i^l}{\partial z_i^l} = \left( \sum_k \delta_k^{l+1} W_{ki}^{l+1} \right) \sigma'(z_i^l) \tag{12}
 $$
 
 Which gives the recursive matrix form:
@@ -122,23 +156,36 @@ $$
 \nabla_{\mathbf{W}^l} C = \boldsymbol{\delta}^l (\mathbf{a}^{l-1})^\top \tag{BP4}
 $$
 
-*Note on Batching:* For a batch size $B$, the total cost is $C_{tot} = \frac{1}{B}\sum C_i$. Consequently, the final parameter updates use the *averaged gradients* across the batch.
+*Note on Batching:* For a batch size $B$, the total cost is $C_{\text{tot}} = \frac{1}{B}\sum C_i$. Consequently, the final parameter updates use the _averaged gradients_ across the batch.
 
-## Generalization: From Layers to Graphs
+## Generalization
 
-Modern architectures like ResNets are *Directed Acyclic Graphs* (DAGs). This is where *Reverse-Mode Automatic Differentiation* comes in:
+While FCNNs follow a rigid sequential structure, modern architectures like ResNets (with skip connections) or Transformers (with multi-head attention) are structured as _Directed Acyclic Graphs_ (DAGs). In these networks, a single node's output can be used by multiple downstream operations.
+
+To compute gradients in a DAG, we move beyond "layers" and use _Reverse-Mode Automatic Differentiation_. This is the generalized engine powering PyTorch’s `autograd` and TensorFlow’s `GradientTape`.
+
+### The Generalized Chain Rule
+
+If a variable $v_i$ influences the cost $C$ through multiple paths (successors), the total derivative is the sum of the derivatives along all those paths:
 
 $$
-\frac{\partial C}{\partial v_i} = \sum_{j \in \text{Children}(i)} \frac{\partial C}{\partial v_j} \frac{\partial v_j}{\partial v_i} \tag{12}
+\frac{\partial C}{\partial v_i} = \sum_{j \in \text{Children}(i)} \frac{\partial C}{\partial v_j} \frac{\partial v_j}{\partial v_i} \tag{13}
 $$
 
 
 
-| | FCNN | General DAG |
+In this context, we often use the "bar" notation, where $\bar{v}_i = \frac{\partial C}{\partial v_i}$ represents the *adjoint* (or error signal) of $v_i$. This allows us to process any complex architecture by visiting nodes in reverse topological order.
+
+### Comparing Perspectives
+
+| | Sequential (FCNN) | Generalized (DAG) |
 | :--- | :--- | :--- |
-| **Perspective** | Layers as blocks | Every operation is a node |
-| **Error Signal** | $\delta_i^l = \frac{\partial C}{\partial z_i^l}$ | $\bar{v}_i = \frac{\partial C}{\partial v_i}$ |
-| **Gradient Flow** | Weighted sum of next layer | Sum over all successor nodes |
+| **Perspective** | Layers are treated as atomic blocks | Every operation (sum, mul, exp) is a node |
+| **Connectivity** | Each layer has exactly one successor | A node can have any number of children |
+| **Error Signal** | $\delta_i^l = \frac{\partial C}{\partial z_i^l}$ (Pre-activation error) | $\bar{v}_i = \frac{\partial C}{\partial v_i}$ (Node adjoint) |
+| **Gradient Flow** | Pass error back through the weight matrix | Sum the error signals from all successor nodes |
+
+This graph-based view explains how backpropagation handles modern complexities like _residual connections_—where the gradient simply "splits" and flows through both the skip path and the residual block—or _weight sharing_, where gradients from different parts of the graph are summed at the shared parameter node.
 
 ## Conclusion
 
