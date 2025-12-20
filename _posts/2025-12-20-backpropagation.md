@@ -43,7 +43,7 @@ $$
 
 <img
     src="/assets/images/blogs/2025-12-20-backpropagation/mlp.jpg"
-    alt=""
+    alt="Three-layer neural network architecture diagram showing input layer, hidden layers, and output layer with weight vectors"
 />
 <p class="image-caption">Three-layer neural network. $\mathbf w_i^l$ is the $i$th weight vector of the $l$th layer, and $\dim\left(\mathbf w_i^l\right) = \dim\left({\mathbf a_{l-1}}\right)$.</p>
 
@@ -91,7 +91,7 @@ In practice, calculating the cost over the entire dataset ($N$) is computational
 
 <img
     src="/assets/images/blogs/2025-12-20-backpropagation/loss-surface.jpg"
-    alt=""
+    alt="3D visualization of a loss surface showing flat and sharp minima at a given input"
     style="max-width: min(100%, 400px)"
 />
 <p class="image-caption">Loss surface at a given input $\mathbf x$.</p>

@@ -55,7 +55,7 @@ When analyzing a standard normal distribution—a common proxy for neural networ
 
 <img
     src="/assets/images/blogs/2025-12-06-quantization-vs-pruning/normal-distribution.jpg"
-    alt="INT4 quantization vs. 75% pruning distribution (left), squared error weighted by p(x) (right)"
+    alt="Standard normal distribution comparison showing INT4 quantization versus 75% pruning with probability-weighted squared error visualization"
 />
 <p class="image-caption">Standard Normal Comparison. (Left) Distributions after INT4 quantization vs. 75% pruning. (Right) Probability-weighted squared error.</p>
 
@@ -73,7 +73,7 @@ where $\mu$ is the mean.
 
 <img
     src="/assets/images/blogs/2025-12-06-quantization-vs-pruning/student-t-distribution.jpg"
-    alt="Pruning vs. Quantization SNR: Kurtosis vs. #bits (theoretical, Student's t)"
+    alt="Three-panel visualization of pruning versus quantization signal-to-noise ratio showing kurtosis versus number of bits using Student's t-distribution"
 />
 <p class="image-caption">Pruning vs. Quantization error (Student's $t$). Pruning error is invariant to outlier magnitude (left), while quantization SNR degrades significantly as kurtosis increases (middle), defining the trade-off regions between the two (right).</p>
 
@@ -108,7 +108,7 @@ The results across 10 distinct layers (from MobileNet-V2, ResNet-18, and ViT) co
 
 <img
     src="/assets/images/blogs/2025-12-06-quantization-vs-pruning/per-layer.jpg"
-    alt="Pruning vs. Quantization SNR: Per layer comparison"
+    alt="Plot showing post-training pruning versus quantization signal-to-noise ratio performance bounds across 4 models and 7 bit-widths per layer"
     style="max-width: min(100%, 380px)"
 />
 <p class="image-caption">Post-Training Pruning vs. Quantization. Boxes show performance bounds across 4 models and 7 bit-widths per layer.</p>
