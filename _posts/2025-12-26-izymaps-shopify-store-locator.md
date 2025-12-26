@@ -6,7 +6,7 @@ categories: [Entrepreneurship, Shopify]
 tags: [shopify, google-maps, store-locator, e-commerce, saas]
 author: Orestis Zambounis
 description: "How I built IzyMaps, a simple yet powerful Google Maps store locator app for Shopify merchants. From single-location stores to multi-location retailers, making it easy for customers to find your business."
-image: https://cdn.shopify.com/app-store/listing_images/6f587b8c3d8791c634c5a30f4bbbb7d5/promotional_image/CK3snsb825EDEAE=.png
+image: https://cdn.shopify.com/app-store/listing_images/6f587b8c3d8791c634c5a30f4bbbb7d5/promotional_image/CK7chaf925EDEAE=.png
 ---
 
 After building [Beachin' Rentals](/blog/automating-beach-rental-store.html) and integrating it with Shopify, I noticed a recurring pain point among merchants: adding a simple, good-looking store locator to their website was surprisingly difficult. Existing solutions were either overly complex, required technical knowledge to set up, or were ridiculously expensive for such simple functionality. This frustration led me to build **IzyMaps**, a straightforward and affordable Google Maps store locator for Shopify.
