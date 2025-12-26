@@ -47,7 +47,13 @@ kramdown:
 
 gems:
   - jekyll-seo-tag
+  - jekyll-feed
 exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
+
+# RSS Feed settings
+feed:
+  path: feed.xml
+  excerpt_only: true
 
 project-list:
     Shop automation:
