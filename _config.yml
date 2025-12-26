@@ -8,7 +8,7 @@ description: Orestis Zambounis' Personal Website
 # Profile picture
 picture: assets/images/profile.jpg
 
-url: https://orestis.ch/
+url: https://orestis.ch
 
 permalink: /blog/:title
 
