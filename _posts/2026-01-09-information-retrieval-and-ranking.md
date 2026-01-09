@@ -149,8 +149,8 @@ The most critical advantage of Bi-Encoders over other neural methods (like Cross
 
 Calculating exact Cosine Similarity against millions of vectors is too slow for real-time applications. Instead, vector databases use Approximate Nearest Neighbor (ANN) algorithms to speed up the process:
 
-* **HNSW (Hierarchical Navigable Small Worlds):** Constructs a multi-layered graph that allows the search to "skip" through clusters of data to find the neighborhood of the query vector quickly. It provides high accuracy and sub-millisecond latency at the cost of high RAM usage.
-* **IVFPQ (Inverted File with Product Quantization):** Partitions the vector space into Voronoi cells (IVF) and compresses the vectors using Product Quantization (PQ). This allows billions of documents to fit in memory, though at a slight cost to precision compared to HNSW.
+* Hierarchical Navigable Small Worlds (HNSW): Constructs a multi-layered graph that allows the search to "skip" through clusters of data to find the neighborhood of the query vector quickly. It provides high accuracy and sub-millisecond latency at the cost of high RAM usage.
+* Inverted File with Product Quantization (IVF-PQ): Partitions the vector space into Voronoi cells (IVF) and compresses the vectors using Product Quantization (PQ). This allows billions of documents to fit in memory, though at a slight cost to precision compared to HNSW.
 
 ### Hybrid Search
 
