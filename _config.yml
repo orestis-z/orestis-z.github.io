@@ -75,7 +75,7 @@ project-list:
         icon: /assets/images/thumbnails/tensorrt.jpg
         year: 2022 – 2025
         variant: small
-        detailed_description: "Real-time ML pipeline optimization using TensorRT, batching & parallelization, achieving 10x speedup for computer vision models in production environments. With the help of those optimizations we were able to sell multiple VisionSuite systems running on a single hardware unit while staying within the Python ecosystem."
+        detailed_description: "Real-time ML pipeline optimization using TensorRT, dynamic batching & parallelization, achieving 10x speedup for computer vision models in production environments. With the help of those optimizations we were able to sell multiple VisionSuite systems running on a single hardware unit while staying within the Python ecosystem."
         portfolio_image: "/assets/images/portfolio/tensorrt.jpg"
         secondary_button_label: "Q-SYS VisionSuite"
         secondary_button_url: "https://www.qsys.com/products/q-sys/video/q-sys-visionsuite/"
@@ -83,12 +83,12 @@ project-list:
         organization_link: "https://qsc.com"
     Face Recognition:
         name: Face Recognition
-        description: Face recognition system with a false-positive rate below 5%
+        description: Face recognition system with a precision above 95%
         icon: /assets/images/thumbnails/facereco.jpg
         year: 2022
         variant: small
         detailed_description: |
-            Face recognition system developed at Seervision GmbH with a false-positive rate below 5%.
+            Face recognition system developed at Seervision GmbH with a precision above 95%.
             By uploading a photo, we can remember talents and always associate the same ID to a specific talent. This way you can track specific people or enable person-specific workflows.
             This complex and highly requested feature set us apart from other competitors in the market.
         portfolio_image: /assets/images/portfolio/facereco.jpg
