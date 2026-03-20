@@ -127,10 +127,10 @@ The new rack features 62 locks and looks professional. The cylindrical tubes you
     alt="Smart Rack V2 with 62 electric locks featuring custom cylindrical compartments to prevent umbrella tangling"
     style="margin-bottom: -15px"
 />
-<img
+<!-- <img
     src="/assets/images/blogs/2025-12-08-automating-beach-rental-store/rackv2-cam.jpeg"
     alt="Smart Rack V2 with modular lock system, cylindrical umbrella tubes, and organized beach equipment storage visible from surveillance camera angle"
-/>
+/> -->
 
 <script src="https://player.vimeo.com/api/player.js"></script>
 <p class="image-caption">Smart Rack V2 with modular locks and snug pipe compartments for umbrellas.</p>
