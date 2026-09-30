@@ -43,10 +43,10 @@ export const ProjectMatrix: React.FC<ProjectMatrixProps> = ({
     <section id="projects" className="hairline-b bg-[var(--bg-canvas)]">
       {/* Section Header Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-3 flex flex-wrap items-center justify-between border-b border-[var(--border-hairline)] text-xs font-swiss-mono text-[var(--text-tertiary)] gap-2">
-        <div className="flex items-center gap-2">
+        <h2 className="flex items-center gap-2 text-xs font-swiss-mono font-normal">
           <span className="text-[var(--accent-swiss)] font-bold">SECTION // 02</span>
           <span>SELECTED ENGINEERING SYSTEMS MATRIX</span>
-        </div>
+        </h2>
         <div className="flex items-center gap-3">
           <span>INDEX: PRJ-01 → PRJ-15</span>
           <span>·</span>

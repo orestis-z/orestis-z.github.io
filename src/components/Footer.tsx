@@ -30,12 +30,12 @@ export const Footer: React.FC = () => {
             <div className="text-[10px] text-[var(--text-tertiary)] uppercase tracking-wider font-bold">
               NAVIGATION
             </div>
-            <ul className="space-y-1 text-[11px]">
-              <li><a href="#dossier" className="hover:text-[var(--accent-swiss)]">// 01 DOSSIER & BIO</a></li>
-              <li><a href="#projects" className="hover:text-[var(--accent-swiss)]">// 02 SELECTED WORK [15]</a></li>
-              <li><a href="#systems" className="hover:text-[var(--accent-swiss)]">// 03 SHOP AUTOMATION</a></li>
-              <li><a href="#dispatches" className="hover:text-[var(--accent-swiss)]">// 04 TECHNICAL PAPERS [6]</a></li>
-              <li><a href="#contact" className="hover:text-[var(--accent-swiss)]">// 05 TRANSMISSION & CONTACT</a></li>
+            <ul className="space-y-0.5 text-[11px]">
+              <li><a href="#dossier" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">// 01 DOSSIER & BIO</a></li>
+              <li><a href="#projects" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">// 02 SELECTED WORK [15]</a></li>
+              <li><a href="#systems" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">// 03 SHOP AUTOMATION</a></li>
+              <li><a href="#dispatches" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">// 04 TECHNICAL PAPERS [6]</a></li>
+              <li><a href="#contact" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">// 05 TRANSMISSION & CONTACT</a></li>
             </ul>
           </div>
 
@@ -44,34 +44,34 @@ export const Footer: React.FC = () => {
             <div className="text-[10px] text-[var(--text-tertiary)] uppercase tracking-wider font-bold">
               ARTIFACTS & OPEN SOURCE
             </div>
-            <ul className="space-y-1 text-[11px]">
+            <ul className="space-y-0.5 text-[11px]">
               <li>
-                <a href="https://github.com/vllm-project/speculators" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-swiss)] text-[var(--accent-swiss)] font-bold">
+                <a href="https://github.com/vllm-project/speculators" target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] text-[var(--accent-swiss)] font-bold transition-colors">
                   vllm-project/speculators [MAINTAINER]
                 </a>
               </li>
               <li>
-                <a href={siteData.profile.social.github} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-swiss)]">
+                <a href={siteData.profile.social.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">
                   GITHUB [ORESTIS-Z]
                 </a>
               </li>
               <li>
-                <a href={siteData.profile.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-swiss)]">
+                <a href={siteData.profile.social.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">
                   LINKEDIN [ORESTIS-Z]
                 </a>
               </li>
               <li>
-                <a href={siteData.profile.social.resume} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-swiss)]">
+                <a href={siteData.profile.social.resume} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">
                   CURRICULUM VITAE (PDF)
                 </a>
               </li>
               <li>
-                <button onClick={() => downloadVCard()} className="hover:text-[var(--accent-swiss)] text-left">
+                <button onClick={() => downloadVCard()} className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] text-left cursor-pointer transition-colors">
                   DOWNLOAD vCARD 3.0
                 </button>
               </li>
               <li>
-                <a href="/ai.txt" target="_blank" className="hover:text-[var(--accent-swiss)]">
+                <a href="/ai.txt" target="_blank" className="inline-flex items-center min-h-[26px] py-1 hover:text-[var(--accent-swiss)] transition-colors">
                   AI.TXT DIRECTIVES
                 </a>
               </li>
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
               Zambounis Technology<br />
               Av. Eugène-Rambert 30, 1005 Lausanne<br />
               Switzerland<br />
-              <a href="mailto:info@orestis.ch" className="text-[var(--text-primary)] hover:underline">
+              <a href="mailto:info@orestis.ch" className="inline-flex items-center min-h-[24px] py-0.5 text-[var(--text-primary)] hover:underline">
                 info@orestis.ch
               </a>
             </div>
