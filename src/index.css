@@ -141,34 +141,82 @@
   margin-bottom: 0.5rem;
 }
 
+.prose-swiss h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.prose-swiss h5 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 1.35rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prose-swiss h5::before {
+  content: "§";
+  color: var(--accent-swiss);
+  font-weight: 700;
+}
+
+.prose-swiss h6 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 1.15rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-tertiary);
+}
+
 .prose-swiss p {
   margin-bottom: 1.2rem;
 }
 
 /* Hyperlinks in technical articles */
 .prose-swiss a {
-  color: var(--accent-swiss);
+  color: var(--text-primary);
   font-weight: 500;
   text-decoration: underline;
-  text-decoration-color: var(--accent-swiss);
+  text-decoration-color: var(--text-tertiary);
   text-underline-offset: 3px;
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 1px;
   transition: all 0.15s ease-in-out;
   cursor: pointer;
 }
 
 .prose-swiss a:visited {
-  color: var(--accent-swiss);
+  color: var(--text-primary);
 }
 
 .prose-swiss a:hover {
-  text-decoration-thickness: 2.5px;
+  color: var(--accent-swiss);
+  text-decoration-color: var(--accent-swiss);
+  text-decoration-thickness: 1.5px;
   background-color: var(--accent-swiss-subtle);
   border-radius: 2px;
 }
 
 .prose-swiss a code {
   color: inherit;
+  border-color: var(--border-hairline);
+  transition: border-color 0.15s ease-in-out;
+}
+
+.prose-swiss a:hover code {
   border-color: var(--accent-swiss);
 }
 
@@ -176,9 +224,14 @@
   content: " ↗";
   font-family: var(--font-mono);
   font-size: 0.75em;
-  opacity: 0.8;
+  color: var(--text-tertiary);
+  transition: color 0.15s ease-in-out;
   display: inline-block;
   line-height: 1;
+}
+
+.prose-swiss a[target="_blank"]:not(:has(img)):hover::after {
+  color: var(--accent-swiss);
 }
 
 /* Lists styling for technical articles */
@@ -327,4 +380,27 @@
   max-width: 580px;
   margin: 0.5rem auto 2.25rem auto;
   line-height: 1.5;
+}
+
+/* Responsive video embeds (e.g. Vimeo, YouTube) */
+.prose-swiss .vimeo,
+.prose-swiss .video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 2.25rem auto 0.75rem auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.prose-swiss .vimeo iframe,
+.prose-swiss .video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

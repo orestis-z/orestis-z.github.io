@@ -28,7 +28,8 @@ export const ShopAutomationArchitecture: React.FC<ShopAutomationArchitectureProp
   const beachinItem = shopSolutions.find(s => s.key === "Beachin'");
 
   return (
-    <section id="systems" className="hairline-b bg-[var(--bg-canvas)]">
+    <section id="systems" className="hairline-b bg-[var(--bg-canvas)] relative">
+      <div id="shop-automation" className="absolute -top-16 left-0" />
       {/* Section Header Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-3 flex flex-wrap items-center justify-between border-b border-[var(--border-hairline)] text-xs font-swiss-mono text-[var(--text-tertiary)] gap-2">
         <div className="flex items-center gap-2">

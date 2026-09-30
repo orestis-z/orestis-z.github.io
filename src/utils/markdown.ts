@@ -45,6 +45,29 @@ export function renderMarkdownWithMath(content: string): string {
     return `@@CODE_BLOCK_${codeBlocks.length - 1}@@`;
   });
 
+  // 1.5. Map and resolve equation references (\eqref{...})
+  const eqMap: Record<string, string> = {
+    'eq:multi-neurons': '(2)',
+    'eq:momentum': '(3)',
+    'eq:momentum-update': '(4)',
+    'eq:adam-bias-correction': '(16)',
+    'eq:large-f': '(7)',
+    'eq:small-k1': '(8)',
+    'eq:large-k1': '(9)',
+    'eq:small-document-penalty': '(10)',
+    'eq:large-document-penalty': '(11)',
+    'eq:large-k1-and-avg-length': '(12)',
+  };
+
+  // Replace any \eqref{...} (with or without enclosing $) with clean equation badges
+  processed = processed.replace(/(?:\$\s*)?\\eqref\{([^}]+)\}(?:\s*\$)?/g, (_, eqId) => {
+    const num = eqMap[eqId] || (eqId.startsWith('eq:') ? `(${eqId.slice(3)})` : `(${eqId})`);
+    return `<span class="font-swiss-mono font-semibold text-[var(--accent-swiss)]">${num}</span>`;
+  });
+
+  // Strip any remaining stray \label{...} in text or math
+  processed = processed.replace(/\\label\{[^}]*\}/g, '');
+
   // 2. Parse display math: $$...$$
   processed = processed.replace(/\$\$([\s\S]*?)\$\$/g, (_, rawFormula) => {
     try {
@@ -63,8 +86,8 @@ export function renderMarkdownWithMath(content: string): string {
     }
   });
 
-  // 3. Parse inline math: $...$ (avoiding dollar signs next to numbers)
-  processed = processed.replace(/(?<!\\)\$([^\$\n]+?)\$/g, (_, rawFormula) => {
+  // 3. Parse inline math: $...$ (requiring non-whitespace borders to prevent greedy captures)
+  processed = processed.replace(/(?<!\\)\$([^\s\$](?:[^\$\n]*?[^\s\$])?)\$/g, (_, rawFormula) => {
     try {
       const formula = rawFormula
         .replace(/\\label\{[^}]*\}/g, '')

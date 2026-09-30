@@ -29,48 +29,109 @@ export const App: React.FC = () => {
     }
   }, [isDark]);
 
-  // Handle URL hash on initial load or navigation
+  // Handle URL pathname and hash on initial load or navigation
   useEffect(() => {
-    const handleHash = () => {
-      const hash = window.location.hash.replace('#', '');
-      if (!hash) return;
+    const handleRoute = () => {
+      const pathname = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.replace('#', '').toLowerCase();
 
-      // Check if hash matches an article slug
-      const foundPost = siteData.posts.find(p => p.slug === hash);
+      // 1. Check pathname for blog route (/blog/:slug)
+      const blogMatch = pathname.match(/\/blog\/([^\/\.]+)/);
+      if (blogMatch) {
+        const foundPost = siteData.posts.find(p => p.slug.toLowerCase() === blogMatch[1]);
+        if (foundPost) {
+          setSelectedPost(foundPost);
+          return;
+        }
+      }
+
+      // Helper to close modals and scroll to target section once mounted
+      const scrollToSection = (targetId: string) => {
+        setSelectedPost(null);
+        setSelectedProject(null);
+        setTimeout(() => {
+          const el = document.getElementById(targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 50);
+      };
+
+      // 2. Check pathname for section pages
+      if (pathname.includes('/portfolio')) {
+        scrollToSection('projects');
+        return;
+      }
+      if (pathname.includes('/shop-automation')) {
+        scrollToSection('systems');
+        return;
+      }
+      if (pathname.includes('/impressum')) {
+        scrollToSection('contact');
+        return;
+      }
+
+      if (!hash) {
+        setSelectedPost(null);
+        setSelectedProject(null);
+        return;
+      }
+
+      // 3. Check if hash matches an article slug
+      const foundPost = siteData.posts.find(p => p.slug.toLowerCase() === hash);
       if (foundPost) {
         setSelectedPost(foundPost);
         return;
       }
 
-      // Check if hash matches a project key/id
+      // 4. Check if hash matches a project key/id
       const foundProject = siteData.projects.find(
-        p => p.id.toLowerCase() === hash.toLowerCase() || p.key.toLowerCase().replace(/\s+/g, '-') === hash.toLowerCase()
+        p => p.id.toLowerCase() === hash || p.key.toLowerCase().replace(/\s+/g, '-') === hash
       );
       if (foundProject) {
         setSelectedProject(foundProject);
         return;
       }
 
-      // Else scroll to section
-      const el = document.getElementById(hash);
-      if (el) {
-        setSelectedPost(null);
-        setSelectedProject(null);
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      // 5. Check if hash matches a section or alias
+      const sectionAliases: Record<string, string> = {
+        'shop-automation': 'systems',
+        'systems': 'systems',
+        'projects': 'projects',
+        'portfolio': 'projects',
+        'dossier': 'dossier',
+        'about': 'dossier',
+        'dispatches': 'dispatches',
+        'blog': 'dispatches',
+        'contact': 'contact',
+        'impressum': 'contact',
+      };
+
+      const targetSection = sectionAliases[hash] || hash;
+      scrollToSection(targetSection);
     };
 
-    handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+    handleRoute();
+    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('popstate', handleRoute);
+    return () => {
+      window.removeEventListener('hashchange', handleRoute);
+      window.removeEventListener('popstate', handleRoute);
+    };
   }, []);
 
-  // Update hash when opening or closing reader
+  // Update URL when opening or closing reader
   useEffect(() => {
     if (selectedPost) {
-      window.location.hash = selectedPost.slug;
-    } else if (window.location.hash.startsWith('#') && siteData.posts.some(p => p.slug === window.location.hash.replace('#', ''))) {
-      history.replaceState(null, '', window.location.pathname);
+      if (!window.location.pathname.includes('/blog/')) {
+        window.location.hash = selectedPost.slug;
+      }
+    } else {
+      if (window.location.pathname.includes('/blog/')) {
+        history.pushState(null, '', '/');
+      } else if (window.location.hash.startsWith('#') && siteData.posts.some(p => p.slug === window.location.hash.replace('#', ''))) {
+        history.replaceState(null, '', window.location.pathname);
+      }
     }
   }, [selectedPost]);
 
