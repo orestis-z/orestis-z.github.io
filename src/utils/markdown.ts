@@ -18,28 +18,37 @@ export function renderMarkdownWithMath(content: string): string {
   });
 
   // 2. Parse display math: $$...$$
-  processed = processed.replace(/\$\$([\s\S]*?)\$\$/g, (_, formula) => {
+  processed = processed.replace(/\$\$([\s\S]*?)\$\$/g, (_, rawFormula) => {
     try {
-      const rendered = katex.renderToString(formula.trim(), {
+      // Clean LaTeX \label{...} which causes red error text in KaTeX and overlaps
+      const formula = rawFormula
+        .replace(/\\label\{[^}]*\}/g, '')
+        .trim();
+
+      const rendered = katex.renderToString(formula, {
         displayMode: true,
         throwOnError: false,
       });
-      return `<div class="katex-block my-4 overflow-x-auto py-2 flex justify-center">${rendered}</div>`;
+      return `<div class="katex-block my-6 overflow-x-auto py-2">${rendered}</div>`;
     } catch {
-      return `<code>${formula}</code>`;
+      return `<code>${rawFormula}</code>`;
     }
   });
 
   // 3. Parse inline math: $...$ (avoiding dollar signs next to numbers)
-  processed = processed.replace(/(?<!\\)\$([^\$\n]+?)\$/g, (_, formula) => {
+  processed = processed.replace(/(?<!\\)\$([^\$\n]+?)\$/g, (_, rawFormula) => {
     try {
-      const rendered = katex.renderToString(formula.trim(), {
+      const formula = rawFormula
+        .replace(/\\label\{[^}]*\}/g, '')
+        .trim();
+
+      const rendered = katex.renderToString(formula, {
         displayMode: false,
         throwOnError: false,
       });
       return `<span class="katex-inline inline-block px-1">${rendered}</span>`;
     } catch {
-      return `<code>${formula}</code>`;
+      return `<code>${rawFormula}</code>`;
     }
   });
 

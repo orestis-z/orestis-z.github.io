@@ -145,13 +145,78 @@
   margin-bottom: 1.2rem;
 }
 
-.prose-swiss ul, .prose-swiss ol {
+/* Lists styling for technical articles */
+.prose-swiss ul {
+  list-style-type: disc !important;
+  margin-top: 0.75rem;
   margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
+  padding-left: 1.75rem;
+}
+
+.prose-swiss ol {
+  list-style-type: decimal !important;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.75rem;
 }
 
 .prose-swiss li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  display: list-item !important;
+}
+
+.prose-swiss ul ul, .prose-swiss ol ul {
+  list-style-type: circle !important;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-swiss ol ol, .prose-swiss ul ol {
+  list-style-type: lower-roman !important;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+/* KaTeX mathematical display and tag alignment */
+.katex-block {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 1.75rem 0;
+  padding: 0.5rem 0;
+}
+
+.katex-display {
+  width: 100%;
+  margin: 0 !important;
+  text-align: center;
+}
+
+.katex-display > .katex {
+  display: block !important;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.katex-display > .katex > .katex-html {
+  display: block !important;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 3.5rem;
+}
+
+.katex-display > .katex > .katex-html > .katex-tag {
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding-left: 1rem;
 }
 
 .prose-swiss blockquote {
