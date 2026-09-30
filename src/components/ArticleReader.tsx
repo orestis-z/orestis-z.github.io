@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { ArrowLeft, Clock, Calendar, Tag, Share2, Check, BookOpen, Layers } from 'lucide-react';
 import { Post } from '../data/siteData';
 import { renderMarkdownWithMath } from '../utils/markdown';
@@ -9,8 +9,12 @@ interface ArticleReaderProps {
 }
 
 export const ArticleReader: React.FC<ArticleReaderProps> = ({ post, onClose }) => {
-  const [renderedHtml, setRenderedHtml] = useState<string>('');
   const [copiedLink, setCopiedLink] = useState(false);
+
+  // Compute rendered HTML synchronously with useMemo to avoid blank content flash
+  const renderedHtml = useMemo(() => {
+    return post ? renderMarkdownWithMath(post.content) : '';
+  }, [post]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -19,9 +23,6 @@ export const ArticleReader: React.FC<ArticleReaderProps> = ({ post, onClose }) =
     if (post) {
       window.scrollTo(0, 0);
       window.addEventListener('keydown', handleKeyDown);
-      // Render markdown + math
-      const html = renderMarkdownWithMath(post.content);
-      setRenderedHtml(html);
     }
     return () => {
       window.removeEventListener('keydown', handleKeyDown);

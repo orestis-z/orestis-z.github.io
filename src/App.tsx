@@ -11,13 +11,43 @@ import { ArticleReader } from './components/ArticleReader';
 import { CommandPalette } from './components/CommandPalette';
 import { siteData, Project, Post } from './data/siteData';
 
+const getInitialPost = (): Post | null => {
+  if (typeof window === 'undefined') return null;
+  const pathname = window.location.pathname.toLowerCase();
+  const hash = window.location.hash.replace('#', '').toLowerCase();
+
+  const blogMatch = pathname.match(/\/blog\/([^\/\.]+)/);
+  if (blogMatch) {
+    const foundPost = siteData.posts.find(p => p.slug.toLowerCase() === blogMatch[1]);
+    if (foundPost) return foundPost;
+  }
+
+  if (hash) {
+    const foundPost = siteData.posts.find(p => p.slug.toLowerCase() === hash);
+    if (foundPost) return foundPost;
+  }
+
+  return null;
+};
+
+const getInitialProject = (): Project | null => {
+  if (typeof window === 'undefined') return null;
+  const hash = window.location.hash.replace('#', '').toLowerCase();
+  if (hash) {
+    return siteData.projects.find(
+      p => p.id.toLowerCase() === hash || p.key.toLowerCase().replace(/\s+/g, '-') === hash
+    ) || null;
+  }
+  return null;
+};
+
 export const App: React.FC = () => {
   const [isDark, setIsDark] = useState<boolean>(() => {
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
   const [activeSection, setActiveSection] = useState<string>('dossier');
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [selectedPost, setSelectedPost] = useState<Post | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(getInitialProject);
+  const [selectedPost, setSelectedPost] = useState<Post | null>(getInitialPost);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
 
   // Apply dark mode class to html element
