@@ -267,9 +267,28 @@
   letter-spacing: 0.05em;
 }
 
+/* Centered figures & diagrams in technical prose */
 .prose-swiss img {
+  display: block;
   max-width: 100%;
   height: auto;
+  margin: 2.25rem auto 0.75rem auto;
   border: 1px solid var(--border-hairline);
-  margin: 1.5rem 0;
+  background: var(--bg-surface);
+}
+
+.prose-swiss p:has(> img) {
+  text-align: center;
+}
+
+.prose-swiss .image-caption,
+.prose-swiss figcaption {
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  max-width: 580px;
+  margin: 0.5rem auto 2.25rem auto;
+  line-height: 1.5;
 }
