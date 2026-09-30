@@ -1,0 +1,210 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@layer base {
+  :root {
+    --bg-canvas: #fafafa;
+    --bg-surface: #ffffff;
+    --bg-subtle: #f2f3f5;
+    --border-hairline: #e3e6eb;
+    --border-strong: #111111;
+    --text-primary: #0d0f12;
+    --text-secondary: #57606a;
+    --text-tertiary: #8c959f;
+    --accent-swiss: #e60000;
+    --accent-swiss-subtle: rgba(230, 0, 0, 0.08);
+    --grid-mark: #cbd5e1;
+    --code-bg: #f6f8fa;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .dark {
+    --bg-canvas: #090a0d;
+    --bg-surface: #101216;
+    --bg-subtle: #171a21;
+    --border-hairline: #222731;
+    --border-strong: #f0f2f5;
+    --text-primary: #f2f4f7;
+    --text-secondary: #9098a5;
+    --text-tertiary: #5d6573;
+    --accent-swiss: #ff3333;
+    --accent-swiss-subtle: rgba(255, 51, 51, 0.12);
+    --grid-mark: #323946;
+    --code-bg: #14171e;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: var(--border-hairline);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Selection style */
+  ::selection {
+    background: var(--text-primary);
+    color: var(--bg-canvas);
+  }
+}
+
+/* Swiss typography utilities */
+.font-swiss-sans {
+  font-family: var(--font-sans);
+}
+
+.font-swiss-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+.hairline-border {
+  border: 1px solid var(--border-hairline);
+}
+
+.hairline-b {
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--border-hairline);
+}
+
+.hairline-l {
+  border-left: 1px solid var(--border-hairline);
+}
+
+.hairline-r {
+  border-right: 1px solid var(--border-hairline);
+}
+
+/* Swiss corner register marks */
+.register-cross {
+  position: relative;
+}
+.register-cross::before {
+  content: "+";
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1;
+  color: var(--grid-mark);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Markdown prose typography for engineering papers */
+.prose-swiss {
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.prose-swiss h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.prose-swiss h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-hairline);
+  line-height: 1.3;
+}
+
+.prose-swiss h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-swiss p {
+  margin-bottom: 1.2rem;
+}
+
+.prose-swiss ul, .prose-swiss ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose-swiss li {
+  margin-bottom: 0.35rem;
+}
+
+.prose-swiss blockquote {
+  border-left: 2px solid var(--accent-swiss);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.prose-swiss pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border-hairline);
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.prose-swiss code:not(pre code) {
+  background: var(--code-bg);
+  border: 1px solid var(--border-hairline);
+  padding: 0.15rem 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+.prose-swiss table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+}
+
+.prose-swiss th, .prose-swiss td {
+  border: 1px solid var(--border-hairline);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose-swiss th {
+  background: var(--bg-subtle);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.prose-swiss img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border-hairline);
+  margin: 1.5rem 0;
+}

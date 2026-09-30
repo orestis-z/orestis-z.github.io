@@ -1,45 +1,18 @@
----
-layout: default
-title: orestis.ch
----
-
-<div class="wrapper-small">
-    {% include navigation-header.html %}
-    <div class="home">
-    {% include profile-header.html %}
-
-    {% if site.about %}
-        <nav class="nav-home">
-            <ul class="list">
-                <li class="item">
-                    <h2>About</h2>
-                </li>
-            </ul>
-        </nav>
-        {% include about.html %}
-    {% endif %}
-
-    {% if site.skills %}
-        <nav class="nav-home">
-            <ul class="list">
-                <li class="item">
-                    <h2>Skills</h2>
-                </li>
-            </ul>
-        </nav>
-        {% include skills.html %}
-    {% endif %}
-
-    {% if site.projects %}
-        <nav class="nav-home">
-            <ul class="list">
-                <li class="item">
-                    <h2>Projects</h2>
-                    <p><a href="/portfolio">View all projects with detailed case studies →</a></p>
-                </li>
-            </ul>
-        </nav>
-        {% include projects.html %}
-    {% endif %}
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ORESTIS ZAMBOUNIS // ENGINEERING DOSSIER</title>
+    <meta name="description" content="Personal engineering system and portfolio of Orestis Zambounis. ML Lead at Q-SYS, ETH Zurich alumnus, specializing in ML inference optimization, computer vision, robotics control, and unattended shop automation." />
+    <!-- Google Fonts: Inter and JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#fafafa] dark:bg-[#090a0d] text-[#0d0f12] dark:text-[#f2f4f7] transition-colors duration-150">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

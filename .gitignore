@@ -1,4 +1,16 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OS and Editor files
 .DS_Store
-_site
-.sass-cache
-.npm-debug.log
+.idea/
+.vscode/
+*.local

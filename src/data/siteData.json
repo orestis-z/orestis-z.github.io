@@ -1,0 +1,847 @@
+{
+  "profile": {
+    "name": "Orestis Zambounis",
+    "title": "AI & Full-Stack Engineer",
+    "leadRole": "AI & Systems Engineer · Senior ML Engineer @ Red Hat · Maintainer vllm-project/speculators",
+    "almaMater": "ETH Zurich Alumnus (Robotics, Systems & Control)",
+    "bio": "AI & Full-Stack Systems Engineer",
+    "subbio": "Machine learning systems, computer vision, robotics control, physical automation",
+    "aboutParagraphs": [
+      "AI & systems engineer with an interdisciplinary background spanning machine learning systems, robotics & control (ETH Zurich), and physical computing.",
+      "Currently a Senior ML Engineer at Red Hat and maintainer of vllm-project/speculators (speculative decoding for vLLM); previously ML Lead at Q-SYS (ex-Seervision).",
+      "Obsessed with high-performance execution across LLM inference, real-time computer vision, distributed backends, and autonomous IoT retail hardware.",
+      "With an entrepreneurial engineering mindset, I specialize in taking mathematically grounded concepts from cutting-edge research to production-scale operations with zero operational friction."
+    ],
+    "picture": "/assets/images/profile.jpg",
+    "coordinates": "46°31'N 6°38'E",
+    "location": "Lausanne, Switzerland",
+    "email": "info@orestis.ch",
+    "personalEmail": "me@orestisz.com",
+    "phone": "+41 78 637 35 91",
+    "company": "Zambounis Technology",
+    "address": {
+      "entity": "Zambounis Technology",
+      "name": "Orestis Zambounis",
+      "street": "Av. Eugène-Rambert 30",
+      "postalCode": "1005",
+      "city": "Lausanne",
+      "country": "Switzerland"
+    },
+    "social": {
+      "github": "https://github.com/orestis-z",
+      "linkedin": "https://linkedin.com/in/orestis-z",
+      "resume": "https://github.com/orestis-z/resume-compiler/raw/master/docs/Resume_Orestis_Zambounis.pdf",
+      "calendly": "https://calendly.com/me-orestisz/20-minute-meeting",
+      "speculators": "https://github.com/vllm-project/speculators"
+    },
+    "systemTelemetry": {
+      "status": "OPERATIONAL",
+      "nodeId": "CH-LAUSANNE-01",
+      "latency": "< 1.4ms",
+      "runtime": "VITE + REACT + TYPESCRIPT",
+      "aesthetic": "SWISS INTERNATIONAL TYPOGRAPHIC STYLE (NEUE HAAS GROTESK / MONOSPACE)"
+    },
+    "keyMetrics": [
+      {
+        "value": "10×",
+        "label": "INFERENCE SPEEDUP",
+        "sub": "TensorRT / Dynamic Batching in Prod"
+      },
+      {
+        ">95%": ">95%",
+        "value": ">95%",
+        "label": "FACE RECOGNITION PRECISION",
+        "sub": "Talent ID for Broadcast Systems"
+      },
+      {
+        "value": "0",
+        "label": "STAFF OVERHEAD",
+        "sub": "24/7 Unattended Store Automation"
+      },
+      {
+        "value": "100K+",
+        "label": "PRODUCTION APP USERS",
+        "sub": "Cross-Platform Mobile Game"
+      },
+      {
+        "value": "55×",
+        "label": "NUMPY TO C++ SPEEDUP",
+        "sub": "PyJet Directed Acyclic Graph JIT"
+      },
+      {
+        "value": "11 FPS",
+        "label": "3D INSTANCE SEGMENTATION",
+        "sub": "RGB-D Mask R-CNN Robotic Sensing"
+      }
+    ],
+    "engineeringStacks": [
+      {
+        "group": "SPECULATIVE DECODING & LLM INFERENCE",
+        "skills": [
+          "vllm-project/speculators (Maintainer)",
+          "Speculative Decoding",
+          "vLLM",
+          "Draft Models",
+          "TensorRT-LLM",
+          "TensorRT",
+          "CUDA",
+          "PyTorch",
+          "Dynamic Batching"
+        ]
+      },
+      {
+        "group": "COMPUTER VISION",
+        "skills": [
+          "Mask R-CNN",
+          "3D Pose Estimation",
+          "RGB-D Perception",
+          "OpenCV",
+          "Face Re-Identification"
+        ]
+      },
+      {
+        "group": "ROBOTICS & SYSTEMS",
+        "skills": [
+          "Nonlinear Attitude Control",
+          "Quaternions",
+          "Extended Kalman Filters",
+          "C++",
+          "MATLAB/Simulink"
+        ]
+      },
+      {
+        "group": "IOT & EMBEDDED",
+        "skills": [
+          "ESP32 (C/C++)",
+          "Relay Matrices",
+          "Solenoid Control",
+          "I2C / GPIO Expanders",
+          "Raspberry Pi"
+        ]
+      },
+      {
+        "group": "CLOUD & DATA",
+        "skills": [
+          "Azure Databricks",
+          "Apache Spark",
+          "AWS (EC2, RDS, Route53, S3)",
+          "Docker",
+          "Distributed ETL"
+        ]
+      },
+      {
+        "group": "FULL-STACK & SAAS",
+        "skills": [
+          "TypeScript",
+          "React",
+          "Node.js",
+          "Shopify API / Webhooks",
+          "Stripe POS",
+          "Tailwind CSS"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "PRJ-01",
+      "key": "Shop automation",
+      "name": "Shop Automation",
+      "subtitle": "",
+      "description": "Self-service in-store system powered by smart lockers and Shopify",
+      "detailedDescription": "Self-service in-store system powered by custom smart lockers for oversized products, payment kiosk and Shopify integration. Reduced staff costs to zero (unattended store).",
+      "year": "2024 – present",
+      "icon": "/assets/images/thumbnails/selfservice.jpg",
+      "portfolioImage": "/assets/images/portfolio/selfservice.jpg",
+      "portfolioImageContain": false,
+      "organization": "Beachin' Rentals",
+      "shortOrg": "<none>",
+      "organizationLink": "https://beachinrentalsbcn.es",
+      "url": "/blog/automating-beach-rental-store",
+      "buttonLabel": "Full Case Study",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": true,
+      "categoryId": "iot",
+      "categoryName": "IoT",
+      "tags": [
+        "Smart Lockers",
+        "Shopify API",
+        "ESP32",
+        "IoT",
+        "Hardware Automation"
+      ],
+      "metric": "0 Staff / 24/7 Unattended",
+      "domain": "IoT & Retail Automation"
+    },
+    {
+      "id": "PRJ-02",
+      "key": "Inference Optimization",
+      "name": "ML Inference Optimization",
+      "subtitle": "",
+      "description": "Real-time ML pipeline optimization using TensorRT, batching & parallelization, 10x speedup",
+      "detailedDescription": "Real-time ML pipeline optimization using TensorRT, dynamic batching & parallelization, achieving 10x speedup for computer vision models in production environments. With the help of those optimizations we were able to sell multiple VisionSuite systems running on a single hardware unit while staying within the Python ecosystem.",
+      "year": "2022 – 2025",
+      "icon": "/assets/images/thumbnails/tensorrt.jpg",
+      "portfolioImage": "/assets/images/portfolio/tensorrt.jpg",
+      "portfolioImageContain": false,
+      "organization": "QSC",
+      "shortOrg": "",
+      "organizationLink": "https://qsc.com",
+      "url": "",
+      "buttonLabel": "View Details",
+      "secondaryButtonUrl": "https://www.qsys.com/products/q-sys/video/q-sys-visionsuite/",
+      "secondaryButtonLabel": "Q-SYS VisionSuite",
+      "isMiniPortfolio": true,
+      "categoryId": "computer_vision_ai",
+      "categoryName": "Computer Vision / AI",
+      "tags": [
+        "TensorRT",
+        "Dynamic Batching",
+        "CUDA",
+        "Python",
+        "Deep Learning"
+      ],
+      "metric": "10× Inference Speedup",
+      "domain": "AI / Computer Vision"
+    },
+    {
+      "id": "PRJ-03",
+      "key": "Face Recognition",
+      "name": "Face Recognition",
+      "subtitle": "",
+      "description": "Face recognition system with a precision above 95%",
+      "detailedDescription": "Face recognition system developed at Seervision GmbH with a precision above 95%. By uploading a photo, we can remember talents and always associate the same ID to a specific talent. This way you can track specific people or enable person-specific workflows. This complex and highly requested feature set us apart from other competitors in the market.",
+      "year": 2022,
+      "icon": "/assets/images/thumbnails/facereco.jpg",
+      "portfolioImage": "/assets/images/portfolio/facereco.jpg",
+      "portfolioImageContain": false,
+      "organization": "Seervision GmbH",
+      "shortOrg": "Seervision",
+      "organizationLink": "https://seervision.ch",
+      "url": "",
+      "buttonLabel": "View Details",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": true,
+      "categoryId": "computer_vision_ai",
+      "categoryName": "Computer Vision / AI",
+      "tags": [
+        "Computer Vision",
+        "Deep Metric Learning",
+        "Face Embeddings",
+        "C++ / Python"
+      ],
+      "metric": ">95% Precision at Scale",
+      "domain": "Computer Vision"
+    },
+    {
+      "id": "PRJ-04",
+      "key": "Data pipeline",
+      "name": "Big Data Pipeline",
+      "subtitle": "",
+      "description": "Scalable ML infrastructure and data pipelines built on DataBricks",
+      "detailedDescription": "Cloud infrastructure powered by Azure DataBricks, enabling large-scale ETL pipelines, data analytics and machine learning applications.",
+      "year": 2022,
+      "icon": "/assets/images/thumbnails/databricks.jpg",
+      "portfolioImage": "/assets/images/portfolio/databricks.jpg",
+      "portfolioImageContain": true,
+      "organization": "benshi.ai",
+      "shortOrg": "",
+      "organizationLink": "https://benshi.ai",
+      "url": "",
+      "buttonLabel": "View Details",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": true,
+      "categoryId": "big_data",
+      "categoryName": "Cloud",
+      "tags": [
+        "Azure Databricks",
+        "Apache Spark",
+        "ETL Pipelines",
+        "ML Infrastructure"
+      ],
+      "metric": "Multi-TB Scalable Data Lake",
+      "domain": "Cloud & Data Engineering"
+    },
+    {
+      "id": "PRJ-05",
+      "key": "AWS",
+      "name": "AWS Cloud Infrastructure",
+      "subtitle": "",
+      "description": "Scalable cloud infrastructure for web applications and services",
+      "detailedDescription": "Scalable microservice infrastructure powered by Route 53, S3, EC2, RDS, SNS, CloudFront, Elastic Beanstalk, OpsWorks and ELB. The cloud infrastructure served a web and mobile app enabling a seamless experience at scale.",
+      "year": 2021,
+      "icon": "/assets/images/thumbnails/aws.jpg",
+      "portfolioImage": "/assets/images/portfolio/aws.jpg",
+      "portfolioImageContain": false,
+      "organization": "",
+      "shortOrg": "",
+      "organizationLink": "",
+      "url": "",
+      "buttonLabel": "View Details",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": false,
+      "categoryId": "big_data",
+      "categoryName": "Cloud",
+      "tags": [
+        "Route 53",
+        "EC2",
+        "RDS",
+        "CloudFront",
+        "Elastic Beanstalk",
+        "DevOps"
+      ],
+      "metric": "High-Availability Microservices",
+      "domain": "Cloud Infrastructure"
+    },
+    {
+      "id": "PRJ-06",
+      "key": "MT",
+      "name": "Multitask CNN",
+      "subtitle": "Architecture for Online 3D Human Pose Estimation and Multi-person Tracking",
+      "description": "Multitask CNN architecture for online 3D human pose estimation and multi-person tracking",
+      "detailedDescription": "Robotic systems require precise information about the position and shape of objects along with future motion of surrounding persons in order to efficiently plan trajectories and safely collaborate with humans in a dynamic environment. We present an end-to-end multi-task CNN architecture which predicts object instances, human poses and tracks multiple people. Our method extends Mask R-CNN with a simple tracking head based on the MatchNet metric which relies exclusively on appearance cues. With a straightforward back-tracking algorithm we manage to re-identify lost tracks caused by detector failures or occlusions. Our method runs at ∼2.5Hz and is able to associate objects independent of spatio-temporal relations. Exploiting sensory information from RGB-D cameras and SLAM systems we aim to lay a solid step stone for generating arbitrary 3D human motion datasets and use those to train temporal models to predict human motion for future timestamps.",
+      "year": 2019,
+      "icon": "/assets/images/thumbnails/trackrcnn.jpg",
+      "portfolioImage": "/assets/images/portfolio/000066_pred-multi.jpg",
+      "portfolioImageContain": true,
+      "organization": "Imperial College London",
+      "shortOrg": "",
+      "organizationLink": "https://www.imperial.ac.uk/",
+      "url": "https://drive.google.com/file/d/1JowSPwsx_-GFVdufEHyK6bJdPH2bveiT/view?usp=sharing",
+      "buttonLabel": "Report",
+      "secondaryButtonUrl": "https://docs.google.com/presentation/d/1sPEMw900Rz1AuMB-vPiYq_DEyCpvwpXp/edit?usp=drive_link&ouid=103928730132306857985&rtpof=true&sd=true",
+      "secondaryButtonLabel": "Slides",
+      "isMiniPortfolio": false,
+      "categoryId": "computer_vision_ai",
+      "categoryName": "Computer Vision / AI",
+      "tags": [
+        "3D Pose Estimation",
+        "Mask R-CNN",
+        "MatchNet",
+        "Multi-Person Tracking"
+      ],
+      "metric": "~2.5 Hz Online 3D Tracking",
+      "domain": "Deep Learning Research"
+    },
+    {
+      "id": "PRJ-07",
+      "key": "Does depth matter",
+      "name": "Does Depth Matter?",
+      "subtitle": "RGB-D Instance Segmentation with Mask R-CNN",
+      "description": "RGB-D Instance Segmentation with Mask R-CNN, 31% accuracy improvement",
+      "detailedDescription": "Robotic systems require precise information about the geometry and the location of object instances for successful interactions with their surrounding environment. This involves the ability to extract information about previously unseen object instances from raw sensor data. Most methods approach this by segmenting RGB, depth, or point cloud data based on either geometrical cues or learned features. Whereas color-based segmentation approaches benefit from distinctive changes in appearance, they fail at identifying objects with similar texture or drastic illumination changes. On the other hand, geometrical approaches suffer from the inability to detect object instances that have invisible boundaries in depth images, such as flat objects. Furthermore, most of the learning-based approaches are restricted to RGB inputs as they require a large amount of training data to show good performance and only limited labeled RGB-D data is available. We extend an established convolutional neural network for instance-aware segmentation to work with RGB-D data, which substantially improves the object instance prediction accuracy, compared to sole RGB inputs. In our approach, we use the synthetic SceneNet RGB-D dataset with data augmentation to generate a large training set and we fine-tune our models using a limited set of labeled real-world data from the NYU Depth V2 dataset. Our method yields real-time performance running at over 11 fps. We evaluate our approach on both synthetic and real data.",
+      "year": 2018,
+      "icon": "/assets/images/thumbnails/convnet.jpg",
+      "portfolioImage": "/assets/images/portfolio/maskrcnn.jpg",
+      "portfolioImageContain": true,
+      "organization": "ETH Zurich",
+      "shortOrg": "",
+      "organizationLink": "https://ethz.ch",
+      "url": "https://drive.google.com/file/d/1jngkyHaAs9gxZNe6l0xQHnCDeZzjOQ1T/view?usp=sharing",
+      "buttonLabel": "Paper",
+      "secondaryButtonUrl": "https://drive.google.com/file/d/1otA-GDfS-7KHopIVa8kvhq6R2vQh8dGX/view?usp=drive_link",
+      "secondaryButtonLabel": "Slides",
+      "isMiniPortfolio": true,
+      "categoryId": "computer_vision_ai",
+      "categoryName": "Computer Vision / AI",
+      "tags": [
+        "RGB-D Segmentation",
+        "Mask R-CNN",
+        "SceneNet",
+        "Robotics Vision"
+      ],
+      "metric": "+31% Accuracy Improvement (11 FPS)",
+      "domain": "Robotics / Deep Learning"
+    },
+    {
+      "id": "PRJ-08",
+      "key": "Explora",
+      "name": "Explora.ch",
+      "subtitle": "",
+      "description": "Cross-platform mobile app built using React Native, 5.0-star rating",
+      "detailedDescription": "Cross-platform mobile app built using React Native, providing users with event information and a ticket booking system. Maintained a 5.0-star rating on app stores.",
+      "year": 2018,
+      "icon": "/assets/images/thumbnails/explora.jpg",
+      "portfolioImage": "/assets/images/portfolio/explora.jpg",
+      "portfolioImageContain": false,
+      "organization": "nextron GmbH",
+      "shortOrg": "nextron",
+      "organizationLink": "https://nextron.ch",
+      "url": "https://www.explora.ch/news?id=6418V3XK-Neue_Explora_App",
+      "buttonLabel": "App Info",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": false,
+      "categoryId": "app_development",
+      "categoryName": "App Development",
+      "tags": [
+        "React Native",
+        "Mobile Engineering",
+        "Booking Engine",
+        "iOS & Android"
+      ],
+      "metric": "5.0-Star App Store Rating",
+      "domain": "Mobile Engineering"
+    },
+    {
+      "id": "PRJ-09",
+      "key": "PyJet",
+      "name": "PyJet",
+      "subtitle": "NumPy/Python to C++ compiler",
+      "description": "Python library converting Python/NumPy code to C++, 55x speedup",
+      "detailedDescription": "The JET library offers a simple way to make Python, and especially NumPy code run faster. This is achieved by transparently converting Python/NumPy operations to performant C++. The computation graph is represented as a Directed Acyclic Graph (DAG). Nodes of the graph represent a specific operation and edges are the data that flows between the nodes. Instead of calling a huge, math-heavy Python/NumPy simulation model on every iteration JET packs the whole model in a single performant C++ function which results in a significant speed-up (up to 60-fold speed up was observed in a simulation of a math-heavy quadcopter-model).",
+      "year": "2016f",
+      "icon": "/assets/images/thumbnails/pyjet.jpg",
+      "portfolioImage": "/assets/images/portfolio/pyjet.jpg",
+      "portfolioImageContain": true,
+      "organization": "Rapyuta Robotics",
+      "shortOrg": "",
+      "organizationLink": "https://rapyuta-robotics.com",
+      "url": "https://github.com/wolfv/pyjet",
+      "buttonLabel": "GitHub",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": false,
+      "categoryId": "robotics",
+      "categoryName": "Robotics",
+      "tags": [
+        "Python to C++",
+        "DAG Compiler",
+        "NumPy Accelerator",
+        "Code Generation"
+      ],
+      "metric": "55× Numerical Speedup",
+      "domain": "Compilers / Performance"
+    },
+    {
+      "id": "PRJ-10",
+      "key": "Omnicopter",
+      "name": "Balancing the Omnicopter",
+      "subtitle": "Nonlinear attitude control system",
+      "description": "Control systems from simulation to product using quaternions, C++, and MATLAB/Simulink",
+      "detailedDescription": "The Omnicopter is a 44 cm×44 cm×44 cm cube-framed UAV with 8 rotors attached on its space diagonals. This work presents the synthesis of control algorithms in order to balance the Omnicopter on both its edges and corners on the floor. Some attitude representations are introduced, with emphasis on the quaternion-parametrisation. The rigid-body dynamics of the inverted 3D pendulum model are derived and a steering system which allows guidance of the balancing maneuvers by the end user is described. The nonlinear attitude control system utilized is presented and an onboard implementation is introduced using the Kalman filter as a sensor fusion algorithm. Performance tests in simulations and experiments are included.",
+      "year": 2015,
+      "icon": "/assets/images/thumbnails/OmnicopterRendering_Edge.jpg",
+      "portfolioImage": "/assets/images/portfolio/cube_inital_body_frame.svg",
+      "portfolioImageContain": true,
+      "organization": "ETH Zurich",
+      "shortOrg": "",
+      "organizationLink": "https://ethz.ch",
+      "url": "https://drive.google.com/file/d/1kAv44eUh_8UD5H3U0iBAwY4kKAhkx1JA/view?usp=sharing",
+      "buttonLabel": "Report",
+      "secondaryButtonUrl": "https://docs.google.com/presentation/d/1FkHmZTHal_46OnI0chXMOFyWvDplDz-x/edit?usp=drive_link&ouid=103928730132306857985&rtpof=true&sd=true",
+      "secondaryButtonLabel": "Slides",
+      "isMiniPortfolio": false,
+      "categoryId": "robotics",
+      "categoryName": "Robotics",
+      "tags": [
+        "Nonlinear Control",
+        "Quaternions",
+        "Kalman Filter",
+        "MATLAB/Simulink",
+        "C++"
+      ],
+      "metric": "8-Rotor 3D Attitude Balancing",
+      "domain": "Robotics & Control"
+    },
+    {
+      "id": "PRJ-11",
+      "key": "Beachin'",
+      "name": "Beachin' Rentals",
+      "subtitle": "",
+      "description": "Self-service beach & skates equipment rental shop in Barcelona",
+      "detailedDescription": "Self-service beach & skates equipment rental shop in Barcelona. Clear value proposition with proximity to the beach and 50% cheaper than on the sand.",
+      "year": "2023 – present",
+      "icon": "https://lh5.googleusercontent.com/p/AF1QipNThJ5yJZ17UbXYz4-j_uox4338cxDfbWoS1M9s=w286-h298-k-no",
+      "portfolioImage": "/assets/images/portfolio/beachin.jpg",
+      "portfolioImageContain": false,
+      "organization": "",
+      "shortOrg": "",
+      "organizationLink": "",
+      "url": "https://beachinrentalsbcn.es/",
+      "buttonLabel": "Website",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": false,
+      "categoryId": "creative",
+      "categoryName": "Creative & Entrepreneurial",
+      "tags": [
+        "Smart Lockers",
+        "Autonomous Store",
+        "Shopify POS",
+        "Barcelona Retail"
+      ],
+      "metric": "-50% Cost vs Beach Front",
+      "domain": "Venture & Automation"
+    },
+    {
+      "id": "PRJ-12",
+      "key": "Trap the Cat",
+      "name": "Trap the Cat",
+      "subtitle": "",
+      "description": "Cross-platform puzzle game built with vanilla JavaScript and CapacitorJS, 100K+ downloads",
+      "detailedDescription": "Cross-platform puzzle game built with vanilla JavaScript and CapacitorJS, surpassing 100K downloads across mobile platforms with 100+ levels and user-generated content.",
+      "year": "2023 – 2024",
+      "icon": "https://play-lh.googleusercontent.com/Nvp14M_z_lItrBoEkTUKxL6UE3Kr92FkbM8KY_jB3OzoehsXhwO9URL-IIHtLar3Yw=w480-h960-rw",
+      "portfolioImage": "",
+      "portfolioImageContain": false,
+      "organization": "",
+      "shortOrg": "",
+      "organizationLink": "",
+      "url": "https://play.google.com/store/apps/details/Chat_Noir_Hexagon?id=com.kima.chatnoirhex",
+      "buttonLabel": "Play Store",
+      "secondaryButtonUrl": "https://chat-noir-hexagon.web.app",
+      "secondaryButtonLabel": "Browser Game",
+      "isMiniPortfolio": true,
+      "categoryId": "app_development",
+      "categoryName": "App Development",
+      "tags": [
+        "Vanilla JavaScript",
+        "CapacitorJS",
+        "Hexagonal Grid",
+        "Algorithms"
+      ],
+      "metric": "100K+ Organic Downloads",
+      "domain": "Mobile & Web Games"
+    },
+    {
+      "id": "PRJ-13",
+      "key": "Eixample Airbnb",
+      "name": "Eixample Airbnb",
+      "subtitle": "",
+      "description": "Airbnb listing for a flat in Barcelona, interior design and self-made furniture",
+      "detailedDescription": "Airbnb listing for a flat in Barcelona featuring custom interior design and self-made furniture. Creative expression in physical space creating a unique accommodation experience.",
+      "year": 2022,
+      "icon": "/assets/images/thumbnails/rbnb.jpg",
+      "portfolioImage": "/assets/images/portfolio/rbnb.jpg",
+      "portfolioImageContain": false,
+      "organization": "",
+      "shortOrg": "",
+      "organizationLink": "",
+      "url": "https://orestisz.pixieset.com/eixample-airbnb/",
+      "buttonLabel": "Gallery",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": false,
+      "categoryId": "creative",
+      "categoryName": "Creative & Entrepreneurial",
+      "tags": [
+        "Spatial Architecture",
+        "Custom Furniture",
+        "Interior Fabrication",
+        "Barcelona"
+      ],
+      "metric": "Superhost Rating & Custom Build",
+      "domain": "Spatial Design"
+    },
+    {
+      "id": "PRJ-14",
+      "key": "Machine Dreams",
+      "name": "Machine Dreams",
+      "subtitle": "",
+      "description": "An experimental fusion of artificial intelligence and digital art",
+      "detailedDescription": "An experimental fusion of artificial intelligence and digital art. Surreal animated artwork generated by interpolating selected feature embeddings from a Generative Adversarial Network (GAN).",
+      "year": 2022,
+      "icon": "https://machinedreamsart.s3.us-east-1.amazonaws.com/public/binary/small/0.gif",
+      "portfolioImage": "",
+      "portfolioImageContain": false,
+      "organization": "",
+      "shortOrg": "",
+      "organizationLink": "",
+      "url": "/machinedreams/",
+      "buttonLabel": "Website",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": false,
+      "categoryId": "creative",
+      "categoryName": "Creative & Entrepreneurial",
+      "tags": [
+        "GAN Latent Space",
+        "Feature Interpolation",
+        "Generative Media",
+        "Python"
+      ],
+      "metric": "Latent Manifold Art Generation",
+      "domain": "Generative AI & Art"
+    },
+    {
+      "id": "PRJ-15",
+      "key": "Anti CryptoPunks",
+      "name": "Anti CryptoPunks",
+      "subtitle": "",
+      "description": "NFT project built on the Polygon blockchain, 6 ETH traded",
+      "detailedDescription": "NFT project built on the Polygon blockchain with 6 ETH traded. Grew community to 4k+ users on Discord and Twitter.",
+      "year": 2022,
+      "icon": "/anticryptopunks/9280.png",
+      "portfolioImage": "",
+      "portfolioImageContain": false,
+      "organization": "",
+      "shortOrg": "",
+      "organizationLink": "",
+      "url": "/anticryptopunks/",
+      "buttonLabel": "Website",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "isMiniPortfolio": false,
+      "categoryId": "creative",
+      "categoryName": "Creative & Entrepreneurial",
+      "tags": [
+        "Polygon Blockchain",
+        "Smart Contracts",
+        "Web3 Community",
+        "ERC-721"
+      ],
+      "metric": "6 ETH Volume / 4k Community",
+      "domain": "Web3 & Decentralized"
+    }
+  ],
+  "categories": [
+    {
+      "id": "computer_vision_ai",
+      "name": "Computer Vision / AI",
+      "projectKeys": [
+        "Inference Optimization",
+        "Face Recognition",
+        "MT",
+        "Does depth matter"
+      ]
+    },
+    {
+      "id": "iot",
+      "name": "IoT",
+      "projectKeys": [
+        "Shop automation"
+      ]
+    },
+    {
+      "id": "big_data",
+      "name": "Cloud",
+      "projectKeys": [
+        "Data pipeline",
+        "AWS"
+      ]
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics",
+      "projectKeys": [
+        "PyJet",
+        "Omnicopter"
+      ]
+    },
+    {
+      "id": "app_development",
+      "name": "App Development",
+      "projectKeys": [
+        "Trap the Cat",
+        "Explora"
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "Creative & Entrepreneurial",
+      "projectKeys": [
+        "Beachin'",
+        "Eixample Airbnb",
+        "Machine Dreams",
+        "Anti CryptoPunks"
+      ]
+    }
+  ],
+  "shopSolutions": [
+    {
+      "key": "Smart Lockers",
+      "name": "Smart Lockers",
+      "description": "Enable customers to pick up and return products anytime, automatically.\nAutomated locker systems for unattended retail, rentals, and storage.\nAvailable in various sizes with custom branding, sensors, and weatherproofing for indoor/outdoor use.\nIdeal for offices, supermarkets, universities, train stations, gyms, and more.",
+      "portfolioImage": "/assets/images/shop-automation/smartlockers.jpg",
+      "portfolioImageContain": false,
+      "url": "",
+      "buttonLabel": "",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "quote": null
+    },
+    {
+      "key": "Oversized Product Lockers",
+      "name": "Oversized Product Lockers",
+      "description": "Specialized lockers designed for surfboards, loungers, umbrellas, skates, and other large items.\nBuilt for durability with modular design for easy expansion.\nMade in Switzerland.",
+      "portfolioImage": "/assets/images/shop-automation/customlockers.jpg",
+      "portfolioImageContain": false,
+      "url": "",
+      "buttonLabel": "",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "quote": null
+    },
+    {
+      "key": "Kiosk",
+      "name": "Self-service Kiosk",
+      "description": "Intuitive payment and product selection terminals with seamless locker integration.\nIntegrates with Shopify for online bookings, order and inventory management.\nPhysical payment terminals supporting cards and contactless payments.",
+      "portfolioImage": "/assets/images/shop-automation/kiosk.jpg",
+      "portfolioImageContain": false,
+      "url": "",
+      "buttonLabel": "",
+      "secondaryButtonUrl": "",
+      "secondaryButtonLabel": "",
+      "quote": null
+    },
+    {
+      "key": "Beachin'",
+      "name": "Beachin' Rentals",
+      "description": "Self-service beach equipment & skates rental shop in Barcelona.\nIntegration of custom smart lockers, lockers for oversized products, payment kiosk, and Shopify.\nReduced staff costs to zero while operating around the clock (unattended store).",
+      "portfolioImage": "/assets/images/Beachin-01.svg",
+      "portfolioImageContain": true,
+      "url": "/blog/automating-beach-rental-store",
+      "buttonLabel": "Full Case Study",
+      "secondaryButtonUrl": "https://beachinrentalsbcn.es/",
+      "secondaryButtonLabel": "Website",
+      "quote": {
+        "content": "The automation system transformed our rental shop. We now operate 24/7 without staff, and customer satisfaction has never been higher.",
+        "author": "Theo, Beachin' Rentals Barcelona"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "filename": "2026-01-09-information-retrieval-and-ranking.md",
+      "slug": "information-retrieval-and-ranking",
+      "date": "2026-01-09",
+      "title": "Information Retrieval & Ranking: the \"Multi-stage Ranking\" pipeline",
+      "categories": [
+        "AI",
+        "Machine Learning"
+      ],
+      "tags": [
+        "bm25",
+        "bert",
+        "ranking",
+        "ndcg",
+        "search",
+        "hnsw",
+        "ivfpq",
+        "ir"
+      ],
+      "author": "Orestis Zambounis",
+      "description": "A comprehensive guide to modern multi-stage search architectures, lexical vs. semantic retrieval, and advanced evaluation metrics.",
+      "image": "/assets/images/blogs/2026-01-09-information-retrieval-and-ranking/ir_ranking.jpg",
+      "readTime": "10 min read",
+      "wordCount": 2068,
+      "content": "Modern information retrieval (IR) systems face a fundamental trade-off between computational efficiency and ranking precision. In a world where corpora consist of billions of documents, it is impossible to apply complex, query-aware neural models to every document in real-time. To solve this, the industry has standardized the **Multi-stage Ranking Pipeline**. \n\nThis architecture functions like a funnel: the initial stages use lightweight, high-recall methods to filter the corpus down to a few hundred candidates, while subsequent stages use increasingly sophisticated models to refine the order of those candidates for maximum relevance.\n\n## First stage retrieval\n\nThe first stage of the pipeline is often referred to as \"Candidate Generation.\" Its primary objective is high **recall**—ensuring that as many relevant documents as possible are caught in the \"net,\" even if many irrelevant ones are included. Because this stage must scan the entire corpus (millions or billions of documents), it must be extremely fast and typically relies on pre-computed indices.\n\n### Lexical / Sparse Retrieval\n\nIn the first and coarse stage, documents are retrieved based on exact keywords (lexical matching). The query is represented as a large sparse vector (most entries are 0) and the mapping is based on vocabulary (bag of words). This retrieval is the cheapest but also most inaccurate as it fails to capture the underlying intent or synonyms.\n\n#### Term Frequency-Inverse Document Frequency (TF-IDF)\n\nThe overall formula is the product of two separate components:\n\n$$\n\\text{TF-IDF}(q, d, D) = \\text{TF}(q, d) \\times \\text{IDF}(q, D) \\tag{1}\n$$\n\n- $q \\in Q$: term of query\n- $d \\in D$: document\n- $D$: all documents (corpus)\n\n##### Term Frequency (TF)\n\nThis measures how frequently a term $q$ appears in a specific document $d$. The most common way to calculate it (normalized to document length) is:\n\n$$\n\\text{TF}(q, d) = \\frac{f_{q, d}}{\\sum_{q' \\in d} f_{q', d}}\n$$\n\n- $f_{q, d}$: The number of times term $q$ appears in document $d$.\n- Denominator: The total number of terms in document $d$.\n\n#### Inverse Document Frequency (IDF)\nThis measures how important a term is across the entire collection of documents $D$. It reduces the weight of terms that appear very frequently (like \"the\" or \"is\") and increases the weight of terms that are rare.\n\n$$\n\\text{IDF}(q, D) = \\log \\left( \\frac{N}{|\\{d \\in D : q \\in d\\}|} \\right) \\in \\left[0, \\infty \\right) \\tag{2}\n$$\n\n- $N = \\lvert D\\rvert$: Total number of documents in the corpus.\n- $\\lvert\\{d \\in D : q \\in d\\}\\rvert$: Number of documents where the term $q$ appears (Document Frequency).\n\nThe rarer a term in the corpus is, the larger the IDF will be.\n\n##### The Aggregated Formula\nIf your query $Q$ consists of terms $\\{q_1, q_2, \\dots, q_n\\}$, the document score is:\n\n$$\n\\text{score}(d, D, Q) = \\sum_{q_i \\in Q} \\text{TF-IDF}(q_i, d, D) \\tag{3}\n$$\n\nWhile TF-IDF was a revolutionary starting point for search, it has two major \"blind spots\" that make it less effective for modern information retrieval.\n\n1. Its linear scaling fails to account for term frequency saturation, allowing repetitive \"keyword stuffing\" to disproportionately and inaccurately inflate a document's relevance score.\n2. Its lack of adaptive normalization creates a bias that unfairly penalizes long, comprehensive content or over-rewards short documents with accidental keyword matches.\n\n#### Best Matching 25 (BM25)\n\nBM25 is the state-of-the-art lexical ranking function. For a query $Q$ containing terms $q_1, q_2, \\dots, q_n$, the score for document $d$ is:\n\n$$\n\\text{score}(d, D, Q) = \\sum_{q \\in Q} \\text{IDF}(q, D) \\cdot \\frac{f_{q, d} \\cdot (k_1 + 1)}{f_{q, d} + k_1 \\cdot \\left(1 - b + b \\cdot \\frac{|d|}{\\text{avgdl}}\\right)} \\tag{4}\n$$\n\n- Term Frequency $f_{q, d}$: How many times the query term $q$ appears in document $d$.\n- Average Doc Length $\\text{avgdl}=\\frac{1}{\\lvert D \\rvert}\\sum_{d \\in D}\\lvert d \\rvert$: The average number of words across all documents in the collection.\n- Saturation Constant $k_1$: Controls how quickly the \"reward\" for a repeating word plateaus (usually $1.2$ to $2.0$).\n- Length Penalty $b$: Controls how much document length affects the score (usually $0.75$).\n\n##### The BM25 version of IDF\n\nIt is important to note that BM25 uses a slightly modified version of Inverse Document Frequency (IDF) compared to standard TF-IDF to ensure the math remains robust for very common words:\n\n$$\n\\text{IDF}(q, D) = \\log \\left( \\frac{N - n(q, D) + 0.5}{n(q, D) + 0.5} + 1 \\right) \\tag{5}\n$$\n\n- $N = \\lvert D\\rvert$: Total number of documents in the collection.\n- $n(q, D) = \\lvert\\{d \\in D : q \\in d\\}\\rvert$: Number of documents that contain the term $q$.\n\n##### Fostering understanding for the BM25 formula\nThe BM25 formula seems quite complicated at first glance. To understand it better, let's define\n\n$$\ng(q, d) = \\frac{f_{q, d} \\cdot (k_1 + 1)}{f_{q, d} + k_1 \\cdot \\left(1 - b + b \\cdot \\frac{|d|}{\\text{avgdl}}\\right)} \\tag{6}\n$$\n\nand look at some edge cases:\n\n$$\n\\lim_{f_{q, d} \\to \\infty} g(q, d) = k_1 + 1 \\tag{7} \\label{eq:large-f}\n$$\n\n$$\ng(q, d) |_{k_1 = 0} = 1 \\tag{8} \\label{eq:small-k1}\n$$\n\n$$\n\\lim_{k_1 \\to \\infty} g(q, d) = \\frac{f_{q, d}}{1 - b \\left(\\frac{|d|}{\\text{avgdl}} - 1\\right)} \\tag{9} \\label{eq:large-k1}\n$$\n\n$$\ng(q, d)|_{\\lvert d \\rvert = \\text{avgdl}\\ \\lor\\ b=0} = \\frac{f_{q, d} \\cdot (k_1 + 1)}{f_{q, d} + k_1} \\tag{10} \\label{eq:small-document-penalty}\n$$\n\n$$\n\\lim_{\\lvert d \\rvert \\to \\infty}g(q, d) =  \\lim_{b \\to \\infty} g(q, d) = 0 \\tag{11} \\label{eq:large-document-penalty}\n$$\n\n$$\n\\lim_{k_1 \\to \\infty} g(q, d)|_{\\lvert d \\rvert = \\text{avgdl}} = f_{q, d} \\tag{12} \\label{eq:large-k1-and-avg-length}\n$$\n\nAs can be easily seen in $\\eqref{eq:large-f}$ a large term frequency asymptotes $g$ to the constant $k_1 + 1$, effectively limiting the keyword stuffing. While as can be seen in $\\eqref{eq:small-k1}$ a small $k_1$ pushes the metric to disregard term frequency. A large $k_1$ on the contrary, as can be seen in $\\eqref{eq:large-k1}$ and $ \\eqref{eq:large-k1-and-avg-length}$ reduces the fraction to the Term Frequency divided by the Term Frequency plus the length penalty term. As can be easily seen in $\\eqref{eq:small-document-penalty}$ and $\\eqref{eq:large-document-penalty}$ a larger $b$ puts a stronger penalty on large document lengths.\n\n### Semantic / Dense Retrieval\n\nThe semantic or dense methods use deep learning (like BERT) to map text into a mathematical space where similar meanings are physically close together. Key Advantage: They solve the vocabulary gap. They \"know\" that \"dog\" and \"canine\" are related, even if they share no letters.\n\n#### Two-Tower Encoders (Bi-Encoders)\n\nTwo-Tower Architecture: It uses two separate \"towers\" (neural networks). One tower processes the query, and the other processes the document. They never \"see\" each other during the encoding phase. Once both the query and the document have been turned into vectors ($v_q$ and $v_d$), their relevance is calculated using simple vector geometry, usually Cosine Similarity or Dot Product:\n\n$$\n\\text{score}(q, d) = \\frac{v_q \\cdot v_d}{\\|v_q\\| \\|v_d\\|} = \\cos(\\theta) \\tag{13}\n$$\n\nThe most critical advantage of Bi-Encoders over other neural methods (like Cross-Encoders) is efficiency at scale:\n\n- Offline Encoding: Document vectors are stored in a Vector Database like Pinecone.\n- Real-time Retrieval: You only need to encode the query (one tower pass).\n- Speed: Vector comparison (Dot Product) is extremely fast on modern hardware.\n\n#### Scaling Search with ANN Indices\n\nCalculating exact Cosine Similarity against millions of vectors is too slow for real-time applications. Instead, vector databases use Approximate Nearest Neighbor (ANN) algorithms to speed up the process:\n\n* Hierarchical Navigable Small Worlds (HNSW): Constructs a multi-layered graph that allows the search to \"skip\" through clusters of data to find the neighborhood of the query vector quickly. It provides high accuracy and sub-millisecond latency at the cost of high RAM usage.\n* Inverted File with Product Quantization (IVF-PQ): Partitions the vector space into Voronoi cells (IVF) and compresses the vectors using Product Quantization (PQ). This allows billions of documents to fit in memory, though at a slight cost to precision compared to HNSW.\n\n### Hybrid Search\n\nMost production systems today use Hybrid Search, which combines both lexical (BM25) and semantic (Bi-Encoder) retrieval to ensure both precision for exact terms and recall for conceptual intent.\n\n#### Reciprocal Rank Fusion (RRF)\n\nTo combine systems with different score scales (e.g., BM25 vs Cosine Similarity), we use RRF:\n\n$$\n\\text{RRFscore}(d \\in D) = \\sum_{r \\in R} \\frac{1}{k + \\text{rank}(r, d)} \\tag{14}\n$$\n\n- $R$: The set of rankers.\n- $\\text{rank}(r, d)$: The position of document $d$ in the results of ranker $r$ (starting at 1).\n- $k$: A smoothing constant (typically set to 60).\n\n## Refining / Re-ranking \n\nOnce we have a narrowed-down pool of candidates (e.g., Top 100) from our hybrid search, we pass them to the Cross-Encoder for the final, most precise ranking.\n\n### Cross-Encoder\n\nUnlike the Bi-Encoder, the Cross-Encoder processes the query and document simultaneously.\n\n- Input: `[CLS] Query Text [SEP] Document Text`.\n- Full Self-Attention: Every word in the query can \"attend\" to every word in the document.\n- Output: A single probability score representing relevance.\n\n## Evaluation Metrics\n\nEvaluation is the cornerstone of IR research. Without robust metrics, it is impossible to determine if a pipeline change represents a true improvement. We categorize these metrics based on the nature of the \"Ground Truth\" labels provided by human annotators.\n\n### Binary Relevance\n\nIn binary evaluation, a document is either relevant (1) or non-relevant (0). This is most common in navigational search or simple question-answering tasks where there is a clear \"hit\" or \"miss.\"\n\n#### Mean Reciprocal Rank (MRR)\n\nMRR only cares about the rank of the **very first** relevant item.\n\n$$\n\\text{RR} = \\frac{1}{\\text{rank of 1st relevant item}} \\tag{15}\n$$\n\n#### Precision@K\n\nProportion of relevant documents in the top $K$.\n\n$$\nP_K = \\frac{T_{P,K}}{K} \\tag{16}\n$$\n\n#### Average Precision (AP)\n\nAP considers the entire ranking by averaging precision at every position where a relevant document is found:\n\n$$\nAP = \\frac{\\sum_{k=1}^{n} (P@k \\cdot \\text{rel}_k)}{\\text{Total Relevant Documents}} \\tag{17}\n$$\n\n#### Mean Average Precision (MAP)\n\nAverage of $AP$ over all queries:\n\n$$\nMAP = \\frac{\\sum_{q\\in Q}AP(q)}{\\lvert Q \\rvert} \\tag{18}\n$$\n\n### Graded Relevance\n\nGraded relevance recognizes that not all \"hits\" are equal. A \"Highly Relevant\" document (e.g., Grade 3) is more valuable than a \"Fair\" one (Grade 1). This is the standard for modern web search (e.g., Google's 5-star rating system).\n\n#### Normalized Discounted Cumulative Gain (NDCG)\n\nNDCG is the most popular graded metric because it handles both position and varying query difficulty through normalization.\n\n##### Cumulative Gain (CG)\n\n$$\nCG_K = \\sum_{i=1}^K rel_i \\tag{19}\n$$\n\n##### Discounted Cumulative Gain (DCG)\n\nTo account for the \"diminishing returns\" of documents further down the list, we apply a logarithmic discount:\n\n$$\nDCG_K = \\sum_{i=1}^K \\frac{2^{rel_i} - 1}{\\log_2(i + 1)} \\tag{20}\n$$\n\n#### Normalized DCG (NDCG)\n\nWe divide the actual DCG by the Ideal DCG (IDCG), which is the score of a perfect ranking.\n\n$$\nNDCG = \\frac{DCG}{IDCG} \\tag{21}\n$$\n\n### Expected Reciprocal Rank (ERR)\n\nERR models the user as a \"cascade,\" assuming they stop as soon as they are satisfied.\n\n$$\nERR = \\sum_{r=1}^{n} \\frac{1}{r} R_r \\prod_{i=1}^{r-1} (1 - R_i) \\tag{22}\n$$\n\nWhere the satisfaction probability is:\n\n$$\nR_i = \\frac{2^{rel_i} - 1}{2^{\\max(rel)}} \\tag{23}\n$$\n\n## Conclusion\n\nThe multi-stage ranking pipeline is a sophisticated orchestration of speed and intelligence. By leveraging efficient lexical and semantic retrievers to create a candidate pool, and using deep neural re-rankers to refine that pool, IR systems can serve high-quality results in milliseconds. However, the choice of evaluation metric remains the most critical decision in system design; whether one chooses MAP for comprehensive recall or NDCG for nuanced ranking significantly shifts the optimization goals of the entire pipeline.\n\n---\n\n## References\n\n- **Manning, C. D., Raghavan, P., & Schütze, H. (2008).** *Introduction to Information Retrieval.* Cambridge University Press.\n- **Järvelin, K., & Kekäläinen, J. (2002).** Cumulated gain-based evaluation of IR techniques. *ACM Transactions on Information Systems (TOIS)*, 20(4), 422-446.\n- **Robertson, S., & Zaragoza, H. (2009).** The probabilistic relevance framework: BM25 and beyond. *Foundations and Trends in Information Retrieval*, 3(4), 333-389.\n- **Malkov, Y. A., & Yashunin, D. A. (2018).** Efficient and robust approximate nearest neighbor search using HNSW graphs. *IEEE transactions on pattern analysis and machine intelligence*.\n- **Jegou, H., Douze, M., & Schmid, C. (2010).** Product quantization for nearest neighbor search. *IEEE transactions on pattern analysis and machine intelligence*.\n- **Cormack, G. V., Clarke, C. L., & Buettcher, S. (2009).** Reciprocal rank fusion outperforms data fusion and learning to rank methods. *Proceedings of the 32nd international ACM SIGIR conference*.\n- **Chapelle, O., Metlzer, D., Zhang, Y., & Grinspan, P. (2009).** Expected reciprocal rank for graded relevance. *Proceedings of the 18th ACM conference on Information and knowledge management (CIKM)*."
+    },
+    {
+      "filename": "2025-12-26-izymaps-shopify-store-locator.md",
+      "slug": "izymaps-shopify-store-locator",
+      "date": "2025-12-26",
+      "title": "IzyMaps: Building a Shopify Store Locator App",
+      "categories": [
+        "Entrepreneurship",
+        "Shopify"
+      ],
+      "tags": [
+        "shopify",
+        "google-maps",
+        "store-locator",
+        "e-commerce",
+        "saas"
+      ],
+      "author": "Orestis Zambounis",
+      "description": "How I built IzyMaps, a simple yet powerful Google Maps store locator app for Shopify merchants. From single-location stores to multi-location retailers, making it easy for customers to find your business.",
+      "image": "https://cdn.shopify.com/app-store/listing_images/6f587b8c3d8791c634c5a30f4bbbb7d5/promotional_image/CNPnvOiM3JEDEAE=.png",
+      "readTime": "5 min read",
+      "wordCount": 927,
+      "content": "After building [Beachin' Rentals](/blog/automating-beach-rental-store.html) and integrating it with Shopify, I noticed a recurring pain point among merchants: adding a simple, good-looking store locator to their website was surprisingly difficult. Existing solutions were either overly complex, required technical knowledge to set up, or were ridiculously expensive for such simple functionality. This frustration led me to build **IzyMaps**, a straightforward and affordable Google Maps store locator for Shopify.\n\n## The Problem\n\nWhen customers visit an e-commerce store, one of the most common questions is: *\"Where can I find you?\"* Whether it is a single boutique, a chain of retail stores, or a network of partner locations, merchants need an easy way to display their physical presence on a map.\n\nMost existing store locator apps fall into two categories:\n\n1. **Overly complex enterprise solutions** that require API keys, extensive configuration, and high technical expertise.\n2. **Basic tools** that look outdated, offer limited customization, and often carry hefty monthly price tags that do not match the value provided.\n\nI wanted to create something in between: a polished, feature-rich solution that anyone could set up in minutes without writing a single line of code or breaking the bank.\n\n## The Solution: IzyMaps\n\nIzyMaps is designed with simplicity and value at its core. The app integrates directly into Shopify's theme editor as a native app block, which means merchants can add a store locator to any page with just a few clicks.\n\n### Single Location: Keep It Simple\n\nFor stores with just one location, IzyMaps offers a clean, minimalist map display. Merchants simply enter their address, and the map automatically centers on their location. They can add business hours, phone numbers, and other details that appear alongside the map.\n\nThe design philosophy here is straightforward: show customers exactly what they need (where you are and how to reach you) without any unnecessary clutter.\n\n<img src=\"/assets/images/blogs/2025-12-26-izymaps-shopify-store-locator/simple.jpg\"/>\n<p class=\"image-caption\">Single location map on a desktop browser.</p>\n\n<img src=\"/assets/images/blogs/2025-12-26-izymaps-shopify-store-locator/mobile-simple.jpg\" style=\"max-width: min(100%, 200px);\">\n<p class=\"image-caption\">Mobile-first single location map.</p>\n\n### Multiple Locations: Powerful Features\n\nFor merchants with multiple locations, IzyMaps scales up with advanced features:\n\n* **Search functionality**: Customers can search by name, city, or address to find the right store.\n* **Auto-location detection**: The app can automatically find and highlight the nearest store based on the customer's location.\n* **Filtering by tags**: Stores can be categorized (for example: \"Retail\", \"Partner Store\", or \"Warehouse\") allowing customers to filter results.\n* **Bulk CSV upload**: For merchants with dozens or hundreds of locations, bulk importing via CSV saves hours of manual entry.\n\n<img src=\"/assets/images/blogs/2025-12-26-izymaps-shopify-store-locator/multi.jpg\" style=\"border-top-left-radius: 0;\">\n<p class=\"image-caption\">Multi-store map on a desktop browser.</p>\n\n<img src=\"/assets/images/blogs/2025-12-26-izymaps-shopify-store-locator/mobile-multi.jpg\" style=\"max-width: min(100%, 200px);\">\n<p class=\"image-caption\">Mobile-first multi-store map.</p>\n\n## Technical Implementation\n\nUnder the hood, IzyMaps leverages Shopify's app extensions and metafields to store location data. The frontend is built as a Liquid theme extension with vanilla JavaScript for the interactive map components.\n\nOne of the interesting challenges was geocoding: converting addresses to latitude/longitude coordinates. Rather than requiring merchants to obtain their own Google Maps API keys, I built a server-side geocoding service with intelligent caching. This approach offers several benefits:\n\n1. Keeps the setup process simple for merchants.\n2. Reduces API costs through aggressive caching (results are stored for 7 days).\n3. Provides fallback options for high-volume users who want to use their own API keys.\n\nThe app leverages Shopify's managed pricing for simplicity, offering a transparent and fair subscription model:\n\n| Plan | Price | Features |\n|------|-------|----------|\n| Free | $0 | Single location with watermark |\n| Basic | $2.99/mo | Single location, no watermark |\n| Growth | $9.99/mo | Up to 10 locations, search, auto-locate |\n| Pro | $19.99/mo | Unlimited locations, CSV bulk upload, 24/7 support |\n\n## Customization Without Complexity\n\nA key design goal was making the app customizable without overwhelming users with options. The theme editor integration allows merchants to:\n\n* Choose from multiple map styles (Default, Pastel, Silver, Night, Minimal).\n* Customize colors to match their brand.\n* Adjust padding, layout, and responsive behavior.\n* Add custom CSS for advanced users.\n\nAll of this happens through Shopify's native theme customizer, so there is no separate admin panel to learn.\n\n<img src=\"/assets/images/blogs/2025-12-26-izymaps-shopify-store-locator/edit.jpg\"/>\n<p class=\"image-caption\">Theme extension editor for single location map.</p>\n\n<img src=\"/assets/images/blogs/2025-12-26-izymaps-shopify-store-locator/multi-theme.jpg\" style=\"border-top-left-radius: 0;\"/>\n<p class=\"image-caption\">Fancy theme for multi-store map.</p>\n\n## Lessons Learned\n\nBuilding IzyMaps reinforced several product development principles:\n\n**Start with the simplest use case.** The single-location map was the first feature I built. It is the most common need, and getting it right established the foundation for everything else.\n\n**Dogfooding works.** Using IzyMaps on the Beachin' Rentals store helped me identify UX issues that I would not have noticed otherwise.\n\n**Pricing is critical.** Finding the right balance between free tier limitations and paid features took several iterations. It confirmed that there is a high demand for tools that provide utility without the \"enterprise\" price tag.\n\n**Support matters.** Even for a \"simple\" app, merchants have questions. Building comprehensive documentation and being responsive to support emails has been crucial for maintaining good reviews.\n\n## What's Next\n\nIzyMaps is now live on the [Shopify App Store](https://apps.shopify.com/google-maps-locator). Future plans include:\n\n* Additional map providers (Mapbox, OpenStreetMap) for merchants who prefer alternatives to Google.\n* Store hours with holiday schedules.\n* Integration with inventory systems to show product availability by location.\n* Analytics dashboard showing which locations get the most views.\n\nIf you are a Shopify merchant looking for a straightforward, affordable way to add a store locator to your site, give [IzyMaps](https://apps.shopify.com/google-maps-locator) a try. If you have feedback or feature requests, I would love to hear from you at [info@orestis.ch](mailto:info@orestis.ch)."
+    },
+    {
+      "filename": "2025-12-20-backpropagation.md",
+      "slug": "backpropagation",
+      "date": "2025-12-20",
+      "title": "Backpropagation in Practice",
+      "categories": [
+        "AI",
+        "Machine Learning"
+      ],
+      "tags": [
+        "backpropagation",
+        "theory",
+        "mathematics"
+      ],
+      "author": "Orestis Zambounis",
+      "description": "",
+      "image": "",
+      "readTime": "8 min read",
+      "wordCount": 1504,
+      "content": "The \"magic\" behind the modern deep learning revolution isn't just the architectures themselves, but our ability to train them efficiently. At the heart of this efficiency lies backpropagation, an algorithm that is often misunderstood as a \"black box.\" In reality, it is an elegant application of the Multivariate Chain Rule, implemented via Dynamic Programming. This post aims to demystify the algorithm by bridging the gap between classical textbook notations and the high-performance implementation strategies used in frameworks like PyTorch and TensorFlow.\n\n## Notations\n\nIn the following, we introduce the notations representing the computations within a neural network. As we progress from simple neurons to complex graphs, the notation evolves to remain intuitive.\n\n### Textbook Notation\n\nAt its most fundamental level, a neuron consists of a linear transformation followed by a non-linear activation function:\n\n$$\nf: \\mathbb{R}^n \\to \\mathbb{R}, \\quad f(\\mathbf{x}) = \\sigma(\\mathbf{w}^\\top \\mathbf{x} + b) \\tag{1}\n$$\n\nwhere $\\sigma: \\mathbb{R} \\to \\mathbb{R}$ is the activation function, $\\mathbf{w} \\in \\mathbb{R}^n$ is the weight vector, and $b \\in \\mathbb{R}$ is the scalar bias. For multiple neurons operating on the same input, we use matrix notation:\n\n$$\nf: \\mathbb{R}^n \\to \\mathbb{R}^m, \\quad f(\\mathbf{x}) = \\sigma(\\mathbf{W}\\mathbf{x} + \\mathbf{b}) \\tag{2} \\label{eq:multi-neurons}\n$$\n\nwhere $\\mathbf{W} \\in \\mathbb{R}^{m \\times n}$ is the weight matrix and $\\mathbf{b} \\in \\mathbb{R}^m$ is the bias vector. We can think of the rows of the weight matrix $\\mathbf{w}_i$ and the $i$-th element of the bias $b_i$ as belonging to the $i$-th neuron.\n\nWe define this operation as a layer $l$:\n\n$$\n\\mathbf{a}^l = \\sigma(\\mathbf{W}^l \\mathbf{a}^{l-1} + \\mathbf{b}^l), \\quad l \\in \\{1, \\dots, L\\} \\tag{3}\n$$\n\nIn a *Fully Connected Neural Network* (FCNN), we chain these layers together:\n\n$$\n\\mathbf{o} = f_L(f_{L-1}(\\dots f_1(\\mathbf{x}) \\dots)) \\tag{4}\n$$\n\n<img\n    src=\"/assets/images/blogs/2025-12-20-backpropagation/mlp.jpg\"\n    alt=\"Three-layer neural network architecture diagram showing input layer, hidden layers, and output layer with weight vectors\"\n/>\n<p class=\"image-caption\">Three-layer neural network. $\\mathbf w_i^l$ is the $i$th weight vector of the $l$th layer, and $\\dim\\left(\\mathbf w_i^l\\right) = \\dim\\left({\\mathbf a_{l-1}}\\right)$.</p>\n\n### Row-Vector Notation\n\nIn contrast to scientific publications and textbooks, libraries like PyTorch or TensorFlow use right-multiplication notation:\n\n$$\nf: \\mathbb{R}^{M \\times n} \\to \\mathbb{R}^{M \\times m}, \\quad f(\\mathbf{X}) = \\sigma(\\mathbf{X}\\mathbf{W}^\\top + \\mathbf{b}) \\tag{5}\n$$\n\nwhere $\\mathbf{W} \\in \\mathbb{R}^{m \\times n}$, $\\mathbf{b} \\in \\mathbb{R}^m$, and $M$ is the mini-batch size. \n\nIn this notation, the addition of the bias vector $\\mathbf{b}$ to the matrix product $\\mathbf{X}\\mathbf{W}^\\top$ is understood to be applied row-wise via _broadcasting_. Effectively, the bias is \"stretched\" across the mini-batch dimension so it can be added to each observation. Note that for a mini-batch size of $M=1$, this implementation is essentially the transpose of the textbook notation in Eq. \\eqref{eq:multi-neurons}.\n\n**Why the difference?**\n\n1.  **Batching Convention:** In data science, rows represent observations and columns represent features. This matches standard dataset structures (CSVs, SQL).\n2.  **Hardware Efficiency:** Modern GPUs use row-major storage. If data were stored as columns, the GPU would have to \"jump\" across memory addresses to fetch a single sample. Row-wise processing allows for *memory coalescing*, maximizing throughput.\n\n## Training and Optimization\n\nThe objective of training is to find the set of weights $\\mathbf{W}$ and biases $\\mathbf{b}$ that minimize the distance between the network output $\\mathbf{o}$ and labels $\\mathbf{y}$:\n\n$$\n\\hat{\\mathbf{W}}, \\hat{\\mathbf{b}} = \\arg\\min_{\\mathbf{W}, \\mathbf{b}} \\frac{1}{N} \\sum_{i=1}^N C(\\mathbf{W}, \\mathbf{b}; \\mathbf{x}_i, \\mathbf{y}_i) \\tag{6}\n$$\n\nSince calculating the inverse of the chained layers in Eq. \\eqref{eq:multi-neurons} is virtually impossible, we must rely on numerical optimization. We use _Stochastic Gradient Descent_ (SGD) to update parameters. The gradient $\\nabla C$ indicates the direction of steepest increase; thus, we move in the opposite direction:\n\n$$\n\\mathbf{W}_t = \\mathbf{W}_{t-1} - \\eta \\nabla_{\\mathbf{W}} C, \\quad \\mathbf{b}_t = \\mathbf{b}_{t-1} - \\eta \\nabla_{\\mathbf{b}} C \\tag{7}\n$$\n\nwhere the hyperparameter $\\eta \\in \\mathbb{R}^+$ is the _learning rate_.\n\n_Note:_ While SGD remains a gold standard for training certain neural networks, adaptive optimizers like [AdamW](/blog/adam-w) have emerged as the preferred choice for specific architectures.\n\n### The Role of Mini-Batches\n\nIn practice, calculating the cost over the entire dataset ($N$) is computationally prohibitive. Instead, we approximate the gradient using mini-batches of size $M < N$. Selecting the optimal $M$ is a balancing act between two competing forces:\n\n* **Stochasticity for Generalization:** Because each mini-batch is a random sample, the resulting loss surface fluctuates slightly at every step. This \"noise\" is actually beneficial; it helps the optimizer escape sharp local minima and guides the network toward _flat minima_, which significantly improves the model's ability to generalize to unseen data.\n* **Gradient Stability vs. Overfitting:** Larger mini-batches provide a higher \"gradient quality\" by averaging out noise, leading to smoother and more stable updates. However, there is a point of diminishing returns: if $M$ is too large, the lack of stochastic pressure may cause the network to settle into poor minima or overfit on the training distribution.\n\n<img\n    src=\"/assets/images/blogs/2025-12-20-backpropagation/loss-surface.jpg\"\n    alt=\"3D visualization of a loss surface showing flat and sharp minima at a given input\"\n    style=\"max-width: min(100%, 400px)\"\n/>\n<p class=\"image-caption\">Loss surface at a given input $\\mathbf x$.</p>\n\n## Gradient Derivation\n\nTo calculate these gradients efficiently, we combine the chain rule with efficient matrix operators.\n\n### Prerequisites\n\nIn the following, we often use the gradient operator notation with respect to a matrix $\\mathbf{M}$ or a vector $\\mathbf{v}$ to denote the partial derivatives of the cost $C$:\n\n$$\n(\\nabla_{\\mathbf{v}})_i = \\frac{\\partial C}{\\partial v_i}, \\quad (\\nabla_{\\mathbf{M}})_{ij} = \\frac{\\partial C}{\\partial M_{ij}} \\tag{8}\n$$\n\nFurthermore, we rely on the _Multivariate Chain Rule_. If a function $f$ depends on $x$ through several intermediate variables $g_i$, the total derivative is the sum of the partial derivatives along all paths:\n\n$$\n\\frac{\\partial f}{\\partial x} = \\sum_{i} \\frac{\\partial f}{\\partial g_i} \\frac{\\partial g_i}{\\partial x} \\tag{9}\n$$\n\n### 1. The Output Layer Error\n\nLet $\\mathbf{z}^l = \\mathbf{W}^l \\mathbf{a}^{l-1} + \\mathbf{b}^l$. For the last layer $L$, the partial derivatives for a single weight and bias are:\n\n$$\n\\frac{\\partial C}{\\partial b_i^L} = \\frac{\\partial C}{\\partial z_i^L} \\frac{\\partial z_i^L}{\\partial b_i^L} = \\frac{\\partial C}{\\partial z_i^L} \\tag{10}\n$$\n\n$$\n\\frac{\\partial C}{\\partial W_{ij}^L} = \\frac{\\partial C}{\\partial z_i^L} \\frac{\\partial z_i^L}{\\partial W_{ij}^L} = \\frac{\\partial C}{\\partial z_i^L} a_j^{L-1} \\tag{11}\n$$\n\nWe define the error term $\\delta_i^L := \\frac{\\partial C}{\\partial z_i^L}$. In matrix form:\n\n$$\n\\boldsymbol{\\delta}^L = \\nabla_{\\mathbf{a}^L} C \\odot \\sigma'(\\mathbf{z}^L) \\tag{BP1}\n$$\n\n### 2. Propagating Backward\n\nFor a hidden layer $l$, a change in $z_i^l$ affects the cost through all neurons $k$ in the next layer $l+1$. Summing these paths:\n\n$$\n\\delta_i^l := \\frac{\\partial C}{\\partial z_i^l} = \\left( \\sum_k \\frac{\\partial C}{\\partial z_k^{l+1}} \\frac{\\partial z_k^{l+1}}{\\partial a_i^l} \\right) \\frac{\\partial a_i^l}{\\partial z_i^l} = \\left( \\sum_k \\delta_k^{l+1} W_{ki}^{l+1} \\right) \\sigma'(z_i^l) \\tag{12}\n$$\n\nWhich gives the recursive matrix form:\n\n$$\n\\boldsymbol{\\delta}^l = ((\\mathbf{W}^{l+1})^\\top \\boldsymbol{\\delta}^{l+1}) \\odot \\sigma'(\\mathbf{z}^l) \\tag{BP2}\n$$\n\n### 3. Parameter Gradients\n\nUsing the error terms, the final gradients for layer $l$ are:\n\n$$\n\\nabla_{\\mathbf{b}^l} C = \\boldsymbol{\\delta}^l \\tag{BP3}\n$$\n\n$$\n\\nabla_{\\mathbf{W}^l} C = \\boldsymbol{\\delta}^l (\\mathbf{a}^{l-1})^\\top \\tag{BP4}\n$$\n\n*Note on Batching:* For a mini-batch size $M$, the total cost is $C_{\\text{tot}} = \\frac{1}{M}\\sum C_i$. Consequently, the final parameter updates use the _averaged gradients_ across the mini-batch.\n\n## Generalization\n\nWhile FCNNs follow a rigid sequential structure, modern architectures like ResNets (with skip connections) or Transformers (with multi-head attention) are structured as _Directed Acyclic Graphs_ (DAGs). In these networks, a single node's output can be used by multiple downstream operations.\n\nTo compute gradients in a DAG, we move beyond \"layers\" and use _Reverse-Mode Automatic Differentiation_. This is the generalized engine powering PyTorch’s `autograd` and TensorFlow’s `GradientTape`.\n\n### The Generalized Chain Rule\n\nIf a variable $v_i$ influences the cost $C$ through multiple paths (successors), the total derivative is the sum of the derivatives along all those paths:\n\n$$\n\\frac{\\partial C}{\\partial v_i} = \\sum_{j \\in \\text{Children}(i)} \\frac{\\partial C}{\\partial v_j} \\frac{\\partial v_j}{\\partial v_i} \\tag{13}\n$$\n\n\n\nIn this context, we often use the \"bar\" notation, where $\\bar{v}_i = \\frac{\\partial C}{\\partial v_i}$ represents the *adjoint* (or error signal) of $v_i$. This allows us to process any complex architecture by visiting nodes in reverse topological order.\n\n### Comparing Perspectives\n\n| | Sequential (FCNN) | Generalized (DAG) |\n| :--- | :--- | :--- |\n| **Perspective** | Layers are treated as atomic blocks | Every operation (sum, mul, exp) is a node |\n| **Connectivity** | Each layer has exactly one successor | A node can have any number of children |\n| **Error Signal** | $\\delta_i^l = \\frac{\\partial C}{\\partial z_i^l}$ (Pre-activation error) | $\\bar{v}_i = \\frac{\\partial C}{\\partial v_i}$ (Node adjoint) |\n| **Gradient Flow** | Pass error back through the weight matrix | Sum the error signals from all successor nodes |\n\nThis graph-based view explains how backpropagation handles modern complexities like _residual connections_—where the gradient simply \"splits\" and flows through both the skip path and the residual block—or _weight sharing_, where gradients from different parts of the graph are summed at the shared parameter node.\n\n## Conclusion\n\nBackpropagation is a recursive application of the chain rule optimized through *Dynamic Programming*. It achieves a temporal complexity of $\\mathcal{O}(P)$, where $P$ is the number of parameters, in a single backward pass. This linear efficiency is what allows us to train the massive models we see today.\n\n---\n\n### References\n\n* Nielsen, Michael A. [Neural networks and deep learning](http://neuralnetworksanddeeplearning.com/). 2015.\n* Goodfellow, Ian, et al. [Deep learning](https://www.deeplearningbook.org/). MIT press, 2016."
+    },
+    {
+      "filename": "2025-12-20-adam-w.md",
+      "slug": "adam-w",
+      "date": "2025-12-20",
+      "title": "The Evolution of AdamW",
+      "categories": [
+        "AI",
+        "Machine Learning"
+      ],
+      "tags": [
+        "adam-w",
+        "theory",
+        "mathematics"
+      ],
+      "author": "Orestis Zambounis",
+      "description": "",
+      "image": "/assets/images/blogs/2025-12-20-adam-w/loss-landscape.jpg",
+      "readTime": "8 min read",
+      "wordCount": 1594,
+      "content": "In deep learning (DL), we aim to find the optimal weights $\\mathbf{W}$ and biases $\\mathbf{b}$ with respect to a cost function. As the name suggests, deep neural networks consist of many layers chained together, leading to a highly complex computational graph. Since calculating the exact inverse of these chained layers is virtually impossible, we must rely on numerical optimization. AdamW has become the *de-facto* standard and a robust baseline for training modern DL models.\n\nWe approach understanding AdamW by looking at its evolution, starting from the *Stochastic Gradient Descent* (SGD) algorithm. At each step of the timeline, we aim to understand what specific problem the algorithm is solving compared to its predecessor.\n\n| Era | Method | Core Innovation |\n| --- | --- | --- |\n| **1950s** | **SGD** | Update weights by the negative gradient. |\n| **1960s** | **Momentum** | Adds velocity to smooth out updates and overcome local minima. |\n| **1980s** | **Nesterov** | A \"look-ahead\" mechanism before calculating the gradient. |\n| **2011** | **AdaGrad** | Per-parameter learning rates based on feature frequency. |\n| **2012** | **RMSProp** | Sliding window adaptive rates (solves AdaGrad's \"stalling\"). |\n| **2014** | **Adam** | Combines Momentum, RMSProp, and Bias Correction. |\n| **2017** | **AdamW** | Decouples weight decay from adaptive updates for better regularization. |\n| **2020+** | **Lion / Sophia** | New experimental optimizers (Memory efficient / Second-order). |\n\n<p class=\"image-caption\">The complete evolutionary timeline of Adam & Co.</p>\n\n## Training Objective\n\nThe objective of training is to find the set of weights $\\mathbf{W}$ and biases $\\mathbf{b}$ that minimize the distance between the network output $\\mathbf{o}$ and target labels $\\mathbf{y}$:\n\n$$\n\\hat{\\mathbf{W}}, \\hat{\\mathbf{b}} = \\arg\\min_{\\mathbf{W}, \\mathbf{b}} \\frac{1}{N} \\sum_{i=1}^N C(\\mathbf{W}, \\mathbf{b}; \\mathbf{x}_i, \\mathbf{y}_i) \\tag{1}\n$$\n\nwhere $C$ is the cost (loss) function and $N$ is the size of the dataset.\n\n## Stochastic Gradient Descent (SGD)\n\nSGD is the fundamental algorithm used to update learnable parameters. The gradient $\\nabla C$ indicates the direction of steepest increase; thus, we move in the opposite direction:\n\n$$\n\\mathbf{W}_t = \\mathbf{W}_{t-1} - \\eta \\nabla_{\\mathbf{W}} C, \\quad \\mathbf{b}_t = \\mathbf{b}_{t-1} - \\eta \\nabla_{\\mathbf{b}} C \\tag{2}\n$$\n\nwhere the hyperparameter $\\eta \\in \\mathbb{R}^+$ is the *learning rate*. \n\nIn practice, calculating the cost over the entire dataset ($N$) is computationally prohibitive. Instead, we approximate the gradient using mini-batches of size $M < N$. Selecting the optimal $M$ is a balancing act:\n\n* **Stochasticity for Generalization:** Because each mini-batch is a random sample, the resulting loss surface fluctuates slightly at every step. This \"noise\" helps the optimizer escape sharp local minima and guides the network toward *flat minima*, which generally improves the model's ability to generalize to unseen data.\n* **Gradient Stability:** Larger mini-batches provide higher \"gradient quality\" by averaging out noise, leading to smoother updates. However, if $M$ is too large, the lack of stochastic pressure may cause the network to overfit or settle into poor minima.\n\n<img\n    src=\"/assets/images/blogs/2025-12-20-adam-w/gd-variants.jpg\"\n    alt=\"Comparison of gradient descent variants showing batch, stochastic, and mini-batch approaches with their update paths\"\n    style=\"max-width: min(100%, 500px)\"\n/>\n\n## Gradient Descent With Momentum\n\nMomentum addresses the problem of \"oscillations\" in narrow valleys of the loss surface. It maintains a running average of the gradients (the *first moment*), building speed in directions where the gradient is consistent and canceling out noise where it flickers.\n\n$$\n\\mathbf{m}_t = \\beta_1 \\mathbf{m}_{t-1} + (1 - \\beta_1) \\mathbf{g}_{t} \\tag{3} \\label{eq:momentum}\n$$\n\n$$\n\\mathbf{w}_t = \\mathbf{w}_{t-1} - \\eta \\mathbf{m}_t \\tag{4} \\label{eq:momentum-update}\n$$\n\nwhere $\\beta_1$ is the decay rate (usually $0.9$), and $$\\mathbf{g}_t := \\nabla_{\\mathbf{w}} C_t$$. By substituting $\\eqref{eq:momentum}$ into $\\eqref{eq:momentum-update}$, we can derive the alternative *Polyak's Heavy Ball* formulation:\n\n$$\n\\mathbf{w}_{t+1} = \\mathbf{w}_t - \\alpha \\mathbf{g}_t + \\beta (\\mathbf{w}_t - \\mathbf{w}_{t-1}) \\tag{5}\n$$\n\n<img\n    src=\"/assets/images/blogs/2025-12-20-adam-w/gd-valley.jpg\"\n    alt=\"Side-by-side comparison of vanilla gradient descent oscillating in a valley versus gradient descent with momentum smoothly navigating the valley\"\n    style=\"max-width: min(100%, 350px)\"\n/>\n<p class=\"image-caption\">Vanilla gradient descent (left) vs. Gradient descent with momentum (right).</p>\n\n## Nesterov Accelerated Gradient (NAG)\n\nNAG is a \"look-ahead\" modification to momentum. The core problem with standard Polyak's momentum is that it is \"blind\" to the future: it calculates the gradient at the current position, adds the accumulated velocity, and effectively \"hopes\" it doesn't overshoot. In high-curvature valleys, this often leads to the algorithm flinging itself up the opposite slope before it can react.\n\nNAG solves this by being _proactive_. It calculates the gradient at the point where the momentum *would* take you, allowing the optimizer to anticipate the landscape and apply a \"braking\" force if it's about to overshoot.\n\n$$\n\\mathbf{v}_t = \\gamma \\mathbf{v}_{t-1} + \\eta \\nabla C(\\mathbf{w}_{t-1} - \\gamma \\mathbf{v}_{t-1}) \\tag{6}\n$$\n\n$$\n\\mathbf{w}_t = \\mathbf{w}_{t-1} - \\mathbf{v}_t \\tag{7}\n$$\n\nIn deep learning libraries like PyTorch, this is often rearranged to avoid calculating gradients at a \"virtual\" point:\n\n$$\n\\mathbf{v}_t = \\gamma \\mathbf{v}_{t-1} + \\mathbf{g}_t \\tag{8}\n$$\n\n$$\n\\mathbf{w}_t = \\mathbf{w}_{t-1} - \\eta (\\mathbf{g}_t + \\gamma \\mathbf{v}_t) \\tag{9}\n$$\n\n<img\n    src=\"/assets/images/blogs/2025-12-20-adam-w/polyak-vs-nesterov.jpg\"\n    alt=\"Diagram comparing Polyak's momentum calculating gradient before velocity jump versus Nesterov's look-ahead approach calculating gradient after the jump\"\n    style=\"max-width: min(100%, 500px)\"\n/>\n<p class=\"image-caption\">Polyak vs. Nesterov: Polyak calculates the gradient (orange) before the velocity jump (red); Nesterov calculates it after the jump.</p>\n\n## Adaptive Gradient (AdaGrad)\n\nAdaGrad adjusts the learning rate for each parameter individually. It gives smaller updates to frequent features and larger updates to infrequent (sparse) ones by accumulating past squared gradients.\n\n$$\nG_t = G_{t-1} + \\mathbf{g}_t^2 \\tag{10}\n$$\n\n$$\n\\mathbf{w}_{t+1} = \\mathbf{w}_t - \\frac{\\eta}{\\sqrt{G_t + \\epsilon}} \\odot \\mathbf{g}_t \\tag{11}\n$$\n\nThe primary concern is that $G_t$ grows monotonically. Eventually, the effective learning rate shrinks toward zero, causing training to stall—a phenomenon known as the *\"Death of AdaGrad.\"*\n\n## Root Mean Square Propagation (RMSProp)\n\nRMSProp fixes AdaGrad by replacing the raw sum with an exponentially decaying moving average. This allows the optimizer to \"forget\" the distant past and maintain a productive learning rate throughout training.\n\n$$\nE[\\mathbf{g}^2]_t = \\rho E[\\mathbf{g}^2]_{t-1} + (1 - \\rho) \\mathbf{g}_t^2 \\tag{12}\n$$\n\n$$\n\\mathbf{w}_{t+1} = \\mathbf{w}_t - \\frac{\\eta}{\\sqrt{E[\\mathbf{g}^2]_t + \\epsilon}} \\odot \\mathbf{g}_t \\tag{13}\n$$\n\n## Adaptive Moment Estimation (Adam)\n\nAdam is the fusion of Momentum and RMSProp. It tracks both the *First Moment* ($\\mathbf{m}_t$, the mean) and the *Second Moment* ($\\mathbf{v}_t$, the uncentered variance).\n\n**Update Moments:**\n\n$$\n\\mathbf{m}_t = \\beta_1 \\mathbf{m}_{t-1} + (1 - \\beta_1) \\mathbf{g}_t \\tag{14}\n$$\n\n$$\n\\mathbf{v}_t = \\beta_2 \\mathbf{v}_{t-1} + (1 - \\beta_2) \\mathbf{g}_t^2 \\tag{15}\n$$\n\n**Bias Correction:** Since $\\mathbf{m}_t$ and $\\mathbf{v}_t$ are initialized at zero, they are biased toward zero in early steps. We correct this:\n    \n$$\n\\hat{\\mathbf{m}}_t = \\frac{\\mathbf{m}_t}{1 - \\beta_1^t}, \\quad \\hat{\\mathbf{v}}_t = \\frac{\\mathbf{v}_t}{1 - \\beta_2^t} \\tag{16} \\label{eq:adam-bias-correction}\n$$\n\n**Update Weights:**\n\n$$\n\\mathbf{w}_{t+1} = \\mathbf{w}_t - \\frac{\\eta}{\\sqrt{\\hat{\\mathbf{v}}_t} + \\epsilon} \\hat{\\mathbf{m}}_t \\tag{17}\n$$\n\nAdam effectively combined three critical ideas. It uses $\\hat{\\mathbf{m}}_t$ to navigate high-curvature valleys, $\\hat{\\mathbf{v}}_t$ to handle non-stationary objectives, and the Bias Correction steps in Eq. $\\eqref{eq:adam-bias-correction}$ to ensure the optimizer is effective from the very first iterations.\n\n## Adam with Decoupled Weight Decay (AdamW)\n\nDespite its success, Adam had a mathematical flaw in how it handled weight decay. In standard Adam, the $L_2$ penalty is added to the gradient, meaning it also gets scaled by the inverse of $\\sqrt{\\mathbf{v}_t}$. This results in non-uniform regularization. AdamW decouples weight decay by applying it directly to the weights:\n\n$$\n\\mathbf{w}_{t+1} = \\mathbf{w}_t - \\underbrace{\\eta \\left( \\frac{\\hat{\\mathbf{m}}_t}{\\sqrt{\\hat{\\mathbf{v}_t}} + \\epsilon} \\right)}_{\\text{Adaptive Update}} - \\underbrace{\\eta \\lambda \\mathbf{w}_t}_{\\text{Decoupled Decay}} \\tag{18}\n$$\n\n## Beyond AdamW\n\nSeveral newer optimizers address AdamW's memory overhead and its ignorance of \"curvature\" (second-order information).\n\n### EvoLved SIgn Momentum (Lion)\nLion (2023) is more memory-efficient as it only tracks the *sign* of the momentum. It discards the second moment ($\\mathbf{v}_t$), saving 50% of the optimizer memory.\n\n$$\n\\mathbf{w}_{t+1} = \\mathbf{w}_t - \\eta \\cdot \\text{sign}(\\beta_1 \\mathbf{m}_{t-1} + (1-\\beta_1)\\mathbf{g}_t) \\tag{19}\n$$\n\n### Second-order Stochastic Optimization (Sophia)\nSophia (2023) is a second-order optimizer designed for LLMs. It estimates the *Hessian* (curvature). By knowing where the landscape is flat or sharp, Sophia can take larger steps in flat directions, potentially training GPT-style models 2× faster than AdamW.\n\n### Momentum Update on Orthogonalized Nanoscale (Muon)\nA newer entrant that ensures weight updates are \"orthonormal.\" It has shown significant efficiency in training Small Language Models (SLMs) and Mixtures of Experts (MoE) by ensuring the internal geometry of the weights remains well-conditioned.\n\n## Conclusion\n\nThe journey from SGD to AdamW represents a transition from simple gradient-following to sophisticated, per-parameter adaptive systems. AdamW remains the industry standard because it strikes a perfect balance: it is computationally efficient, handles sparse gradients well, and provides robust regularization through decoupled weight decay. While newer optimizers like Lion and Sophia offer exciting improvements in memory and convergence speed, AdamW's reliability across diverse architectures makes it the most essential tool in the modern practitioner's toolkit.\n\n---\n\n### References\n\n<!-- * Polyak, B. T. [Some methods of speeding up the convergence of iteration methods](https://www.sciencedirect.com/science/article/abs/pii/0041550264900375). USSR Computational Mathematics and Mathematical Physics, 1964.\n* Nesterov, Y. [A method for unconstrained convex minimization problem with the rate of convergence $O(1/k^2)$](https://scholar.google.com/scholar?cluster=11303259461129205562). Doklady AN SSSR, 1983. -->\n* Mitliagkas, I. [Nesterov’s Momentum, Stochastic Gradient Descent](http://mitliagkas.github.io/ift6085-2019/ift-6085-lecture-6-notes.pdf). IFT 6085 - Lecture 6, 2019.\n* Duchi, J., Hazan, E., & Singer, Y. [Adaptive Subgradient Methods for Online Learning and Stochastic Optimization](https://jmlr.org/papers/v12/duchi11a.html). Journal of Machine Learning Research, 2011.\n* Kingma, D. P., & Ba, J. [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980). ICLR, 2015.\n* Loshchilov, I., & Hutter, F. [Decoupled Weight Decay Regularization](https://arxiv.org/abs/1711.05101). ICLR, 2019.\n* Chen, X., et al. [Symbolic Discovery of Optimization Algorithms](https://arxiv.org/abs/2302.06675). arXiv preprint arXiv:2302.06675, 2023. (Lion)\n* Liu, H., et al. [Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training](https://arxiv.org/abs/2305.14342). arXiv preprint arXiv:2305.14342, 2023.\n* Keller, J., et al. [Muon: Momentum Update on Orthogonalized Nanoscale](https://kellerjordan.github.io/posts/muon/). 2024."
+    },
+    {
+      "filename": "2025-12-08-automating-beach-rental-store.md",
+      "slug": "automating-beach-rental-store",
+      "date": "2025-12-08",
+      "title": "Automating a Beach Rental Store",
+      "categories": [
+        "IoT",
+        "Entrepreneurship"
+      ],
+      "tags": [
+        "quantization",
+        "pruning",
+        "model-compression",
+        "deep-learning",
+        "inference-optimization"
+      ],
+      "author": "Orestis Zambounis",
+      "description": "A deep dive into automating a physical retail space: How I built custom smart racks using Raspberry Pi, I/O expanders, and 3D printed parts to run a 24/7 unstaffed rental store.",
+      "image": "/assets/images/blogs/2025-12-08-automating-beach-rental-store/beachin.jpg",
+      "readTime": "9 min read",
+      "wordCount": 1818,
+      "content": "This is the story of **Beachin' Rentals**, our first venture into the world of physical retail. Located just three minutes from the sand in Barceloneta, we set out to provide high-quality beach equipment to locals and tourists alike. However, we quickly ran into a fundamental problem: the cost of staffing. In our first year, the expense of having an employee on-site was eating through our margins, and we were losing money.\n\nWe faced a stark choice: close up shop or pivot entirely. I began analyzing the daily tasks of our staff and realized the job was relatively repetitive and procedural. This sparked a question: *What if we could automate it?* Theoretically, automation would allow us to operate 24/7 with near-zero marginal labor costs, transforming a struggling rental shop into a scalable, self-sufficient business.\n\n## Automation: The \"Smart Rack\"\n\nThe first hurdle was the hardware. Our core products—beach loungers and umbrellas—do not fit into conventional smart lockers due to their \"oversized\" geometry. Even if we could find large enough lockers, they wouldn't be space-efficient for our small storefront. We needed a custom solution.\n\nI designed a \"Smart Rack.\" Instead of traditional locker doors, this system uses chained buckles that loop through the product to secure it. It was a space-saving, geometry-agnostic solution perfectly detailed for long, narrow items like umbrellas and folded sunbeds.\n\nTo validate this idea, I started with a Proof of Concept (PoC). The goal was to prove the entire loop could function without human intervention: from a customer selecting an item on a UI, to processing a payment via a Stripe terminal, to triggering the electric locks. If I could make this work for one lock, I knew I could scale it to 32.\n\n<div class=\"vimeo\">\n  <iframe src=\"https://player.vimeo.com/video/1144524032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Admin Panel -> Lock Control\"></iframe>\n</div>\n<p class=\"image-caption\">Proof of concept: Electric lock control from a separate user interface.</p>\n\nMounting the locks onto the rack was easier said than done. I spent roughly two months just cutting metal to fit the rack structure so the buckles would slide through correctly. There were countless hours spent 3D printing handheld parts, connecting cables, and soldering components to ensure a robust build.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/wip-3.jpg\"\n    alt=\"Work-in-progress metal rack frame with electric locks mounted and 3D printed handheld components attached\"\n/>\n<p class=\"image-caption\">Electric locks mounted on rack frame with 3D printed handheld parts.</p>\n\nOnce the electric lockers were installed, I wired up all the trigger and feedback cables using four I/O expanders (MCP23017). This setup allowed a single Raspberry Pi to control the state of 32 lockers via the I2C interface. Crucially, I implemented a feedback loop: any activity in the shop (opening or closing a lock) triggered a notification on our Android admin app. This admin interface was connected via the cloud, giving us the power to control the locks remotely if needed.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/wip-4.jpg\"\n    alt=\"Raspberry Pi connected to four MCP23017 I/O expanders via I2C interface with wiring setup to control 32 electric locks\"\n/>\n<p class=\"image-caption\">I/O expanders (MCP23017) to control 32 locks through the I2C interface of the Raspberry Pi.</p>\n\nFor the customer experience, we designed an intuitive self-service UI. We tested this rigorously with various users before rolling it out to ensure it was foolproof. The system accommodated two flows: walk-in customers could select and pay directly at the kiosk, while those who booked online via our Shopify store could enter a reservation code to unlock their gear. We opted for a physical payment terminal rather than a QR-code-based web payment to reduce trust friction and make the transaction feel more secure and professional.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/kiosk2b.jpg\"\n    alt=\"Self-service kiosk with touchscreen interface for product selection and integrated payment terminal for rental equipment\"\n/>\n<p class=\"image-caption\">User interface to select and pay for rental equipment, and unlock online orders.</p>\n\nAfter more than three months of grueling work—much harder than anticipated—the system was finally live. Watching our first customers use it was surreal. We had feared that removing the human element might lower our conversion rate, but we observed the exact opposite. Customers loved the autonomy and speed of the smooth check-in/check-out process, free from the pressure of interacting with sales staff.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/rack.jpg\"\n    style=\"max-width:min(100%, 400px)\"\n    alt=\"Completed smart rack system with beach loungers and umbrellas secured by automated electric locks and buckle chains\"\n/>\n<p class=\"image-caption\">Final \"Smart Rack\" with rental products snugly fitted.</p>\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/customers.jpg\"\n    alt=\"Two customers entering the self-service store Beachin' Rentals\"\n    style=\"margin-bottom: -15px\"\n/>\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/customers2.jpg\"\n    alt=\"Multiple customers browsing and using the automated rental system to select beach equipment\"\n/>\n<p class=\"image-caption\">Customers using the self-service system to rent beach equipment.</p>\n\n## Smart Lockers for Inline Skates\n\nHaving proven the business model was viable in our second year with just the 32-lock rack, we looked for ways to expand. We still had available floor space, and as an inline skating enthusiast myself, I knew Barcelona is considered a European mecca for the sport, thanks to its smooth, flat promenades like the Barceloneta seaside.\n\nWe launched a \"smoke test\" with just two pairs of inline skates to validate the demand. The results were positive, so we decided to scale up. We ordered customized smart lockers directly from a factory in China, designed to integrate easily into our existing ecosystem via the RS485 protocol.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/smartlockers.jpg\"\n    alt=\"Custom smart lockers manufactured in China with RS485 protocol integration designed for automated inline skate rentals\"\n/>\n<p class=\"image-caption\">Customized smart lockers from a factory in China.</p>\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/smartlockerslight.jpg\"\n    alt=\"Illuminated smart lockers with LED lighting displaying inline skates in individual transparent compartments for optimal product presentation\"\n/>\n<p class=\"image-caption\">Smart lockers with inline skates integrated into our store. Illuminated compartments ensure optimal product presentation.</p>\n\nThe addition made the shop feel complete. The inline skates blended perfectly with our beach equipment, adding a cool, active vibe to the store while diversifying our revenue streams.\n\n<div class=\"vimeo\">\n  <iframe src=\"https://player.vimeo.com/video/1144527759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Bechin' Rentals Self-Service\"></iframe>\n</div>\n<p class=\"image-caption\">Round view through our shop with both the smart rack and smart lockers.</p>\n\n## Door Automation\n\nWhile the rentals were automated, the store operations weren't fully hands-off yet. We still needed someone to visit the shop every evening for about 15 minutes to check returned inventory for damage and close the door blinds. Finding someone reliable for such a short, specific task proved to be a pain.\n\nWe realized that since our inventory was relatively low-cost and damage was rare, it was more economical to absorb the occasional loss of a deposit than to pay for daily manual inspections. However, we still needed to secure the shop at night to prevent vandalism. The solution was full door automation. We outsourced this to a specialized company that automated our blinds for a relatively low price point, finally removing the last daily manual task.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/door-fix.gif\"\n    alt=\"Technicians working on installing automated door blind system to enable hands-free store opening and closing\"\n/>\n<p class=\"image-caption\">Technicians working on fully automating our door blinds.</p>\n\n## Upgraded Rack (V2)\n\nOur first smart rack was a success, often selling out completely during the high season. However, it had flaws: the beach umbrellas were simply placed on a shelf, leading to tangles and mess. We decided to almost double our capacity from 32 to 62 locks with an upgraded design.\n\nThis time, I didn't want to spend weeks DIY-ing the fabrication. We utilized an on-demand laser-cutting service in Germany to create modular metal pieces that could be mounted onto any standard rack to convert it into a smart system with minimal effort. We also 3D printed several components on-demand in China, as our design had reached a level of maturity that justified outsourcing.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/module.jpg\"\n    alt=\"Precision laser-cut modular metal components designed for easy smart rack assembly and scalability\"\n    style=\"max-width:min(100%, 400px)\"\n/>\n<p class=\"image-caption\">Modular design for the upgraded smart rack.</p>\n\nThe new rack features 62 locks and looks professional. The cylindrical tubes you see aren't rocket launchers—they are custom compartments for the umbrellas, solving the tangling issue once and for all. This modular design not only expanded our capacity but also offered a novel, scalable approach to storing irregular items that traditional lockers simply can't handle.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/customlockers2.jpg\"\n    alt=\"Smart Rack V2 with 62 electric locks featuring custom cylindrical compartments to prevent umbrella tangling\"\n    style=\"margin-bottom: -15px\"\n/>\n<!-- <img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/rackv2-cam.jpeg\"\n    alt=\"Smart Rack V2 with modular lock system, cylindrical umbrella tubes, and organized beach equipment storage visible from surveillance camera angle\"\n/> -->\n\n<script src=\"https://player.vimeo.com/api/player.js\"></script>\n<p class=\"image-caption\">Smart Rack V2 with modular locks and snug pipe compartments for umbrellas.</p>\n\n## Outlook: Taking It to Greece\n\nWith the core technology validated in Barcelona, the next chapter is scaling, and Greece just handed us the perfect opportunity.\n\nIn 2024, Greek Law 5092/2024 disrupted the country's €2B coastal tourism industry by strictly limiting beach bars to 30% sand coverage, hard-capping concessions at 500sqm and 60% equipment density. Enforcement is serious: drone surveillance and crowdsourced reporting carry fines up to €60,000. Operators who previously expanded freely to meet peak summer demand can no longer do so. They're bleeding potential revenue while simultaneously struggling with severe seasonal staff shortages.\n\nOur solution exploits a legal arbitrage. By placing a fully automated rental hub off the sand (for example, on a taverna's patio or a hotel terrace), equipment is classified as \"portable personal gear\" that customers carry to the mandated 70% free zones themselves. Businesses can monetize the regulatory overflow without violating their spatial concession, expanding their fixed footprint, or increasing headcount.\n\n<img\n    src=\"/assets/images/blogs/2025-12-08-automating-beach-rental-store/outlook.jpg\"\n    alt=\"AI generated simulation of Smart Rack V2 deployed at a Greek beachfront location with modular lock system and organized beach equipment storage\"\n/>\n<p class=\"image-caption\">Simulation of an automated rental hub deployed at a Greek beachfront location.</p>\n\nThe Smart Rack's modularity is key here. A single unit condenses 60+ items into ~2sqm, making it deployable in tight spaces that traditional lockers or rental shops simply can't serve. The system is off-grid capable and corrosion-resistant, built for the harsh coastal environment from day one.\n\nOur go-to-market is B2B: hardware sales paired with a recurring SaaS fee. Target customers include beachfront tavernas and clubs that lost significant footprint to the new density caps, coastal hotels seeking to offer 24/7 autonomous beach amenities without competing in state auctions for beach concessions, and independent entrepreneurs deploying automated kiosks on municipal public spaces overlooking uncommercialized beaches.\n\n## Conclusion\n\nAutomating **Beachin' Rentals** turned a struggling business into a profitable, self-running operation. By identifying the bottleneck (labor costs), embracing IoT technology, and iterating on hardware designs, we managed to create a unique rental experience that customers genuinely prefer. Furthermore, we proved that a fully unattended store can work in the real world.\n\nNow, with a regulatory shift opening up an entire market of operators who urgently need to serve more customers without expanding their footprint or hiring more staff, the timing couldn't be better to productize what we've built and scale it across the Mediterranean.\n\n\n[Thinking to automate your store?](/shop-automation/)\n\n---\n\n## Links\n\n[Beachin' Rentals](https://beachinrentalsbcn.es/)"
+    },
+    {
+      "filename": "2025-12-06-quantization-vs-pruning.md",
+      "slug": "quantization-vs-pruning",
+      "date": "2025-12-06",
+      "title": "Pruning vs. Quantization: An Empirical and Theoretical Analysis",
+      "categories": [
+        "AI",
+        "Machine Learning"
+      ],
+      "tags": [
+        "quantization",
+        "pruning",
+        "model-compression",
+        "deep-learning",
+        "inference-optimization"
+      ],
+      "author": "Orestis Zambounis",
+      "description": "",
+      "image": "",
+      "readTime": "6 min read",
+      "wordCount": 1169,
+      "content": "In the domain of efficient deep learning inference, the trade-off between model size and accuracy is usually managed through two primary compression techniques: **pruning** (inducing sparsity by removing weights) and **quantization** (reducing the bit-width of weights and activations). While both have extensive literature, a direct, rigorous comparison between the two under identical constraints has been historically sparse.\n\nA recent paper from Qualcomm AI Research, [*Pruning vs Quantization: Which is Better?*](https://arxiv.org/abs/2307.02973), provides a comprehensive analytical and empirical answer to this debate. By evaluating statistical distributions, lower-bound errors in Post-Training Quantization (PTQ), and fine-tuning dynamics in Quantization-Aware Training (QAT), the research concludes that quantization generally yields superior accuracy per bit of compression compared to unstructured pruning.\n\n## Preliminaries\n\nThe study assumes FP16 as the basic data type and measures compression gains with respect to it. Using FP16 for inference generally does not lead to a loss in accuracy. To insure a fair comparison, 50% pruning sparsity is compared to INT8 quantization, 75% sparsity to INT4 quantization, and so forth.\n\n### Quantization\n\nThe quantization experiments use symmetric uniform quantization. The quantization operation rounding-to-nearest $\\mathcal{Q}(\\mathbf{W})$ is defined as:\n\n$$\n\\mathcal{Q}(\\mathbf{W})_{i, j} = s q^*,\\quad q^* = \\underset{q \\in Q}{\\arg \\min} |W_{i, j} − s q|,\\quad Q \\in \\left\\{ −2^{b-1}, \\dots, 2^{b − 1} - 1 \\right\\},\n$$\n\nwhere $s$ is the scale factor and $b$ is the bit-width.\n\n### Pruning\n\nFor pruning, the study considers magnitude pruning, which sets values closest to zero to actual zero. The pruning function $\\mathcal P(\\mathbf W)$ is defined as:\n\n$$\n\\mathcal{P}(\\mathbf{W})_{i, j} = \\begin{cases} W_{i, j} & \\text{if } |W_{i, j}| \\ge \\tau \\\\ 0 & \\text{if } |W_{i, j}| < \\tau \\end{cases},\\quad \\tau \\in \\mathbb R^+.\n$$\n\nwhere $\\tau$ is the threshold value. Crucially, to ensure exact compression ratios for comparison, the threshold is derived from the Cumulative Distribution Function (CDF). For a target compression ratio $c \\in (0,1)$ and a symmetric zero-mean distribution, the threshold satisfies:\n\n$$\n\\tau =F_{W}^{-1}\\left(\\frac{1}{2}+\\frac{c}{2}\\right)\n$$\n\nwhere $F^{-1}(p)$ is the inverse CDF.\n\n## Theoretical Analysis: Signal-to-Noise Ratio and Kurtosis\n\nThe authors utilize Signal-to-Noise Ratio ($\\mathrm{SNR}_{dB}$) in log scale as the primary metric to compare the expected error of both methods.\n\n$$\n\\mathrm{SNR}_{dB}=10 \\log_{10}\\left(\\frac{\\mathbb{E}[\\mathbf W^{2}]}{\\mathbb{E}[(\\mathbf W-\\mathcal F(\\mathbf W))^{2}]}\\right)\n$$\n\nwhere $\\mathcal F(\\mathbf W)$ is the quantization or pruning function.\n\nWhen analyzing a standard normal distribution—a common proxy for neural network weights—quantization significantly outperforms pruning. For example, INT4 quantization achieves an SNR of 19.1 dB, whereas 75% pruning (equivalent compression) achieves only 5.6 dB. The error in quantization is bounded and oscillates between grid nodes, while pruning introduces large errors by rounding weights to zero.\n\n<img\n    src=\"/assets/images/blogs/2025-12-06-quantization-vs-pruning/normal-distribution.jpg\"\n    alt=\"Standard normal distribution comparison showing INT4 quantization versus 75% pruning with probability-weighted squared error visualization\"\n/>\n<p class=\"image-caption\">Standard Normal Comparison. (Left) Distributions after INT4 quantization vs. 75% pruning. (Right) Probability-weighted squared error.</p>\n\n### The Exception: Heavy Tails\n\nThe study identifies a specific regime where pruning is superior: distributions with high kurtosis (heavy tails). Using a truncated Student's t-distribution to simulate outliers, the authors found that pruning becomes beneficial only at very high compression ratios (equivalent to 2-3 bits per value) or when the data exhibits extreme outliers. However, for standard bit-widths and typical weight distributions found in the PyTorch model zoo, quantization maintains a higher SNR.\n\nThe distribution’s kurtosis was used as a predictive metric, given by:\n\n$$\n\\mathrm{Kurt}[X]=\\frac{\\mathbb{E}[(X-\\mu)^{4}]}{(\\mathbb{E}[(X-\\mu)^{2}])^{2}}\n$$\n\nwhere $\\mu$ is the mean.\n\n<img\n    src=\"/assets/images/blogs/2025-12-06-quantization-vs-pruning/student-t-distribution.jpg\"\n    alt=\"Three-panel visualization of pruning versus quantization signal-to-noise ratio showing kurtosis versus number of bits using Student's t-distribution\"\n/>\n<p class=\"image-caption\">Pruning vs. Quantization error (Student's $t$). Pruning error is invariant to outlier magnitude (left), while quantization SNR degrades significantly as kurtosis increases (middle), defining the trade-off regions between the two (right).</p>\n\n## Post-Training: Optimization and Lower Bounds\n\nTo remove algorithmic bias (e.g., comparing a poor pruning heuristic against a state-of-the-art quantization algorithm), the authors compared the methods using theoretical lower bounds on the Mean Squared Error (MSE) of layer outputs.\n\n  * **Heuristic:** A standard greedy algorithm provides a realizable solution (an upper bound on the error).\n  * **Relaxation:** By relaxing the integer constraints and using Semi-Definite Programming (SDP) for quantization, or Branch-and-Bound for pruning, they find the global minimum error (or a tight lower bound).\n\nWhen converted to SNR for visualization, this creates a \"range\" of performance.\n\n### Quantization Formulation\n\nFor quantization, the problem is formulated as a mixed-integer quadratic program. The authors relax the integer constraint to $w_{i}(w_{i}-1)\\ge0$ and solve the dual problem using an SDP solver to obtain a tight lower bound on the error.\n\n### Pruning Formulation\n\nFor pruning, the authors introduce a sparsity mask $m \\in \\mathbb{R}^n$ to formulate the optimization exactly for moderate dimensionalities.\n\n$$\nE(\\mathbf{w})=\\min_{\\mathbf{\\hat{w}},\\mathbf{m}}||\\mathbf{X}(\\mathbf{m}\\odot \\mathbf{\\hat{w}})-\\mathbf{X}\\mathbf{w}_{orig}||_{2}^{2}\n$$\n\n$$\n\\text{s.t.} \\quad ||\\mathbf{m}||_1 = k, \\quad -\\mathbf{m}\\odot l\\le \\mathbf{\\hat{w}}\\le \\mathbf{m}\\odot u, \\quad \\mathbf{m}_{i}\\in\\{0,1\\}, \\quad l, u \\in \\mathbb R^+\n$$\n\nwhere $k$ is the number of non-zero elements and $\\odot$ is the element-wise product. This is solved using the Branch-and-Bound method.\n\nThe results across 10 distinct layers (from MobileNet-V2, ResNet-18, and ViT) confirmed that in a post-training setting, quantization provably outperforms pruning for moderate compression ratios.\n\n<img\n    src=\"/assets/images/blogs/2025-12-06-quantization-vs-pruning/per-layer.jpg\"\n    alt=\"Plot showing post-training pruning versus quantization signal-to-noise ratio performance bounds across 4 models and 7 bit-widths per layer\"\n    style=\"max-width: min(100%, 380px)\"\n/>\n<p class=\"image-caption\">Post-Training Pruning vs. Quantization. Boxes show performance bounds across 4 models and 7 bit-widths per layer.</p>\n\n## Fine-Tuning: QAT vs. Magnitude Pruning\n\nThe study extended the comparison to full-model fine-tuning, comparing Quantization-Aware Training (QAT) using the Learned Step Size Quantization (LSQ) method against Magnitude Pruning with gradual sparsity increases. The benchmarks included ResNet, MobileNet, EfficientNet, and ViT on ImageNet, as well as DeepLab-V3 and EfficientDet.\n\n### Key Findings\n\n  * **Accuracy:** At equal compression rates, pruning almost never outperformed quantization. For instance, a ResNet-50 quantized to 4-bits retained 76.3% accuracy, while the equivalently pruned model dropped to 76.1%.\n  * **Representation Learning:** By analyzing log-scale SNR and Central Kernel Alignment (CKA) distances, the authors observed that fine-tuning after pruning tends to recover the original model's representations. In contrast, QAT leads to the learning of completely new representations.\n\n## Hardware Implications\n\nWhile the paper focuses on accuracy, it notes critical hardware distinctions that further favor quantization:\n\n  * **Storage Overhead:** Unstructured pruning requires storing a sparsity mask (at least 1 bit per weight), adding a minimum 6.25% overhead to 16-bit weights. Quantization has negligible metadata overhead.\n  * **Compute Efficiency:** Quantization offers quadratic improvements in compute performance (e.g., INT4 vs. INT8). Conversely, unstructured pruning imposes a binary choice: either decompress weights to a dense format (wasting compute on zeros) or use dedicated hardware to skip zeros. The latter often incurs overheads that negate theoretical gains.\n\n## Conclusion\n\nThe findings suggest that for the majority of deep learning applications, quantization should be the primary strategy for model compression. Pruning appears viable primarily in scenarios necessitating extreme compression (sub-3-bit) or for distributions with exceptionally high kurtosis. The authors recommend quantizing neural networks when efficiency is required before pruning is explored.\n\n---\n\n## References\n\nKuzmin, Andrey, et al. [\"Pruning vs quantization: Which is better?.\"](https://proceedings.neurips.cc/paper_files/paper/2023/file/c48bc80aa5d3cbbdd712d1cc107b8319-Paper-Conference.pdf) *Advances in neural information processing systems* 36 (2023): 62414-62427."
+    }
+  ]
+}

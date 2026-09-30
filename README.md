@@ -1,28 +1,39 @@
-# Minimal Personal Webpage [orestis-z.github.io](http://orestis-z.github.io/)
+# Orestis Zambounis — Systems Dossier & Personal Website
 
-## Deploying to Github Pages
+> High-performance personal engineering dossier and portfolio following the **Swiss International Typographic Style**. Built with Vite, React 19, TypeScript, and Tailwind CSS.
 
-- Fork or Clone this repo
-- Rename the repo to your desired github pages url (E.g yourname.github.io)
-- Customize `_config.yml` as desired
-- Push code to a `gh-pages` branch
-- Visit your website at the github pages url you specified in the second step
+Live at: [https://orestis.ch](https://orestis.ch)
 
-Learn more about Github pages <a href="https://pages.github.com/">here</a>
+---
 
-## Usage
+## Architecture & Technology Stack
 
-- Update `_config.yml` with your desired settings
-- Update `_includes/about.html` with information about yourself
+- **Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Engine**: [Vite 6](https://vite.dev/)
+- **Design System**: Swiss International Typographic Style (Inter, JetBrains Mono, 1px modular hairlines, crosshairs, restrained monochrome + signal red)
+- **Math Engine**: [KaTeX](https://katex.org/) for mathematical typesetting in research papers
+- **Hosting & CI/CD**: GitHub Pages via [GitHub Actions](.github/workflows/deploy.yml)
 
-## Local Setup
+---
 
-- Install <a href="https://www.ruby-lang.org/en/">Ruby</a>, <a href="https://bundler.io/">Bundler</a>, <a href="https://jekyllrb.com/">Jekyll</a>, and <a href="https://nodejs.org/en/">NodeJS</a> `NodeJS`.
-- Run `bundle install` from repo's root
-- Run `bundle exec jekyll serve --config _config.yml,_config-dev.yml` to start the local server
-- Vist website in your browser at `http://localhost:4000`
-- Run link, image and script checks on the website with `bundle exec htmlproofer ./_site --only-4xx`
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Compile production build
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+---
 
 ## License
 
-MIT
+Content and code: [MIT / CC BY 4.0](LICENSE) © Zambounis Technology.
