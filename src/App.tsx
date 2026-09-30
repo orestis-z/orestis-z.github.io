@@ -54,6 +54,8 @@ export const App: React.FC = () => {
       // Else scroll to section
       const el = document.getElementById(hash);
       if (el) {
+        setSelectedPost(null);
+        setSelectedProject(null);
         el.scrollIntoView({ behavior: 'smooth' });
       }
     };

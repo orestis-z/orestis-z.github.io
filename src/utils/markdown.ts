@@ -1,6 +1,34 @@
 import { marked } from 'marked';
 import katex from 'katex';
 
+// Configure custom link renderer
+const renderer = {
+  link({ href, title, text }: { href: string; title?: string | null; text: string }) {
+    let cleanHref = href || '#';
+    let target = '';
+    let rel = '';
+
+    // Handle external links
+    if (cleanHref.startsWith('http://') || cleanHref.startsWith('https://')) {
+      target = ' target="_blank"';
+      rel = ' rel="noopener noreferrer"';
+    } 
+    // Normalize internal legacy Jekyll blog links to SPA hash routes
+    else if (cleanHref.startsWith('/blog/')) {
+      cleanHref = '#' + cleanHref.replace('/blog/', '').replace('.html', '');
+    } 
+    // Normalize shop-automation link to section hash
+    else if (cleanHref === '/shop-automation/' || cleanHref === '/shop-automation') {
+      cleanHref = '#systems';
+    }
+
+    const titleAttr = title ? ` title="${title}"` : '';
+    return `<a href="${cleanHref}"${titleAttr}${target}${rel}>${text}</a>`;
+  }
+};
+
+marked.use({ renderer });
+
 // Configure marked options
 marked.setOptions({
   gfm: true,

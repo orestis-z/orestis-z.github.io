@@ -145,6 +145,42 @@
   margin-bottom: 1.2rem;
 }
 
+/* Hyperlinks in technical articles */
+.prose-swiss a {
+  color: var(--accent-swiss);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-swiss);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.prose-swiss a:visited {
+  color: var(--accent-swiss);
+}
+
+.prose-swiss a:hover {
+  text-decoration-thickness: 2.5px;
+  background-color: var(--accent-swiss-subtle);
+  border-radius: 2px;
+}
+
+.prose-swiss a code {
+  color: inherit;
+  border-color: var(--accent-swiss);
+}
+
+.prose-swiss a[target="_blank"]:not(:has(img))::after {
+  content: " ↗";
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  opacity: 0.8;
+  display: inline-block;
+  line-height: 1;
+}
+
 /* Lists styling for technical articles */
 .prose-swiss ul {
   list-style-type: disc !important;
